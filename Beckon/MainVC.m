@@ -22,6 +22,22 @@
      selector:@selector(goToSignIn:)
      name:@"AccessRefused"
      object:nil];
+ 
+    UIViewController *vc1 = [UIViewController new];
+    UINavigationController *navCon1 =
+    [[UINavigationController alloc]initWithRootViewController:vc1];
+    
+    UIViewController *vc2 = [UIViewController new];
+    [vc2.view setBackgroundColor:[UIColor redColor]];
+//    UINavigationController *navCon2 =
+//    [[UINavigationController alloc] initWithRootViewController:vc2];
+    
+    UIViewController *vc3 = [UIViewController new];
+//    UINavigationController *navCon3 =
+//    [[UINavigationController alloc] initWithRootViewController:vc3];
+    
+    self.viewControllers = @[navCon1, vc2, vc3];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,6 +74,9 @@
          NSLog(@"JSON: %@", responseObject);
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
+                 NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+                 NSDictionary *serializedData = [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
+                 NSLog(@"Error: %@", serializedData);
          NSInteger statusCode = operation.response.statusCode;
          if(statusCode == 403) {
              [[NSNotificationCenter defaultCenter] postNotificationName:@"AccessRefused" object:self];

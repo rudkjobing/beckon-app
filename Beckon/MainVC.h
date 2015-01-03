@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YZSwipeBetweenViewController.h"
 
-@interface MainVC : UIViewController
+@interface MainVC : YZSwipeBetweenViewController
 
 @end
