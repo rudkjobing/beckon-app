@@ -47,11 +47,18 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    NSDictionary *parameters = @{@"email": @"slyngel@gmail.com", @"password": @"12345678"};
-    [manager POST:@"http://localhost:9000/signIn" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+    NSDictionary *parameters = @{@"email": email,
+                                 @"password": password};
+    [manager POST:@"http://localhost:9000/account/signIn" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+//        NSLog(@"JSON: %@", responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+        //TODO Present error message
+        
+//        NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+//        NSDictionary *serializedData = [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
+//        NSLog(@"Error: %@", serializedData);
     }];
     
 }

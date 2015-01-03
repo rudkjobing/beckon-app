@@ -10,6 +10,6 @@
 
 @interface SignUpVC : UIViewController
 
--(void)signUpWithUsername:(NSString*)userName andPassword:(NSString*)password;
+-(void)signUpWithEmail:(NSString*)email phoneNumber:(NSString*)phoneNumber firstName:(NSString*)firstName andPassword:(NSString*)password;
 
 @end

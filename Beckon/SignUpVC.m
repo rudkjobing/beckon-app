@@ -7,14 +7,28 @@
 //
 
 #import "SignUpVC.h"
+#import "AFNetworking.h"
 
 @interface SignUpVC ()
+
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
+@property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
 @implementation SignUpVC
+
 - (IBAction)gotoSignInAction:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)signUpAction:(UIButton *)sender {
+    [self signUpWithEmail:self.emailTextField.text
+              phoneNumber:self.phoneNumberTextField.text
+                firstName:self.firstNameTextField.text
+              andPassword:self.passwordTextField.text];
 }
 
 - (void)viewDidLoad {
@@ -37,7 +51,27 @@
 }
 */
 
--(void)signUpWithUsername:(NSString*)userName andPassword:(NSString*)password{
+-(void)signUpWithEmail:(NSString*)email phoneNumber:(NSString*)phoneNumber firstName:(NSString*)firstName andPassword:(NSString*)password{
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+//    manager.responseSerializer = [JSONResponseSerializerWithData serializer];
+    NSDictionary *parameters = @{@"email": email,
+                                 @"phoneNumber": phoneNumber,
+                                 @"firstName": firstName,
+                                 @"password": password};
+    [manager POST:@"http://localhost:9000/account/signUp" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+        [self dismissViewControllerAnimated:YES completion:nil];
+//        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+        //TODO Present error message
+        
+//        NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+//        NSDictionary *serializedData = [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
+//        NSLog(@"Error: %@", serializedData);
+    }];
     
 }
 

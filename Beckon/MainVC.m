@@ -7,6 +7,7 @@
 //
 
 #import "MainVC.h"
+#import "AFNetworking.h"
 
 @interface MainVC ()
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(goToSignIn:)
+     name:@"AccessRefused"
+     object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,7 +30,9 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [self performSegueWithIdentifier:@"goto_login" sender:self];
+    
+    [self getBeckons];
+    
 }
 
 /*
@@ -37,5 +44,26 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)goToSignIn:(NSNotification*) notification{
+    [self performSegueWithIdentifier:@"goto_login" sender:self];
+}
+
+-(void)getBeckons{
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager GET:@"http://localhost:9000/beckons" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSLog(@"JSON: %@", responseObject);
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         NSInteger statusCode = operation.response.statusCode;
+         if(statusCode == 403) {
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"AccessRefused" object:self];
+         }
+     }];
+    
+}
 
 @end
