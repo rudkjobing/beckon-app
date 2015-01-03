@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F86B5F92F994ED81B331AF04 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44392AE8194A2CA435B8E275 /* libPods.a */; };
+		F92CC0991A581CDF00AA0B70 /* BeckonsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0971A581CDF00AA0B70 /* BeckonsVC.m */; };
+		F92CC09A1A581CDF00AA0B70 /* BeckonsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0981A581CDF00AA0B70 /* BeckonsVC.xib */; };
+		F92CC0A91A5890BB00AA0B70 /* FriendsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0A71A5890BB00AA0B70 /* FriendsVC.m */; };
+		F92CC0AA1A5890BB00AA0B70 /* FriendsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0A81A5890BB00AA0B70 /* FriendsVC.xib */; };
+		F92CC0AE1A5891F900AA0B70 /* OverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0AC1A5891F900AA0B70 /* OverviewVC.m */; };
+		F92CC0AF1A5891F900AA0B70 /* OverviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0AD1A5891F900AA0B70 /* OverviewVC.xib */; };
+		F92CC0B11A5892C000AA0B70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92CC0B01A5892C000AA0B70 /* MapKit.framework */; };
 		F95F30121A57262D00D2CC3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F95F30111A57262D00D2CC3B /* main.m */; };
 		F95F30151A57262D00D2CC3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F95F30141A57262D00D2CC3B /* AppDelegate.m */; };
 		F95F301B1A57262D00D2CC3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95F30191A57262D00D2CC3B /* Main.storyboard */; };
@@ -15,7 +22,6 @@
 		F95F30201A57262D00D2CC3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F301E1A57262D00D2CC3B /* LaunchScreen.xib */; };
 		F95F302C1A57262D00D2CC3B /* BeckonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F95F302B1A57262D00D2CC3B /* BeckonTests.m */; };
 		F960A7551A57285E000BB047 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A74E1A57285E000BB047 /* MainVC.m */; };
-		F960A7561A57285E000BB047 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7501A57285E000BB047 /* User.m */; };
 		F960A7571A57285E000BB047 /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7521A57285E000BB047 /* SignInVC.m */; };
 		F960A7581A57285E000BB047 /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7541A57285E000BB047 /* SignUpVC.m */; };
 /* End PBXBuildFile section */
@@ -34,6 +40,16 @@
 		153D9C6F3363723670029AF8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		44392AE8194A2CA435B8E275 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C48ADF593C1D89D1A6F65F7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F92CC0961A581CDF00AA0B70 /* BeckonsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckonsVC.h; sourceTree = "<group>"; };
+		F92CC0971A581CDF00AA0B70 /* BeckonsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckonsVC.m; sourceTree = "<group>"; };
+		F92CC0981A581CDF00AA0B70 /* BeckonsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeckonsVC.xib; sourceTree = "<group>"; };
+		F92CC0A61A5890BB00AA0B70 /* FriendsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsVC.h; sourceTree = "<group>"; };
+		F92CC0A71A5890BB00AA0B70 /* FriendsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsVC.m; sourceTree = "<group>"; };
+		F92CC0A81A5890BB00AA0B70 /* FriendsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsVC.xib; sourceTree = "<group>"; };
+		F92CC0AB1A5891F900AA0B70 /* OverviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewVC.h; sourceTree = "<group>"; };
+		F92CC0AC1A5891F900AA0B70 /* OverviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewVC.m; sourceTree = "<group>"; };
+		F92CC0AD1A5891F900AA0B70 /* OverviewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverviewVC.xib; sourceTree = "<group>"; };
+		F92CC0B01A5892C000AA0B70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F95F300C1A57262D00D2CC3B /* Beckon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beckon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95F30101A57262D00D2CC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F95F30111A57262D00D2CC3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,8 +63,6 @@
 		F95F302B1A57262D00D2CC3B /* BeckonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeckonTests.m; sourceTree = "<group>"; };
 		F960A74D1A57285E000BB047 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		F960A74E1A57285E000BB047 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
-		F960A74F1A57285E000BB047 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		F960A7501A57285E000BB047 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F960A7511A57285E000BB047 /* SignInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInVC.h; sourceTree = "<group>"; };
 		F960A7521A57285E000BB047 /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInVC.m; sourceTree = "<group>"; };
 		F960A7531A57285E000BB047 /* SignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpVC.h; sourceTree = "<group>"; };
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F92CC0B11A5892C000AA0B70 /* MapKit.framework in Frameworks */,
 				F86B5F92F994ED81B331AF04 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,9 +101,47 @@
 		E1FD63CD532B91CB4A006EDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F92CC0B01A5892C000AA0B70 /* MapKit.framework */,
 				44392AE8194A2CA435B8E275 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F92CC0951A581CB300AA0B70 /* Main scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F92CC0961A581CDF00AA0B70 /* BeckonsVC.h */,
+				F92CC0971A581CDF00AA0B70 /* BeckonsVC.m */,
+				F92CC0981A581CDF00AA0B70 /* BeckonsVC.xib */,
+				F92CC0A61A5890BB00AA0B70 /* FriendsVC.h */,
+				F92CC0A71A5890BB00AA0B70 /* FriendsVC.m */,
+				F92CC0A81A5890BB00AA0B70 /* FriendsVC.xib */,
+				F92CC0AB1A5891F900AA0B70 /* OverviewVC.h */,
+				F92CC0AC1A5891F900AA0B70 /* OverviewVC.m */,
+				F92CC0AD1A5891F900AA0B70 /* OverviewVC.xib */,
+			);
+			name = "Main scenes";
+			sourceTree = "<group>";
+		};
+		F92CC0B21A5893EC00AA0B70 /* Account scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F960A7511A57285E000BB047 /* SignInVC.h */,
+				F960A7521A57285E000BB047 /* SignInVC.m */,
+				F960A7531A57285E000BB047 /* SignUpVC.h */,
+				F960A7541A57285E000BB047 /* SignUpVC.m */,
+			);
+			name = "Account scenes";
+			sourceTree = "<group>";
+		};
+		F92CC0B31A58941100AA0B70 /* Supporting scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F95F301E1A57262D00D2CC3B /* LaunchScreen.xib */,
+				F960A74D1A57285E000BB047 /* MainVC.h */,
+				F960A74E1A57285E000BB047 /* MainVC.m */,
+			);
+			name = "Supporting scenes";
 			sourceTree = "<group>";
 		};
 		F95F30031A57262D00D2CC3B = {
@@ -114,19 +167,10 @@
 		F95F300E1A57262D00D2CC3B /* Beckon */ = {
 			isa = PBXGroup;
 			children = (
-				F960A74D1A57285E000BB047 /* MainVC.h */,
-				F960A74E1A57285E000BB047 /* MainVC.m */,
-				F960A74F1A57285E000BB047 /* User.h */,
-				F960A7501A57285E000BB047 /* User.m */,
-				F960A7511A57285E000BB047 /* SignInVC.h */,
-				F960A7521A57285E000BB047 /* SignInVC.m */,
-				F960A7531A57285E000BB047 /* SignUpVC.h */,
-				F960A7541A57285E000BB047 /* SignUpVC.m */,
-				F95F30131A57262D00D2CC3B /* AppDelegate.h */,
-				F95F30141A57262D00D2CC3B /* AppDelegate.m */,
+				F92CC0B31A58941100AA0B70 /* Supporting scenes */,
+				F92CC0B21A5893EC00AA0B70 /* Account scenes */,
+				F92CC0951A581CB300AA0B70 /* Main scenes */,
 				F95F30191A57262D00D2CC3B /* Main.storyboard */,
-				F95F301C1A57262D00D2CC3B /* Images.xcassets */,
-				F95F301E1A57262D00D2CC3B /* LaunchScreen.xib */,
 				F95F300F1A57262D00D2CC3B /* Supporting Files */,
 			);
 			path = Beckon;
@@ -135,6 +179,9 @@
 		F95F300F1A57262D00D2CC3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F95F30131A57262D00D2CC3B /* AppDelegate.h */,
+				F95F30141A57262D00D2CC3B /* AppDelegate.m */,
+				F95F301C1A57262D00D2CC3B /* Images.xcassets */,
 				F95F30101A57262D00D2CC3B /* Info.plist */,
 				F95F30111A57262D00D2CC3B /* main.m */,
 			);
@@ -240,7 +287,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F92CC09A1A581CDF00AA0B70 /* BeckonsVC.xib in Resources */,
+				F92CC0AA1A5890BB00AA0B70 /* FriendsVC.xib in Resources */,
 				F95F301B1A57262D00D2CC3B /* Main.storyboard in Resources */,
+				F92CC0AF1A5891F900AA0B70 /* OverviewVC.xib in Resources */,
 				F95F30201A57262D00D2CC3B /* LaunchScreen.xib in Resources */,
 				F95F301D1A57262D00D2CC3B /* Images.xcassets in Resources */,
 			);
@@ -294,9 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F960A7581A57285E000BB047 /* SignUpVC.m in Sources */,
-				F960A7561A57285E000BB047 /* User.m in Sources */,
+				F92CC0A91A5890BB00AA0B70 /* FriendsVC.m in Sources */,
 				F960A7551A57285E000BB047 /* MainVC.m in Sources */,
+				F92CC0991A581CDF00AA0B70 /* BeckonsVC.m in Sources */,
 				F960A7571A57285E000BB047 /* SignInVC.m in Sources */,
+				F92CC0AE1A5891F900AA0B70 /* OverviewVC.m in Sources */,
 				F95F30151A57262D00D2CC3B /* AppDelegate.m in Sources */,
 				F95F30121A57262D00D2CC3B /* main.m in Sources */,
 			);

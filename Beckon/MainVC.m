@@ -8,6 +8,9 @@
 
 #import "MainVC.h"
 #import "AFNetworking.h"
+#import "BeckonsVC.h"
+#import "FriendsVC.h"
+#import "OverviewVC.h"
 
 @interface MainVC ()
 
@@ -20,23 +23,22 @@
     [[NSNotificationCenter defaultCenter]
      addObserver:self
      selector:@selector(goToSignIn:)
-     name:@"AccessRefused"
+     name:@"UserUnautherized"
      object:nil];
  
-    UIViewController *vc1 = [UIViewController new];
-    UINavigationController *navCon1 =
-    [[UINavigationController alloc]initWithRootViewController:vc1];
+    //Create the Beckons controller
+    BeckonsVC *beckons = [BeckonsVC new];
+    UINavigationController *navCon1 = [[UINavigationController alloc]initWithRootViewController:beckons];
     
-    UIViewController *vc2 = [UIViewController new];
-    [vc2.view setBackgroundColor:[UIColor redColor]];
-//    UINavigationController *navCon2 =
-//    [[UINavigationController alloc] initWithRootViewController:vc2];
+    //Create the Friends controller
+    FriendsVC *friends = [FriendsVC new];
+    UINavigationController *navCon2 = [[UINavigationController alloc] initWithRootViewController:friends];
     
-    UIViewController *vc3 = [UIViewController new];
-//    UINavigationController *navCon3 =
-//    [[UINavigationController alloc] initWithRootViewController:vc3];
+    //Create the Overview controller
+    OverviewVC *vc3 = [OverviewVC new];
+
     
-    self.viewControllers = @[navCon1, vc2, vc3];
+    self.viewControllers = @[navCon1, navCon2, vc3];
     
 }
 
@@ -47,7 +49,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     
-    [self getBeckons];
+//    [self getBeckons];
     
 }
 
@@ -72,14 +74,12 @@
     [manager GET:@"http://localhost:9000/beckons" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
-     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     }
+        failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
-                 NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
-                 NSDictionary *serializedData = [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
-                 NSLog(@"Error: %@", serializedData);
          NSInteger statusCode = operation.response.statusCode;
-         if(statusCode == 403) {
-             [[NSNotificationCenter defaultCenter] postNotificationName:@"AccessRefused" object:self];
+         if(statusCode == 401) {
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
          }
      }];
     
