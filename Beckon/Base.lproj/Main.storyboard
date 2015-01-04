@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MainVC-->
@@ -62,14 +63,6 @@
                                     <rect key="frame" x="99" y="104" width="203" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2d-oM-Ajj">
-                                <rect key="frame" x="199" y="142" width="203" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="99" y="142" width="203" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTD-1g-saG">
                                 <rect key="frame" x="199" y="180" width="203" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -98,8 +91,80 @@
                                     <action selector="gotoSignInAction:" destination="3xH-34-mB0" eventType="touchUpInside" id="XBE-Bt-oay"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2d-oM-Ajj">
+                                <rect key="frame" x="199" y="142" width="203" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="142" width="203" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P2d-oM-Ajj" firstAttribute="trailing" secondItem="pYA-Vj-utX" secondAttribute="trailingMargin" id="4qU-7A-BJd"/>
+                            <constraint firstItem="YTD-1g-saG" firstAttribute="leading" secondItem="pYA-Vj-utX" secondAttribute="leadingMargin" constant="83" id="7Do-5N-EVB"/>
+                            <constraint firstAttribute="centerX" secondItem="Kaq-ms-I1a" secondAttribute="centerX" constant="-0.5" id="8Y3-Iv-m5Y"/>
+                            <constraint firstItem="P2d-oM-Ajj" firstAttribute="leading" secondItem="pYA-Vj-utX" secondAttribute="leadingMargin" id="M0C-IJ-nep"/>
+                            <constraint firstItem="Afw-3I-qdw" firstAttribute="top" secondItem="U4L-ow-3Ah" secondAttribute="bottom" constant="8" id="P17-HK-4BR"/>
+                            <constraint firstItem="U4L-ow-3Ah" firstAttribute="leading" secondItem="pYA-Vj-utX" secondAttribute="leadingMargin" id="QLb-8B-OZV"/>
+                            <constraint firstItem="kOV-jT-Y3e" firstAttribute="leading" secondItem="pYA-Vj-utX" secondAttribute="leadingMargin" id="SPB-vP-P5u"/>
+                            <constraint firstItem="Afw-3I-qdw" firstAttribute="leading" secondItem="pYA-Vj-utX" secondAttribute="leadingMargin" id="XOp-TM-bl7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YTD-1g-saG" secondAttribute="trailing" constant="82" id="YI9-7A-uL5"/>
+                            <constraint firstItem="U4L-ow-3Ah" firstAttribute="top" secondItem="Est-Zy-D8S" secondAttribute="bottom" constant="8" id="YMW-PF-CMq"/>
+                            <constraint firstItem="YTD-1g-saG" firstAttribute="top" secondItem="P2d-oM-Ajj" secondAttribute="bottom" constant="8" id="Zmp-Iz-R3v"/>
+                            <constraint firstItem="U4L-ow-3Ah" firstAttribute="trailing" secondItem="pYA-Vj-utX" secondAttribute="trailingMargin" id="a40-gJ-WE3"/>
+                            <constraint firstItem="Kaq-ms-I1a" firstAttribute="top" secondItem="YTD-1g-saG" secondAttribute="bottom" constant="8" id="giy-oh-9P7"/>
+                            <constraint firstItem="kOV-jT-Y3e" firstAttribute="trailing" secondItem="pYA-Vj-utX" secondAttribute="trailingMargin" id="h22-Ec-FaD"/>
+                            <constraint firstItem="U4L-ow-3Ah" firstAttribute="top" secondItem="Est-Zy-D8S" secondAttribute="bottom" constant="8" id="uKi-fR-O2r"/>
+                            <constraint firstItem="kOV-jT-Y3e" firstAttribute="top" secondItem="Afw-3I-qdw" secondAttribute="bottom" constant="8" id="yN0-S1-YLr"/>
+                            <constraint firstItem="P2d-oM-Ajj" firstAttribute="top" secondItem="kOV-jT-Y3e" secondAttribute="bottom" constant="8" id="ye6-M3-43y"/>
+                            <constraint firstItem="Afw-3I-qdw" firstAttribute="trailing" secondItem="pYA-Vj-utX" secondAttribute="trailingMargin" id="zNA-iv-DOg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QLb-8B-OZV"/>
+                                <exclude reference="YMW-PF-CMq"/>
+                                <exclude reference="a40-gJ-WE3"/>
+                                <exclude reference="uKi-fR-O2r"/>
+                                <exclude reference="P17-HK-4BR"/>
+                                <exclude reference="XOp-TM-bl7"/>
+                                <exclude reference="zNA-iv-DOg"/>
+                                <exclude reference="SPB-vP-P5u"/>
+                                <exclude reference="h22-Ec-FaD"/>
+                                <exclude reference="yN0-S1-YLr"/>
+                                <exclude reference="4qU-7A-BJd"/>
+                                <exclude reference="M0C-IJ-nep"/>
+                                <exclude reference="ye6-M3-43y"/>
+                                <exclude reference="7Do-5N-EVB"/>
+                                <exclude reference="YI9-7A-uL5"/>
+                                <exclude reference="Zmp-Iz-R3v"/>
+                                <exclude reference="8Y3-Iv-m5Y"/>
+                                <exclude reference="giy-oh-9P7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="QLb-8B-OZV"/>
+                                <include reference="YMW-PF-CMq"/>
+                                <include reference="a40-gJ-WE3"/>
+                                <include reference="uKi-fR-O2r"/>
+                                <include reference="P17-HK-4BR"/>
+                                <include reference="XOp-TM-bl7"/>
+                                <include reference="zNA-iv-DOg"/>
+                                <include reference="SPB-vP-P5u"/>
+                                <include reference="h22-Ec-FaD"/>
+                                <include reference="yN0-S1-YLr"/>
+                                <include reference="4qU-7A-BJd"/>
+                                <include reference="M0C-IJ-nep"/>
+                                <include reference="ye6-M3-43y"/>
+                                <include reference="7Do-5N-EVB"/>
+                                <include reference="YI9-7A-uL5"/>
+                                <include reference="Zmp-Iz-R3v"/>
+                                <include reference="8Y3-Iv-m5Y"/>
+                                <include reference="giy-oh-9P7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="U4L-ow-3Ah" id="s1d-wF-qE2"/>
@@ -110,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atA-yl-4Dd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2459" y="941"/>
+            <point key="canvasLocation" x="2460" y="940.5"/>
         </scene>
         <!--Sign InVC-->
         <scene sceneID="uKr-er-Vtz">
@@ -170,15 +235,59 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8D3-bs-azK" firstAttribute="leading" secondItem="dgV-UK-LJA" secondAttribute="leadingMargin" id="0Q2-Yp-mfg"/>
+                            <constraint firstAttribute="centerX" secondItem="zaV-qd-YYC" secondAttribute="centerX" constant="-0.5" id="89P-qt-LCo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ejY-a8-XuY" secondAttribute="trailing" constant="82" id="BZQ-60-EgR"/>
+                            <constraint firstItem="sDZ-cj-zT9" firstAttribute="trailing" secondItem="dgV-UK-LJA" secondAttribute="trailingMargin" id="D5W-vc-Sxe"/>
+                            <constraint firstItem="sDZ-cj-zT9" firstAttribute="top" secondItem="8D3-bs-azK" secondAttribute="bottom" constant="8" id="RIZ-fs-VFh"/>
+                            <constraint firstItem="zaV-qd-YYC" firstAttribute="top" secondItem="ejY-a8-XuY" secondAttribute="bottom" constant="8" id="UY0-zS-iFE"/>
+                            <constraint firstItem="ejY-a8-XuY" firstAttribute="top" secondItem="sDZ-cj-zT9" secondAttribute="bottom" constant="8" id="WaR-nh-sUY"/>
+                            <constraint firstItem="sDZ-cj-zT9" firstAttribute="leading" secondItem="dgV-UK-LJA" secondAttribute="leadingMargin" id="bhG-yt-uxW"/>
+                            <constraint firstItem="8D3-bs-azK" firstAttribute="trailing" secondItem="dgV-UK-LJA" secondAttribute="trailingMargin" id="dMj-qm-bsk"/>
+                            <constraint firstItem="8D3-bs-azK" firstAttribute="top" secondItem="o4U-sI-3F0" secondAttribute="bottom" constant="8" id="lM4-WY-dBD"/>
+                            <constraint firstItem="ejY-a8-XuY" firstAttribute="leading" secondItem="dgV-UK-LJA" secondAttribute="leadingMargin" constant="83" id="wS9-9q-l40"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0Q2-Yp-mfg"/>
+                                <exclude reference="dMj-qm-bsk"/>
+                                <exclude reference="lM4-WY-dBD"/>
+                                <exclude reference="D5W-vc-Sxe"/>
+                                <exclude reference="RIZ-fs-VFh"/>
+                                <exclude reference="bhG-yt-uxW"/>
+                                <exclude reference="BZQ-60-EgR"/>
+                                <exclude reference="WaR-nh-sUY"/>
+                                <exclude reference="wS9-9q-l40"/>
+                                <exclude reference="89P-qt-LCo"/>
+                                <exclude reference="UY0-zS-iFE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="0Q2-Yp-mfg"/>
+                                <include reference="dMj-qm-bsk"/>
+                                <include reference="lM4-WY-dBD"/>
+                                <include reference="D5W-vc-Sxe"/>
+                                <include reference="RIZ-fs-VFh"/>
+                                <include reference="bhG-yt-uxW"/>
+                                <include reference="BZQ-60-EgR"/>
+                                <include reference="WaR-nh-sUY"/>
+                                <include reference="wS9-9q-l40"/>
+                                <include reference="89P-qt-LCo"/>
+                                <include reference="UY0-zS-iFE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="emailAddressTextField" destination="8D3-bs-azK" id="4Tg-W9-lxJ"/>
+                        <outlet property="notAMemberButton" destination="zaV-qd-YYC" id="faU-OM-G1t"/>
                         <outlet property="passwordTextField" destination="sDZ-cj-zT9" id="UTU-pd-LqN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVq-9T-h3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762" y="941"/>
+            <point key="canvasLocation" x="1770" y="940.5"/>
         </scene>
     </scenes>
 </document>

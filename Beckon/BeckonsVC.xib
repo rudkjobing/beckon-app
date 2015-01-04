@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BeckonsVC">
             <connections>
+                <outlet property="spinner" destination="OuC-yT-NJZ" id="GAF-ZR-agE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,24 +15,53 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eqq-nJ-Pa0">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZcT-pz-h1b">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                    </variation>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="OuC-yT-NJZ">
+                    <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                    <color key="color" red="0.014937482544099101" green="0.15713729816554889" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ZcT-pz-h1b" secondAttribute="bottom" id="684-3b-EIj"/>
+                <constraint firstAttribute="trailing" secondItem="ZcT-pz-h1b" secondAttribute="trailing" id="6BD-xm-FCu"/>
+                <constraint firstItem="OuC-yT-NJZ" firstAttribute="centerX" secondItem="ZcT-pz-h1b" secondAttribute="centerX" constant="8.5" id="amk-M4-pbA"/>
+                <constraint firstItem="ZcT-pz-h1b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pm4-i0-f0e"/>
+                <constraint firstItem="OuC-yT-NJZ" firstAttribute="centerY" secondItem="ZcT-pz-h1b" secondAttribute="centerY" constant="8.5" id="qdZ-5l-ZQK"/>
+                <constraint firstItem="ZcT-pz-h1b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ueJ-P2-vIL"/>
+            </constraints>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="eqq-nJ-Pa0"/>
+                    <exclude reference="ZcT-pz-h1b"/>
+                    <exclude reference="OuC-yT-NJZ"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="684-3b-EIj"/>
+                    <exclude reference="6BD-xm-FCu"/>
+                    <exclude reference="pm4-i0-f0e"/>
+                    <exclude reference="ueJ-P2-vIL"/>
+                    <exclude reference="amk-M4-pbA"/>
+                    <exclude reference="qdZ-5l-ZQK"/>
                 </mask>
             </variation>
-            <variation key="widthClass=compact">
+            <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
-                    <include reference="eqq-nJ-Pa0"/>
+                    <include reference="ZcT-pz-h1b"/>
+                    <include reference="OuC-yT-NJZ"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="684-3b-EIj"/>
+                    <include reference="6BD-xm-FCu"/>
+                    <include reference="pm4-i0-f0e"/>
+                    <include reference="ueJ-P2-vIL"/>
+                    <include reference="amk-M4-pbA"/>
+                    <include reference="qdZ-5l-ZQK"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="377" y="540"/>
         </view>
     </objects>
 </document>

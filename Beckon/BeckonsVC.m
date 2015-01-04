@@ -7,10 +7,12 @@
 //
 
 #import "BeckonsVC.h"
+#import "AFNetworking.h"
 
 @interface BeckonsVC ()
 
 @property (strong, nonatomic) UIBarButtonItem *addButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -28,19 +30,31 @@
     NSLog(@"Adding beckon");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated{
+    
+    [self getBeckons];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)getBeckons{
+    [self.spinner startAnimating];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager GET:@"http://localhost:9000/beckons" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSLog(@"JSON: %@", responseObject);
+         [self.spinner stopAnimating];
+     }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         [self.spinner stopAnimating];
+         NSInteger statusCode = operation.response.statusCode;
+         NSLog(@"%ld", (long)statusCode);
+         if(statusCode == 401) {
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
+         }
+     }];
+    
 }
-*/
 
 @end
