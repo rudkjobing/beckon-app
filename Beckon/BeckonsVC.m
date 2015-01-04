@@ -8,6 +8,7 @@
 
 #import "BeckonsVC.h"
 #import "AFNetworking.h"
+#import "CreateBeckonSwipeVC.h"
 
 @interface BeckonsVC ()
 
@@ -27,13 +28,12 @@
 }
 
 - (void)addBeckon{
-    NSLog(@"Adding beckon");
+    CreateBeckonSwipeVC *createBeckonModal = [CreateBeckonSwipeVC new];
+    [self presentViewController:createBeckonModal animated:YES completion:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    
     [self getBeckons];
-    
 }
 
 -(void)getBeckons{

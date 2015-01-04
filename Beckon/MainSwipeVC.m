@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 Beckon IVS. All rights reserved.
 //
 
-#import "MainVC.h"
+#import "MainSwipeVC.h"
 #import "AFNetworking.h"
 #import "BeckonsVC.h"
 #import "FriendsVC.h"
 #import "OverviewVC.h"
 
-@interface MainVC ()
+@interface MainSwipeVC ()
 
 @end
 
-@implementation MainVC
+@implementation MainSwipeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

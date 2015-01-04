@@ -15,13 +15,28 @@
 		F92CC0AE1A5891F900AA0B70 /* OverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0AC1A5891F900AA0B70 /* OverviewVC.m */; };
 		F92CC0AF1A5891F900AA0B70 /* OverviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0AD1A5891F900AA0B70 /* OverviewVC.xib */; };
 		F92CC0B11A5892C000AA0B70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92CC0B01A5892C000AA0B70 /* MapKit.framework */; };
+		F92CC0B81A596F1300AA0B70 /* CreateBeckonSwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0B71A596F1300AA0B70 /* CreateBeckonSwipeVC.m */; };
+		F92CC0BC1A596F5600AA0B70 /* CreateBeckonStep1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0BA1A596F5600AA0B70 /* CreateBeckonStep1VC.m */; };
+		F92CC0BD1A596F5600AA0B70 /* CreateBeckonStep1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0BB1A596F5600AA0B70 /* CreateBeckonStep1VC.xib */; };
+		F92CC0C11A596F6E00AA0B70 /* CreateBeckonStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0BF1A596F6E00AA0B70 /* CreateBeckonStep2VC.m */; };
+		F92CC0C21A596F6E00AA0B70 /* CreateBeckonStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0C01A596F6E00AA0B70 /* CreateBeckonStep2VC.xib */; };
+		F92CC0C61A597E0800AA0B70 /* CreateBeckonStep3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0C41A597E0800AA0B70 /* CreateBeckonStep3VC.m */; };
+		F92CC0C71A597E0800AA0B70 /* CreateBeckonStep3VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0C51A597E0800AA0B70 /* CreateBeckonStep3VC.xib */; };
+		F92CC0D01A597EB500AA0B70 /* CreateBeckonStep4VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0CE1A597EB500AA0B70 /* CreateBeckonStep4VC.m */; };
+		F92CC0D11A597EB500AA0B70 /* CreateBeckonStep4VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0CF1A597EB500AA0B70 /* CreateBeckonStep4VC.xib */; };
+		F92CC0D51A599EA900AA0B70 /* AddFriendSwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0D41A599EA900AA0B70 /* AddFriendSwipeVC.m */; };
+		F92CC0D91A599ED000AA0B70 /* AddFriendStep1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0D71A599ED000AA0B70 /* AddFriendStep1VC.m */; };
+		F92CC0DA1A599ED000AA0B70 /* AddFriendStep1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0D81A599ED000AA0B70 /* AddFriendStep1VC.xib */; };
+		F92CC0DE1A599EE200AA0B70 /* AddFriendStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0DC1A599EE200AA0B70 /* AddFriendStep2VC.m */; };
+		F92CC0DF1A599EE200AA0B70 /* AddFriendStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0DD1A599EE200AA0B70 /* AddFriendStep2VC.xib */; };
+		F92CC0E21A59A52300AA0B70 /* SwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0E11A59A52300AA0B70 /* SwipeVC.m */; };
 		F95F30121A57262D00D2CC3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F95F30111A57262D00D2CC3B /* main.m */; };
 		F95F30151A57262D00D2CC3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F95F30141A57262D00D2CC3B /* AppDelegate.m */; };
 		F95F301B1A57262D00D2CC3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95F30191A57262D00D2CC3B /* Main.storyboard */; };
 		F95F301D1A57262D00D2CC3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95F301C1A57262D00D2CC3B /* Images.xcassets */; };
 		F95F30201A57262D00D2CC3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F301E1A57262D00D2CC3B /* LaunchScreen.xib */; };
 		F95F302C1A57262D00D2CC3B /* BeckonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F95F302B1A57262D00D2CC3B /* BeckonTests.m */; };
-		F960A7551A57285E000BB047 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A74E1A57285E000BB047 /* MainVC.m */; };
+		F960A7551A57285E000BB047 /* MainSwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A74E1A57285E000BB047 /* MainSwipeVC.m */; };
 		F960A7571A57285E000BB047 /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7521A57285E000BB047 /* SignInVC.m */; };
 		F960A7581A57285E000BB047 /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7541A57285E000BB047 /* SignUpVC.m */; };
 /* End PBXBuildFile section */
@@ -50,6 +65,30 @@
 		F92CC0AC1A5891F900AA0B70 /* OverviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewVC.m; sourceTree = "<group>"; };
 		F92CC0AD1A5891F900AA0B70 /* OverviewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverviewVC.xib; sourceTree = "<group>"; };
 		F92CC0B01A5892C000AA0B70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F92CC0B61A596F1300AA0B70 /* CreateBeckonSwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonSwipeVC.h; sourceTree = "<group>"; };
+		F92CC0B71A596F1300AA0B70 /* CreateBeckonSwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonSwipeVC.m; sourceTree = "<group>"; };
+		F92CC0B91A596F5600AA0B70 /* CreateBeckonStep1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonStep1VC.h; sourceTree = "<group>"; };
+		F92CC0BA1A596F5600AA0B70 /* CreateBeckonStep1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonStep1VC.m; sourceTree = "<group>"; };
+		F92CC0BB1A596F5600AA0B70 /* CreateBeckonStep1VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateBeckonStep1VC.xib; sourceTree = "<group>"; };
+		F92CC0BE1A596F6E00AA0B70 /* CreateBeckonStep2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonStep2VC.h; sourceTree = "<group>"; };
+		F92CC0BF1A596F6E00AA0B70 /* CreateBeckonStep2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonStep2VC.m; sourceTree = "<group>"; };
+		F92CC0C01A596F6E00AA0B70 /* CreateBeckonStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateBeckonStep2VC.xib; sourceTree = "<group>"; };
+		F92CC0C31A597E0800AA0B70 /* CreateBeckonStep3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonStep3VC.h; sourceTree = "<group>"; };
+		F92CC0C41A597E0800AA0B70 /* CreateBeckonStep3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonStep3VC.m; sourceTree = "<group>"; };
+		F92CC0C51A597E0800AA0B70 /* CreateBeckonStep3VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateBeckonStep3VC.xib; sourceTree = "<group>"; };
+		F92CC0CD1A597EB500AA0B70 /* CreateBeckonStep4VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonStep4VC.h; sourceTree = "<group>"; };
+		F92CC0CE1A597EB500AA0B70 /* CreateBeckonStep4VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonStep4VC.m; sourceTree = "<group>"; };
+		F92CC0CF1A597EB500AA0B70 /* CreateBeckonStep4VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateBeckonStep4VC.xib; sourceTree = "<group>"; };
+		F92CC0D31A599EA900AA0B70 /* AddFriendSwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendSwipeVC.h; sourceTree = "<group>"; };
+		F92CC0D41A599EA900AA0B70 /* AddFriendSwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendSwipeVC.m; sourceTree = "<group>"; };
+		F92CC0D61A599ED000AA0B70 /* AddFriendStep1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendStep1VC.h; sourceTree = "<group>"; };
+		F92CC0D71A599ED000AA0B70 /* AddFriendStep1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendStep1VC.m; sourceTree = "<group>"; };
+		F92CC0D81A599ED000AA0B70 /* AddFriendStep1VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendStep1VC.xib; sourceTree = "<group>"; };
+		F92CC0DB1A599EE200AA0B70 /* AddFriendStep2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendStep2VC.h; sourceTree = "<group>"; };
+		F92CC0DC1A599EE200AA0B70 /* AddFriendStep2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendStep2VC.m; sourceTree = "<group>"; };
+		F92CC0DD1A599EE200AA0B70 /* AddFriendStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendStep2VC.xib; sourceTree = "<group>"; };
+		F92CC0E01A59A52300AA0B70 /* SwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeVC.h; sourceTree = "<group>"; };
+		F92CC0E11A59A52300AA0B70 /* SwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeVC.m; sourceTree = "<group>"; };
 		F95F300C1A57262D00D2CC3B /* Beckon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beckon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95F30101A57262D00D2CC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F95F30111A57262D00D2CC3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,8 +100,8 @@
 		F95F30251A57262D00D2CC3B /* BeckonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeckonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95F302A1A57262D00D2CC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F95F302B1A57262D00D2CC3B /* BeckonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeckonTests.m; sourceTree = "<group>"; };
-		F960A74D1A57285E000BB047 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
-		F960A74E1A57285E000BB047 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		F960A74D1A57285E000BB047 /* MainSwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSwipeVC.h; sourceTree = "<group>"; };
+		F960A74E1A57285E000BB047 /* MainSwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSwipeVC.m; sourceTree = "<group>"; };
 		F960A7511A57285E000BB047 /* SignInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInVC.h; sourceTree = "<group>"; };
 		F960A7521A57285E000BB047 /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInVC.m; sourceTree = "<group>"; };
 		F960A7531A57285E000BB047 /* SignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpVC.h; sourceTree = "<group>"; };
@@ -110,6 +149,8 @@
 		F92CC0951A581CB300AA0B70 /* Main scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F960A74D1A57285E000BB047 /* MainSwipeVC.h */,
+				F960A74E1A57285E000BB047 /* MainSwipeVC.m */,
 				F92CC0961A581CDF00AA0B70 /* BeckonsVC.h */,
 				F92CC0971A581CDF00AA0B70 /* BeckonsVC.m */,
 				F92CC0981A581CDF00AA0B70 /* BeckonsVC.xib */,
@@ -138,10 +179,53 @@
 			isa = PBXGroup;
 			children = (
 				F95F301E1A57262D00D2CC3B /* LaunchScreen.xib */,
-				F960A74D1A57285E000BB047 /* MainVC.h */,
-				F960A74E1A57285E000BB047 /* MainVC.m */,
 			);
 			name = "Supporting scenes";
+			sourceTree = "<group>";
+		};
+		F92CC0B41A596DFA00AA0B70 /* Detail scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F92CC0D21A599E8A00AA0B70 /* Add Friend scenes */,
+				F92CC0B51A596E0300AA0B70 /* Create Beckon scenes */,
+			);
+			name = "Detail scenes";
+			sourceTree = "<group>";
+		};
+		F92CC0B51A596E0300AA0B70 /* Create Beckon scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F92CC0B61A596F1300AA0B70 /* CreateBeckonSwipeVC.h */,
+				F92CC0B71A596F1300AA0B70 /* CreateBeckonSwipeVC.m */,
+				F92CC0B91A596F5600AA0B70 /* CreateBeckonStep1VC.h */,
+				F92CC0BA1A596F5600AA0B70 /* CreateBeckonStep1VC.m */,
+				F92CC0BB1A596F5600AA0B70 /* CreateBeckonStep1VC.xib */,
+				F92CC0BE1A596F6E00AA0B70 /* CreateBeckonStep2VC.h */,
+				F92CC0BF1A596F6E00AA0B70 /* CreateBeckonStep2VC.m */,
+				F92CC0C01A596F6E00AA0B70 /* CreateBeckonStep2VC.xib */,
+				F92CC0C31A597E0800AA0B70 /* CreateBeckonStep3VC.h */,
+				F92CC0C41A597E0800AA0B70 /* CreateBeckonStep3VC.m */,
+				F92CC0C51A597E0800AA0B70 /* CreateBeckonStep3VC.xib */,
+				F92CC0CD1A597EB500AA0B70 /* CreateBeckonStep4VC.h */,
+				F92CC0CE1A597EB500AA0B70 /* CreateBeckonStep4VC.m */,
+				F92CC0CF1A597EB500AA0B70 /* CreateBeckonStep4VC.xib */,
+			);
+			name = "Create Beckon scenes";
+			sourceTree = "<group>";
+		};
+		F92CC0D21A599E8A00AA0B70 /* Add Friend scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F92CC0D31A599EA900AA0B70 /* AddFriendSwipeVC.h */,
+				F92CC0D41A599EA900AA0B70 /* AddFriendSwipeVC.m */,
+				F92CC0D61A599ED000AA0B70 /* AddFriendStep1VC.h */,
+				F92CC0D71A599ED000AA0B70 /* AddFriendStep1VC.m */,
+				F92CC0D81A599ED000AA0B70 /* AddFriendStep1VC.xib */,
+				F92CC0DB1A599EE200AA0B70 /* AddFriendStep2VC.h */,
+				F92CC0DC1A599EE200AA0B70 /* AddFriendStep2VC.m */,
+				F92CC0DD1A599EE200AA0B70 /* AddFriendStep2VC.xib */,
+			);
+			name = "Add Friend scenes";
 			sourceTree = "<group>";
 		};
 		F95F30031A57262D00D2CC3B = {
@@ -167,6 +251,7 @@
 		F95F300E1A57262D00D2CC3B /* Beckon */ = {
 			isa = PBXGroup;
 			children = (
+				F92CC0B41A596DFA00AA0B70 /* Detail scenes */,
 				F92CC0B31A58941100AA0B70 /* Supporting scenes */,
 				F92CC0B21A5893EC00AA0B70 /* Account scenes */,
 				F92CC0951A581CB300AA0B70 /* Main scenes */,
@@ -184,6 +269,8 @@
 				F95F301C1A57262D00D2CC3B /* Images.xcassets */,
 				F95F30101A57262D00D2CC3B /* Info.plist */,
 				F95F30111A57262D00D2CC3B /* main.m */,
+				F92CC0E01A59A52300AA0B70 /* SwipeVC.h */,
+				F92CC0E11A59A52300AA0B70 /* SwipeVC.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,11 +375,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F92CC09A1A581CDF00AA0B70 /* BeckonsVC.xib in Resources */,
+				F92CC0DF1A599EE200AA0B70 /* AddFriendStep2VC.xib in Resources */,
+				F92CC0D11A597EB500AA0B70 /* CreateBeckonStep4VC.xib in Resources */,
 				F92CC0AA1A5890BB00AA0B70 /* FriendsVC.xib in Resources */,
 				F95F301B1A57262D00D2CC3B /* Main.storyboard in Resources */,
 				F92CC0AF1A5891F900AA0B70 /* OverviewVC.xib in Resources */,
 				F95F30201A57262D00D2CC3B /* LaunchScreen.xib in Resources */,
+				F92CC0C21A596F6E00AA0B70 /* CreateBeckonStep2VC.xib in Resources */,
+				F92CC0C71A597E0800AA0B70 /* CreateBeckonStep3VC.xib in Resources */,
+				F92CC0DA1A599ED000AA0B70 /* AddFriendStep1VC.xib in Resources */,
 				F95F301D1A57262D00D2CC3B /* Images.xcassets in Resources */,
+				F92CC0BD1A596F5600AA0B70 /* CreateBeckonStep1VC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,10 +437,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F960A7581A57285E000BB047 /* SignUpVC.m in Sources */,
+				F92CC0B81A596F1300AA0B70 /* CreateBeckonSwipeVC.m in Sources */,
+				F92CC0C11A596F6E00AA0B70 /* CreateBeckonStep2VC.m in Sources */,
+				F92CC0BC1A596F5600AA0B70 /* CreateBeckonStep1VC.m in Sources */,
 				F92CC0A91A5890BB00AA0B70 /* FriendsVC.m in Sources */,
-				F960A7551A57285E000BB047 /* MainVC.m in Sources */,
+				F92CC0DE1A599EE200AA0B70 /* AddFriendStep2VC.m in Sources */,
+				F92CC0D51A599EA900AA0B70 /* AddFriendSwipeVC.m in Sources */,
+				F960A7551A57285E000BB047 /* MainSwipeVC.m in Sources */,
+				F92CC0D01A597EB500AA0B70 /* CreateBeckonStep4VC.m in Sources */,
+				F92CC0C61A597E0800AA0B70 /* CreateBeckonStep3VC.m in Sources */,
 				F92CC0991A581CDF00AA0B70 /* BeckonsVC.m in Sources */,
+				F92CC0E21A59A52300AA0B70 /* SwipeVC.m in Sources */,
 				F960A7571A57285E000BB047 /* SignInVC.m in Sources */,
+				F92CC0D91A599ED000AA0B70 /* AddFriendStep1VC.m in Sources */,
 				F92CC0AE1A5891F900AA0B70 /* OverviewVC.m in Sources */,
 				F95F30151A57262D00D2CC3B /* AppDelegate.m in Sources */,
 				F95F30121A57262D00D2CC3B /* main.m in Sources */,

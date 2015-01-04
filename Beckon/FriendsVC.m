@@ -7,6 +7,7 @@
 //
 
 #import "FriendsVC.h"
+#import "AddFriendSwipeVC.h"
 
 @interface FriendsVC ()
 
@@ -25,7 +26,8 @@
 }
 
 - (void)addFriend{
-    NSLog(@"Adding friend");
+    AddFriendSwipeVC *addFriendModal = [AddFriendSwipeVC new];
+    [self presentViewController:addFriendModal animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

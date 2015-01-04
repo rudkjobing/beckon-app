@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateBeckonStep2VC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nCy-tk-j6k">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="nCy-tk-j6k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hnr-wk-Kmw"/>
+                <constraint firstItem="nCy-tk-j6k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pby-Ez-rbp"/>
+                <constraint firstAttribute="trailing" secondItem="nCy-tk-j6k" secondAttribute="trailing" id="Pwt-R3-jho"/>
+                <constraint firstAttribute="bottom" secondItem="nCy-tk-j6k" secondAttribute="bottom" id="Xz1-M9-Ths"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="nCy-tk-j6k"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Hnr-wk-Kmw"/>
+                    <exclude reference="Pby-Ez-rbp"/>
+                    <exclude reference="Pwt-R3-jho"/>
+                    <exclude reference="Xz1-M9-Ths"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="nCy-tk-j6k"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Hnr-wk-Kmw"/>
+                    <include reference="Pby-Ez-rbp"/>
+                    <include reference="Pwt-R3-jho"/>
+                    <include reference="Xz1-M9-Ths"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

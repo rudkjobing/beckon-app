@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateBeckonStep1VC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UqG-j2-bQU">
+                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8d-tf-Zh2">
+                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="UqG-j2-bQU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="3iK-RT-Lbo"/>
+                <constraint firstItem="h8d-tf-Zh2" firstAttribute="top" secondItem="UqG-j2-bQU" secondAttribute="bottom" constant="8" id="Cj2-6l-jgA"/>
+                <constraint firstAttribute="trailing" secondItem="h8d-tf-Zh2" secondAttribute="trailing" constant="8" id="Lyr-Lo-cez"/>
+                <constraint firstItem="UqG-j2-bQU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Yj0-u7-O8B"/>
+                <constraint firstAttribute="trailing" secondItem="UqG-j2-bQU" secondAttribute="trailing" constant="8" id="fPA-UT-d0Q"/>
+                <constraint firstItem="h8d-tf-Zh2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="rce-e0-IDi"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="UqG-j2-bQU"/>
+                    <exclude reference="h8d-tf-Zh2"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="3iK-RT-Lbo"/>
+                    <exclude reference="Yj0-u7-O8B"/>
+                    <exclude reference="fPA-UT-d0Q"/>
+                    <exclude reference="Cj2-6l-jgA"/>
+                    <exclude reference="Lyr-Lo-cez"/>
+                    <exclude reference="rce-e0-IDi"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="UqG-j2-bQU"/>
+                    <include reference="h8d-tf-Zh2"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="3iK-RT-Lbo"/>
+                    <include reference="Yj0-u7-O8B"/>
+                    <include reference="fPA-UT-d0Q"/>
+                    <include reference="Cj2-6l-jgA"/>
+                    <include reference="Lyr-Lo-cez"/>
+                    <include reference="rce-e0-IDi"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="954" y="459"/>
+        </view>
+    </objects>
+</document>

@@ -20,20 +20,20 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="BpK-s3-37b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4TO-SS-5Xd"/>
-                <constraint firstItem="BpK-s3-37b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RRz-aS-tCd"/>
-                <constraint firstAttribute="bottom" secondItem="BpK-s3-37b" secondAttribute="bottom" id="l2V-Am-PXw"/>
-                <constraint firstAttribute="trailing" secondItem="BpK-s3-37b" secondAttribute="trailing" id="ocM-4q-27C"/>
+                <constraint firstItem="BpK-s3-37b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HNo-pW-g5A"/>
+                <constraint firstAttribute="trailing" secondItem="BpK-s3-37b" secondAttribute="trailing" id="HVw-jD-26I"/>
+                <constraint firstAttribute="bottom" secondItem="BpK-s3-37b" secondAttribute="bottom" id="Lqk-S9-lYV"/>
+                <constraint firstItem="BpK-s3-37b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oJu-lR-TId"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="BpK-s3-37b"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="4TO-SS-5Xd"/>
-                    <exclude reference="RRz-aS-tCd"/>
-                    <exclude reference="l2V-Am-PXw"/>
-                    <exclude reference="ocM-4q-27C"/>
+                    <exclude reference="HNo-pW-g5A"/>
+                    <exclude reference="HVw-jD-26I"/>
+                    <exclude reference="Lqk-S9-lYV"/>
+                    <exclude reference="oJu-lR-TId"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -41,10 +41,10 @@
                     <include reference="BpK-s3-37b"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="4TO-SS-5Xd"/>
-                    <include reference="RRz-aS-tCd"/>
-                    <include reference="l2V-Am-PXw"/>
-                    <include reference="ocM-4q-27C"/>
+                    <include reference="HNo-pW-g5A"/>
+                    <include reference="HVw-jD-26I"/>
+                    <include reference="Lqk-S9-lYV"/>
+                    <include reference="oJu-lR-TId"/>
                 </mask>
             </variation>
         </view>
