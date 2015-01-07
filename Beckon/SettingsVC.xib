@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mUE-YT-Bwm">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="mUE-YT-Bwm" secondAttribute="centerY" id="1Bl-yp-nUt"/>
+                <constraint firstItem="mUE-YT-Bwm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="I6O-9p-Fsj"/>
+                <constraint firstAttribute="bottom" secondItem="mUE-YT-Bwm" secondAttribute="bottom" id="JX8-yb-5U4"/>
+                <constraint firstAttribute="trailing" secondItem="mUE-YT-Bwm" secondAttribute="trailing" id="cfR-af-XLf"/>
+                <constraint firstItem="mUE-YT-Bwm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yD0-4S-VKA"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="mUE-YT-Bwm"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="1Bl-yp-nUt"/>
+                    <exclude reference="I6O-9p-Fsj"/>
+                    <exclude reference="JX8-yb-5U4"/>
+                    <exclude reference="cfR-af-XLf"/>
+                    <exclude reference="yD0-4S-VKA"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="mUE-YT-Bwm"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="1Bl-yp-nUt"/>
+                    <include reference="I6O-9p-Fsj"/>
+                    <include reference="JX8-yb-5U4"/>
+                    <include reference="cfR-af-XLf"/>
+                    <include reference="yD0-4S-VKA"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

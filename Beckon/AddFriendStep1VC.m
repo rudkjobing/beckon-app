@@ -12,7 +12,8 @@
 @interface AddFriendStep1VC ()
 
 @property (strong, nonatomic) UIBarButtonItem *cancelButton;
-@property (strong, nonatomic) AddFriendSwipeVC *parent;
+@property (strong, nonatomic) UIBarButtonItem *nextButton;
+@property (strong, nonatomic) AddFriendSwipeVC *swipeVC;
 
 @end
 
@@ -20,16 +21,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.parent = (AddFriendSwipeVC*)self.parentViewController;
+    self.swipeVC = (AddFriendSwipeVC*)self.parentViewController.parentViewController;
     
     self.cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     self.cancelButton.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem = self.cancelButton;
     self.navigationItem.title = @"Search";
+    self.nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(next)];
+    self.nextButton.tintColor = [UIColor blackColor];
+    self.navigationItem.rightBarButtonItem = self.nextButton;
+    
 }
 
 - (void) cancel{
-    [self.parent dismissViewControllerAnimated:YES completion:nil];
+    [self.swipeVC dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) next{
+    [self.swipeVC swipeToNext:self.parentViewController];
 }
 
 @end

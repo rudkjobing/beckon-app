@@ -50,7 +50,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"email": email,
                                  @"password": password};
-    [manager POST:@"http://localhost:9000/account/signIn" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:@"http://ec2-54-93-48-106.eu-central-1.compute.amazonaws.com:9000/account/signIn" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self dismissViewControllerAnimated:YES completion:nil];
         
 //        NSLog(@"JSON: %@", responseObject);

@@ -39,12 +39,12 @@
                     <exclude reference="OuC-yT-NJZ"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="amk-M4-pbA"/>
+                    <exclude reference="qdZ-5l-ZQK"/>
                     <exclude reference="684-3b-EIj"/>
                     <exclude reference="6BD-xm-FCu"/>
                     <exclude reference="pm4-i0-f0e"/>
                     <exclude reference="ueJ-P2-vIL"/>
-                    <exclude reference="amk-M4-pbA"/>
-                    <exclude reference="qdZ-5l-ZQK"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -53,12 +53,12 @@
                     <include reference="OuC-yT-NJZ"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="amk-M4-pbA"/>
+                    <include reference="qdZ-5l-ZQK"/>
                     <include reference="684-3b-EIj"/>
                     <include reference="6BD-xm-FCu"/>
                     <include reference="pm4-i0-f0e"/>
                     <include reference="ueJ-P2-vIL"/>
-                    <include reference="amk-M4-pbA"/>
-                    <include reference="qdZ-5l-ZQK"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="377" y="540"/>

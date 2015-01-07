@@ -11,6 +11,7 @@
 #import "BeckonsVC.h"
 #import "FriendsVC.h"
 #import "OverviewVC.h"
+#import "SettingsVC.h"
 
 @interface MainSwipeVC ()
 
@@ -28,17 +29,20 @@
  
     //Create the Beckons controller
     BeckonsVC *beckons = [BeckonsVC new];
-    UINavigationController *navCon1 = [[UINavigationController alloc]initWithRootViewController:beckons];
+    UINavigationController *scene1 = [[UINavigationController alloc]initWithRootViewController:beckons];
     
     //Create the Friends controller
     FriendsVC *friends = [FriendsVC new];
-    UINavigationController *navCon2 = [[UINavigationController alloc] initWithRootViewController:friends];
+    UINavigationController *scene2 = [[UINavigationController alloc] initWithRootViewController:friends];
     
     //Create the Overview controller
-    OverviewVC *vc3 = [OverviewVC new];
+    OverviewVC *scene3 = [OverviewVC new];
 
+    //Create the Options controller
+    SettingsVC *settings = [SettingsVC new];
+    UINavigationController *scene4 = [[UINavigationController alloc] initWithRootViewController:settings];
     
-    self.viewControllers = @[navCon1, navCon2, vc3];
+    self.viewControllers = @[scene1, scene2, scene3, scene4];
     
 }
 

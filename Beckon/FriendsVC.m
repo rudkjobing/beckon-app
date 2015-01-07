@@ -8,9 +8,11 @@
 
 #import "FriendsVC.h"
 #import "AddFriendSwipeVC.h"
+#import "AFNetworking.h"
 
 @interface FriendsVC ()
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) UIBarButtonItem *addButton;
 
 @end
@@ -30,19 +32,25 @@
     [self presentViewController:addFriendModal animated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)getBeckons{
+    [self.spinner startAnimating];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager GET:@"http://ec2-54-93-48-106.eu-central-1.compute.amazonaws.com:9000/friendships" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSLog(@"JSON: %@", responseObject);
+         [self.spinner stopAnimating];
+     }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         [self.spinner stopAnimating];
+         NSInteger statusCode = operation.response.statusCode;
+         NSLog(@"%ld", (long)statusCode);
+         if(statusCode == 401) {
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
+         }
+     }];
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

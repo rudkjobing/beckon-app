@@ -7,8 +7,13 @@
 //
 
 #import "AddFriendStep2VC.h"
+#import "AddFriendSwipeVC.h"
 
 @interface AddFriendStep2VC ()
+
+@property (strong, nonatomic) UIBarButtonItem *previousButton;
+@property (strong, nonatomic) UIBarButtonItem *doneButton;
+@property (strong, nonatomic) AddFriendSwipeVC *swipeVC;
 
 @end
 
@@ -16,22 +21,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.swipeVC = (AddFriendSwipeVC*)self.parentViewController.parentViewController;
+    
+    self.navigationItem.title = @"Title";
+    
+    self.previousButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self  action:@selector(previous)];
+    self.previousButton.tintColor = [UIColor blackColor];
+    self.navigationItem.leftBarButtonItem = self.previousButton;
+    
+    self.doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(done)];
+    self.doneButton.tintColor = [UIColor blackColor];
+    self.navigationItem.rightBarButtonItem = self.doneButton;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) previous{
+    [self.swipeVC swipeToPrevious:self.parentViewController];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) done{
+    [self.swipeVC dismissViewControllerAnimated:YES completion:nil];
 }
-*/
 
 @end

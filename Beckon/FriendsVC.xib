@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsVC">
             <connections>
+                <outlet property="spinner" destination="MJy-5u-S8v" id="lsf-PD-mb4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,26 +15,70 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Friends" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F27-LM-BSq">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="yIr-so-HLS">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="152" y="92" width="97" height="30"/>
-                    </variation>
                 </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="smq-lm-cTe">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MJy-5u-S8v">
+                    <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                    <color key="color" red="0.01493748254" green="0.1571372982" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="smq-lm-cTe" firstAttribute="top" secondItem="yIr-so-HLS" secondAttribute="bottom" constant="8" id="Em0-an-ygI"/>
+                <constraint firstItem="smq-lm-cTe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Kh9-21-oUI"/>
+                <constraint firstItem="yIr-so-HLS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="SMN-o6-vpU"/>
+                <constraint firstItem="yIr-so-HLS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="73" id="TF7-gx-ofY"/>
+                <constraint firstAttribute="centerX" secondItem="MJy-5u-S8v" secondAttribute="centerX" constant="-0.5" id="d8n-Zq-mEr"/>
+                <constraint firstAttribute="trailing" secondItem="yIr-so-HLS" secondAttribute="trailing" constant="8" id="jO9-Kq-Pze"/>
+                <constraint firstAttribute="trailing" secondItem="smq-lm-cTe" secondAttribute="trailing" id="pxO-S5-55q"/>
+                <constraint firstAttribute="centerY" secondItem="MJy-5u-S8v" secondAttribute="centerY" constant="0.5" id="ux1-Ne-Cs9"/>
+                <constraint firstAttribute="bottom" secondItem="smq-lm-cTe" secondAttribute="bottom" id="xUq-dN-BcE"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="F27-LM-BSq"/>
+                    <exclude reference="yIr-so-HLS"/>
+                    <exclude reference="smq-lm-cTe"/>
+                    <exclude reference="MJy-5u-S8v"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="SMN-o6-vpU"/>
+                    <exclude reference="TF7-gx-ofY"/>
+                    <exclude reference="jO9-Kq-Pze"/>
+                    <exclude reference="Em0-an-ygI"/>
+                    <exclude reference="Kh9-21-oUI"/>
+                    <exclude reference="pxO-S5-55q"/>
+                    <exclude reference="xUq-dN-BcE"/>
+                    <exclude reference="d8n-Zq-mEr"/>
+                    <exclude reference="ux1-Ne-Cs9"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
-                    <include reference="F27-LM-BSq"/>
+                    <include reference="yIr-so-HLS"/>
+                    <include reference="smq-lm-cTe"/>
+                    <include reference="MJy-5u-S8v"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="SMN-o6-vpU"/>
+                    <include reference="TF7-gx-ofY"/>
+                    <include reference="jO9-Kq-Pze"/>
+                    <include reference="Em0-an-ygI"/>
+                    <include reference="Kh9-21-oUI"/>
+                    <include reference="pxO-S5-55q"/>
+                    <include reference="xUq-dN-BcE"/>
+                    <include reference="d8n-Zq-mEr"/>
+                    <include reference="ux1-Ne-Cs9"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="876" y="447"/>
         </view>
     </objects>
 </document>

@@ -30,6 +30,8 @@
 		F92CC0DE1A599EE200AA0B70 /* AddFriendStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0DC1A599EE200AA0B70 /* AddFriendStep2VC.m */; };
 		F92CC0DF1A599EE200AA0B70 /* AddFriendStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0DD1A599EE200AA0B70 /* AddFriendStep2VC.xib */; };
 		F92CC0E21A59A52300AA0B70 /* SwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0E11A59A52300AA0B70 /* SwipeVC.m */; };
+		F92CC0E61A59CB7600AA0B70 /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0E41A59CB7600AA0B70 /* SettingsVC.m */; };
+		F92CC0E71A59CB7600AA0B70 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0E51A59CB7600AA0B70 /* SettingsVC.xib */; };
 		F95F30121A57262D00D2CC3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F95F30111A57262D00D2CC3B /* main.m */; };
 		F95F30151A57262D00D2CC3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F95F30141A57262D00D2CC3B /* AppDelegate.m */; };
 		F95F301B1A57262D00D2CC3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95F30191A57262D00D2CC3B /* Main.storyboard */; };
@@ -89,6 +91,9 @@
 		F92CC0DD1A599EE200AA0B70 /* AddFriendStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendStep2VC.xib; sourceTree = "<group>"; };
 		F92CC0E01A59A52300AA0B70 /* SwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeVC.h; sourceTree = "<group>"; };
 		F92CC0E11A59A52300AA0B70 /* SwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeVC.m; sourceTree = "<group>"; };
+		F92CC0E31A59CB7600AA0B70 /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
+		F92CC0E41A59CB7600AA0B70 /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
+		F92CC0E51A59CB7600AA0B70 /* SettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		F95F300C1A57262D00D2CC3B /* Beckon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beckon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95F30101A57262D00D2CC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F95F30111A57262D00D2CC3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -160,6 +165,9 @@
 				F92CC0AB1A5891F900AA0B70 /* OverviewVC.h */,
 				F92CC0AC1A5891F900AA0B70 /* OverviewVC.m */,
 				F92CC0AD1A5891F900AA0B70 /* OverviewVC.xib */,
+				F92CC0E31A59CB7600AA0B70 /* SettingsVC.h */,
+				F92CC0E41A59CB7600AA0B70 /* SettingsVC.m */,
+				F92CC0E51A59CB7600AA0B70 /* SettingsVC.xib */,
 			);
 			name = "Main scenes";
 			sourceTree = "<group>";
@@ -386,6 +394,7 @@
 				F92CC0DA1A599ED000AA0B70 /* AddFriendStep1VC.xib in Resources */,
 				F95F301D1A57262D00D2CC3B /* Images.xcassets in Resources */,
 				F92CC0BD1A596F5600AA0B70 /* CreateBeckonStep1VC.xib in Resources */,
+				F92CC0E71A59CB7600AA0B70 /* SettingsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +450,7 @@
 				F92CC0C11A596F6E00AA0B70 /* CreateBeckonStep2VC.m in Sources */,
 				F92CC0BC1A596F5600AA0B70 /* CreateBeckonStep1VC.m in Sources */,
 				F92CC0A91A5890BB00AA0B70 /* FriendsVC.m in Sources */,
+				F92CC0E61A59CB7600AA0B70 /* SettingsVC.m in Sources */,
 				F92CC0DE1A599EE200AA0B70 /* AddFriendStep2VC.m in Sources */,
 				F92CC0D51A599EA900AA0B70 /* AddFriendSwipeVC.m in Sources */,
 				F960A7551A57285E000BB047 /* MainSwipeVC.m in Sources */,
