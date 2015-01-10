@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F86B5F92F994ED81B331AF04 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44392AE8194A2CA435B8E275 /* libPods.a */; };
+		F92811451A618C220073B33E /* AddFriendStep1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92811431A618C220073B33E /* AddFriendStep1VC.xib */; };
+		F92811461A618C220073B33E /* AddFriendStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92811441A618C220073B33E /* AddFriendStep2VC.xib */; };
+		F92811491A618CD20073B33E /* AddFriendNC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92811481A618CD20073B33E /* AddFriendNC.m */; };
 		F92CC0991A581CDF00AA0B70 /* BeckonsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0971A581CDF00AA0B70 /* BeckonsVC.m */; };
 		F92CC09A1A581CDF00AA0B70 /* BeckonsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0981A581CDF00AA0B70 /* BeckonsVC.xib */; };
 		F92CC0A91A5890BB00AA0B70 /* FriendsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0A71A5890BB00AA0B70 /* FriendsVC.m */; };
@@ -24,11 +27,8 @@
 		F92CC0C71A597E0800AA0B70 /* CreateBeckonStep3VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0C51A597E0800AA0B70 /* CreateBeckonStep3VC.xib */; };
 		F92CC0D01A597EB500AA0B70 /* CreateBeckonStep4VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0CE1A597EB500AA0B70 /* CreateBeckonStep4VC.m */; };
 		F92CC0D11A597EB500AA0B70 /* CreateBeckonStep4VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0CF1A597EB500AA0B70 /* CreateBeckonStep4VC.xib */; };
-		F92CC0D51A599EA900AA0B70 /* AddFriendSwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0D41A599EA900AA0B70 /* AddFriendSwipeVC.m */; };
 		F92CC0D91A599ED000AA0B70 /* AddFriendStep1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0D71A599ED000AA0B70 /* AddFriendStep1VC.m */; };
-		F92CC0DA1A599ED000AA0B70 /* AddFriendStep1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0D81A599ED000AA0B70 /* AddFriendStep1VC.xib */; };
 		F92CC0DE1A599EE200AA0B70 /* AddFriendStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0DC1A599EE200AA0B70 /* AddFriendStep2VC.m */; };
-		F92CC0DF1A599EE200AA0B70 /* AddFriendStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0DD1A599EE200AA0B70 /* AddFriendStep2VC.xib */; };
 		F92CC0E21A59A52300AA0B70 /* SwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0E11A59A52300AA0B70 /* SwipeVC.m */; };
 		F92CC0E61A59CB7600AA0B70 /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0E41A59CB7600AA0B70 /* SettingsVC.m */; };
 		F92CC0E71A59CB7600AA0B70 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0E51A59CB7600AA0B70 /* SettingsVC.xib */; };
@@ -57,6 +57,10 @@
 		153D9C6F3363723670029AF8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		44392AE8194A2CA435B8E275 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C48ADF593C1D89D1A6F65F7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F92811431A618C220073B33E /* AddFriendStep1VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendStep1VC.xib; sourceTree = "<group>"; };
+		F92811441A618C220073B33E /* AddFriendStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendStep2VC.xib; sourceTree = "<group>"; };
+		F92811471A618CD20073B33E /* AddFriendNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendNC.h; sourceTree = "<group>"; };
+		F92811481A618CD20073B33E /* AddFriendNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendNC.m; sourceTree = "<group>"; };
 		F92CC0961A581CDF00AA0B70 /* BeckonsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckonsVC.h; sourceTree = "<group>"; };
 		F92CC0971A581CDF00AA0B70 /* BeckonsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckonsVC.m; sourceTree = "<group>"; };
 		F92CC0981A581CDF00AA0B70 /* BeckonsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeckonsVC.xib; sourceTree = "<group>"; };
@@ -81,14 +85,10 @@
 		F92CC0CD1A597EB500AA0B70 /* CreateBeckonStep4VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonStep4VC.h; sourceTree = "<group>"; };
 		F92CC0CE1A597EB500AA0B70 /* CreateBeckonStep4VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonStep4VC.m; sourceTree = "<group>"; };
 		F92CC0CF1A597EB500AA0B70 /* CreateBeckonStep4VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateBeckonStep4VC.xib; sourceTree = "<group>"; };
-		F92CC0D31A599EA900AA0B70 /* AddFriendSwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendSwipeVC.h; sourceTree = "<group>"; };
-		F92CC0D41A599EA900AA0B70 /* AddFriendSwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendSwipeVC.m; sourceTree = "<group>"; };
 		F92CC0D61A599ED000AA0B70 /* AddFriendStep1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendStep1VC.h; sourceTree = "<group>"; };
 		F92CC0D71A599ED000AA0B70 /* AddFriendStep1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendStep1VC.m; sourceTree = "<group>"; };
-		F92CC0D81A599ED000AA0B70 /* AddFriendStep1VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendStep1VC.xib; sourceTree = "<group>"; };
 		F92CC0DB1A599EE200AA0B70 /* AddFriendStep2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendStep2VC.h; sourceTree = "<group>"; };
 		F92CC0DC1A599EE200AA0B70 /* AddFriendStep2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendStep2VC.m; sourceTree = "<group>"; };
-		F92CC0DD1A599EE200AA0B70 /* AddFriendStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendStep2VC.xib; sourceTree = "<group>"; };
 		F92CC0E01A59A52300AA0B70 /* SwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeVC.h; sourceTree = "<group>"; };
 		F92CC0E11A59A52300AA0B70 /* SwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeVC.m; sourceTree = "<group>"; };
 		F92CC0E31A59CB7600AA0B70 /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
@@ -224,14 +224,14 @@
 		F92CC0D21A599E8A00AA0B70 /* Add Friend scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F92CC0D31A599EA900AA0B70 /* AddFriendSwipeVC.h */,
-				F92CC0D41A599EA900AA0B70 /* AddFriendSwipeVC.m */,
 				F92CC0D61A599ED000AA0B70 /* AddFriendStep1VC.h */,
 				F92CC0D71A599ED000AA0B70 /* AddFriendStep1VC.m */,
-				F92CC0D81A599ED000AA0B70 /* AddFriendStep1VC.xib */,
+				F92811431A618C220073B33E /* AddFriendStep1VC.xib */,
 				F92CC0DB1A599EE200AA0B70 /* AddFriendStep2VC.h */,
 				F92CC0DC1A599EE200AA0B70 /* AddFriendStep2VC.m */,
-				F92CC0DD1A599EE200AA0B70 /* AddFriendStep2VC.xib */,
+				F92811441A618C220073B33E /* AddFriendStep2VC.xib */,
+				F92811471A618CD20073B33E /* AddFriendNC.h */,
+				F92811481A618CD20073B33E /* AddFriendNC.m */,
 			);
 			name = "Add Friend scenes";
 			sourceTree = "<group>";
@@ -383,15 +383,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F92CC09A1A581CDF00AA0B70 /* BeckonsVC.xib in Resources */,
-				F92CC0DF1A599EE200AA0B70 /* AddFriendStep2VC.xib in Resources */,
+				F92811461A618C220073B33E /* AddFriendStep2VC.xib in Resources */,
 				F92CC0D11A597EB500AA0B70 /* CreateBeckonStep4VC.xib in Resources */,
 				F92CC0AA1A5890BB00AA0B70 /* FriendsVC.xib in Resources */,
 				F95F301B1A57262D00D2CC3B /* Main.storyboard in Resources */,
+				F92811451A618C220073B33E /* AddFriendStep1VC.xib in Resources */,
 				F92CC0AF1A5891F900AA0B70 /* OverviewVC.xib in Resources */,
 				F95F30201A57262D00D2CC3B /* LaunchScreen.xib in Resources */,
 				F92CC0C21A596F6E00AA0B70 /* CreateBeckonStep2VC.xib in Resources */,
 				F92CC0C71A597E0800AA0B70 /* CreateBeckonStep3VC.xib in Resources */,
-				F92CC0DA1A599ED000AA0B70 /* AddFriendStep1VC.xib in Resources */,
 				F95F301D1A57262D00D2CC3B /* Images.xcassets in Resources */,
 				F92CC0BD1A596F5600AA0B70 /* CreateBeckonStep1VC.xib in Resources */,
 				F92CC0E71A59CB7600AA0B70 /* SettingsVC.xib in Resources */,
@@ -449,10 +449,10 @@
 				F92CC0B81A596F1300AA0B70 /* CreateBeckonSwipeVC.m in Sources */,
 				F92CC0C11A596F6E00AA0B70 /* CreateBeckonStep2VC.m in Sources */,
 				F92CC0BC1A596F5600AA0B70 /* CreateBeckonStep1VC.m in Sources */,
+				F92811491A618CD20073B33E /* AddFriendNC.m in Sources */,
 				F92CC0A91A5890BB00AA0B70 /* FriendsVC.m in Sources */,
 				F92CC0E61A59CB7600AA0B70 /* SettingsVC.m in Sources */,
 				F92CC0DE1A599EE200AA0B70 /* AddFriendStep2VC.m in Sources */,
-				F92CC0D51A599EA900AA0B70 /* AddFriendSwipeVC.m in Sources */,
 				F960A7551A57285E000BB047 /* MainSwipeVC.m in Sources */,
 				F92CC0D01A597EB500AA0B70 /* CreateBeckonStep4VC.m in Sources */,
 				F92CC0C61A597E0800AA0B70 /* CreateBeckonStep3VC.m in Sources */,
@@ -575,6 +575,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -636,6 +637,77 @@
 			};
 			name = Release;
 		};
+		F9B3534C1A5DE265006342C6 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Test;
+		};
+		F9B3534D1A5DE265006342C6 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 153D9C6F3363723670029AF8 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Beckon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Test;
+		};
+		F9B3534E1A5DE265006342C6 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BeckonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beckon.app/Beckon";
+			};
+			name = Test;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -643,6 +715,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F95F302D1A57262D00D2CC3B /* Debug */,
+				F9B3534C1A5DE265006342C6 /* Test */,
 				F95F302E1A57262D00D2CC3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -652,6 +725,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F95F30301A57262D00D2CC3B /* Debug */,
+				F9B3534D1A5DE265006342C6 /* Test */,
 				F95F30311A57262D00D2CC3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -661,6 +735,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F95F30331A57262D00D2CC3B /* Debug */,
+				F9B3534E1A5DE265006342C6 /* Test */,
 				F95F30341A57262D00D2CC3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

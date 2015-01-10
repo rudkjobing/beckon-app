@@ -60,7 +60,7 @@
                                  @"phoneNumber": phoneNumber,
                                  @"firstName": firstName,
                                  @"password": password};
-    [manager POST:@"http://ec2-54-93-48-106.eu-central-1.compute.amazonaws.com:9000/account/signUp" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://localhost:9000/account/signUp" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
         [self dismissViewControllerAnimated:YES completion:nil];
 //        NSLog(@"JSON: %@", responseObject);

@@ -7,13 +7,11 @@
 //
 
 #import "AddFriendStep2VC.h"
-#import "AddFriendSwipeVC.h"
 
 @interface AddFriendStep2VC ()
 
 @property (strong, nonatomic) UIBarButtonItem *previousButton;
 @property (strong, nonatomic) UIBarButtonItem *doneButton;
-@property (strong, nonatomic) AddFriendSwipeVC *swipeVC;
 
 @end
 
@@ -21,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.swipeVC = (AddFriendSwipeVC*)self.parentViewController.parentViewController;
     
     self.navigationItem.title = @"Title";
     
@@ -36,11 +33,11 @@
 }
 
 - (void) previous{
-    [self.swipeVC swipeToPrevious:self.parentViewController];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void) done{
-    [self.swipeVC dismissViewControllerAnimated:YES completion:nil];
+    [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

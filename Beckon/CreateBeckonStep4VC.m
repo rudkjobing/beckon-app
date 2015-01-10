@@ -30,7 +30,7 @@
     self.previousButton.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem = self.previousButton;
     
-    self.doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(done)];
+    self.doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Create" style:UIBarButtonItemStylePlain target:self action:@selector(done)];
     self.doneButton.tintColor = [UIColor blackColor];
     self.navigationItem.rightBarButtonItem = self.doneButton;
     

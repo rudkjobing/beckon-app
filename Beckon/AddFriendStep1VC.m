@@ -7,13 +7,17 @@
 //
 
 #import "AddFriendStep1VC.h"
-#import "AddFriendSwipeVC.h"
+#import "AddFriendStep2VC.h"
+#import "AFNetworking.h"
 
 @interface AddFriendStep1VC ()
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) UIBarButtonItem *cancelButton;
 @property (strong, nonatomic) UIBarButtonItem *nextButton;
-@property (strong, nonatomic) AddFriendSwipeVC *swipeVC;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (strong, nonatomic) NSString *searchedText;
+@property (assign) BOOL *isSearching;
 
 @end
 
@@ -21,8 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.swipeVC = (AddFriendSwipeVC*)self.parentViewController.parentViewController;
-    
+    self.isSearching = NO;
     self.cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     self.cancelButton.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem = self.cancelButton;
@@ -34,11 +37,40 @@
 }
 
 - (void) cancel{
-    [self.swipeVC dismissViewControllerAnimated:YES completion:nil];
+    [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) next{
-    [self.swipeVC swipeToNext:self.parentViewController];
+    AddFriendStep2VC *step2 = [AddFriendStep2VC new];
+    [self.navigationController pushViewController:step2 animated:YES];
+}
+
+- (IBAction)searchTextChanged:(id)sender {
+    NSLog(@"asd");
+//    if(!self.isSearching && self.searchedText.length > 2){
+        [self searchForFriends];
+//    }
+}
+
+-(void)searchForFriends{
+    [self.spinner startAnimating];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSDictionary *parameters = @{@"searchString": self.searchTextField.text};
+    [manager POST:@"http://localhost:9000/users/search" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSLog(@"JSON: %@", responseObject);
+         [self.spinner stopAnimating];
+     }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         [self.spinner stopAnimating];
+         NSInteger statusCode = operation.response.statusCode;
+         if(statusCode == 401) {
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
+         }
+     }];
+    
 }
 
 @end

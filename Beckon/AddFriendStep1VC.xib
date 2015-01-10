@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddFriendStep1VC">
             <connections>
+                <outlet property="searchTextField" destination="hG7-6W-Amy" id="NEG-vc-oUE"/>
+                <outlet property="spinner" destination="706-l8-r0m" id="XGj-Ns-FKN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,11 +20,21 @@
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="searchTextChanged:" destination="-1" eventType="editingChanged" id="ZGR-RX-WUB"/>
+                    </connections>
                 </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RNy-xI-ybd">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="706-l8-r0m">
+                    <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                    <color key="color" red="0.01493748254" green="0.1571372982" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="182" y="436" width="37" height="37"/>
+                    </variation>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -39,6 +51,7 @@
                 <mask key="subviews">
                     <exclude reference="hG7-6W-Amy"/>
                     <exclude reference="RNy-xI-ybd"/>
+                    <exclude reference="706-l8-r0m"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="33P-Ee-nJM"/>
@@ -54,6 +67,7 @@
                 <mask key="subviews">
                     <include reference="hG7-6W-Amy"/>
                     <include reference="RNy-xI-ybd"/>
+                    <include reference="706-l8-r0m"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="33P-Ee-nJM"/>
@@ -65,7 +79,7 @@
                     <include reference="pXx-km-Fwn"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="539" y="438"/>
+            <point key="canvasLocation" x="369" y="398"/>
         </view>
     </objects>
 </document>

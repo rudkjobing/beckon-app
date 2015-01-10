@@ -7,8 +7,9 @@
 //
 
 #import "FriendsVC.h"
-#import "AddFriendSwipeVC.h"
 #import "AFNetworking.h"
+#import "AddFriendStep1VC.h"
+#import "AddFriendNC.h"
 
 @interface FriendsVC ()
 
@@ -28,15 +29,20 @@
 }
 
 - (void)addFriend{
-    AddFriendSwipeVC *addFriendModal = [AddFriendSwipeVC new];
-    [self presentViewController:addFriendModal animated:YES completion:nil];
+    AddFriendStep1VC *step1 = [AddFriendStep1VC new];
+    AddFriendNC *navCon = [[AddFriendNC alloc] initWithRootViewController:step1];
+    [self presentViewController:navCon animated:YES completion:nil];
 }
 
--(void)getBeckons{
+- (void)viewDidAppear:(BOOL)animated{
+    [self getFriendships];
+}
+
+-(void)getFriendships{
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager GET:@"http://ec2-54-93-48-106.eu-central-1.compute.amazonaws.com:9000/friendships" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://localhost:9000/friendships" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
          [self.spinner stopAnimating];
