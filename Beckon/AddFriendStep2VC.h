@@ -10,4 +10,6 @@
 
 @interface AddFriendStep2VC : UIViewController
 
+@property (strong,nonatomic) NSDictionary *user;
+
 @end

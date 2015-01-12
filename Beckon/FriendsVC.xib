@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsVC">
             <connections>
                 <outlet property="spinner" destination="MJy-5u-S8v" id="lsf-PD-mb4"/>
+                <outlet property="table" destination="smq-lm-cTe" id="eUl-9K-aQ7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

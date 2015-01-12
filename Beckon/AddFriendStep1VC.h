@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddFriendStep1VC : UIViewController
+@interface AddFriendStep1VC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

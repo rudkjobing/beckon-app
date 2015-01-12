@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -28,7 +28,9 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ZcT-pz-h1b" secondAttribute="bottom" id="684-3b-EIj"/>
                 <constraint firstAttribute="trailing" secondItem="ZcT-pz-h1b" secondAttribute="trailing" id="6BD-xm-FCu"/>
+                <constraint firstAttribute="centerX" secondItem="OuC-yT-NJZ" secondAttribute="centerX" constant="-8.5" id="Acj-Xi-Y1b"/>
                 <constraint firstItem="OuC-yT-NJZ" firstAttribute="centerX" secondItem="ZcT-pz-h1b" secondAttribute="centerX" constant="8.5" id="amk-M4-pbA"/>
+                <constraint firstAttribute="centerY" secondItem="OuC-yT-NJZ" secondAttribute="centerY" constant="-8.5" id="hnx-fq-cr0"/>
                 <constraint firstItem="ZcT-pz-h1b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pm4-i0-f0e"/>
                 <constraint firstItem="OuC-yT-NJZ" firstAttribute="centerY" secondItem="ZcT-pz-h1b" secondAttribute="centerY" constant="8.5" id="qdZ-5l-ZQK"/>
                 <constraint firstItem="ZcT-pz-h1b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ueJ-P2-vIL"/>
@@ -39,12 +41,14 @@
                     <exclude reference="OuC-yT-NJZ"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="amk-M4-pbA"/>
-                    <exclude reference="qdZ-5l-ZQK"/>
                     <exclude reference="684-3b-EIj"/>
                     <exclude reference="6BD-xm-FCu"/>
                     <exclude reference="pm4-i0-f0e"/>
                     <exclude reference="ueJ-P2-vIL"/>
+                    <exclude reference="Acj-Xi-Y1b"/>
+                    <exclude reference="amk-M4-pbA"/>
+                    <exclude reference="hnx-fq-cr0"/>
+                    <exclude reference="qdZ-5l-ZQK"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -53,12 +57,14 @@
                     <include reference="OuC-yT-NJZ"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="amk-M4-pbA"/>
-                    <include reference="qdZ-5l-ZQK"/>
                     <include reference="684-3b-EIj"/>
                     <include reference="6BD-xm-FCu"/>
                     <include reference="pm4-i0-f0e"/>
                     <include reference="ueJ-P2-vIL"/>
+                    <include reference="Acj-Xi-Y1b"/>
+                    <include reference="amk-M4-pbA"/>
+                    <include reference="hnx-fq-cr0"/>
+                    <include reference="qdZ-5l-ZQK"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="377" y="540"/>

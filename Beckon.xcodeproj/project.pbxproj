@@ -41,6 +41,8 @@
 		F960A7551A57285E000BB047 /* MainSwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A74E1A57285E000BB047 /* MainSwipeVC.m */; };
 		F960A7571A57285E000BB047 /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7521A57285E000BB047 /* SignInVC.m */; };
 		F960A7581A57285E000BB047 /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7541A57285E000BB047 /* SignUpVC.m */; };
+		F9DCFB331A63205D00B58029 /* FriendRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB311A63205D00B58029 /* FriendRequestCell.m */; };
+		F9DCFB341A63205D00B58029 /* FriendRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,9 @@
 		F960A7521A57285E000BB047 /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInVC.m; sourceTree = "<group>"; };
 		F960A7531A57285E000BB047 /* SignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpVC.h; sourceTree = "<group>"; };
 		F960A7541A57285E000BB047 /* SignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpVC.m; sourceTree = "<group>"; };
+		F9DCFB301A63205D00B58029 /* FriendRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendRequestCell.h; sourceTree = "<group>"; };
+		F9DCFB311A63205D00B58029 /* FriendRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendRequestCell.m; sourceTree = "<group>"; };
+		F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendRequestCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +264,7 @@
 		F95F300E1A57262D00D2CC3B /* Beckon */ = {
 			isa = PBXGroup;
 			children = (
+				F9DCFB2A1A631A3500B58029 /* Cells */,
 				F92CC0B41A596DFA00AA0B70 /* Detail scenes */,
 				F92CC0B31A58941100AA0B70 /* Supporting scenes */,
 				F92CC0B21A5893EC00AA0B70 /* Account scenes */,
@@ -298,6 +304,16 @@
 				F95F302A1A57262D00D2CC3B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9DCFB2A1A631A3500B58029 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F9DCFB301A63205D00B58029 /* FriendRequestCell.h */,
+				F9DCFB311A63205D00B58029 /* FriendRequestCell.m */,
+				F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +411,7 @@
 				F95F301D1A57262D00D2CC3B /* Images.xcassets in Resources */,
 				F92CC0BD1A596F5600AA0B70 /* CreateBeckonStep1VC.xib in Resources */,
 				F92CC0E71A59CB7600AA0B70 /* SettingsVC.xib in Resources */,
+				F9DCFB341A63205D00B58029 /* FriendRequestCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +478,7 @@
 				F960A7571A57285E000BB047 /* SignInVC.m in Sources */,
 				F92CC0D91A599ED000AA0B70 /* AddFriendStep1VC.m in Sources */,
 				F92CC0AE1A5891F900AA0B70 /* OverviewVC.m in Sources */,
+				F9DCFB331A63205D00B58029 /* FriendRequestCell.m in Sources */,
 				F95F30151A57262D00D2CC3B /* AppDelegate.m in Sources */,
 				F95F30121A57262D00D2CC3B /* main.m in Sources */,
 			);

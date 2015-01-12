@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
 
 @end
 
@@ -25,10 +26,7 @@
 }
 
 - (IBAction)signUpAction:(UIButton *)sender {
-    [self signUpWithEmail:self.emailTextField.text
-              phoneNumber:self.phoneNumberTextField.text
-                firstName:self.firstNameTextField.text
-              andPassword:self.passwordTextField.text];
+    [self signUpWithEmail];
 }
 
 - (void)viewDidLoad {
@@ -51,15 +49,16 @@
 }
 */
 
--(void)signUpWithEmail:(NSString*)email phoneNumber:(NSString*)phoneNumber firstName:(NSString*)firstName andPassword:(NSString*)password{
+-(void)signUpWithEmail{
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
 //    manager.responseSerializer = [JSONResponseSerializerWithData serializer];
-    NSDictionary *parameters = @{@"email": email,
-                                 @"phoneNumber": phoneNumber,
-                                 @"firstName": firstName,
-                                 @"password": password};
+    NSDictionary *parameters = @{@"email": self.emailTextField.text,
+                                 @"phoneNumber": self.phoneNumberTextField.text,
+                                 @"firstName": self.firstNameTextField.text,
+                                 @"lastName": self.lastNameTextField.text,
+                                 @"password": self.passwordTextField.text};
     [manager POST:@"http://localhost:9000/account/signUp" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
         [self dismissViewControllerAnimated:YES completion:nil];

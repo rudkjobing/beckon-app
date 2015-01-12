@@ -7,7 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddFriendStep1VC">
             <connections>
                 <outlet property="searchTextField" destination="hG7-6W-Amy" id="NEG-vc-oUE"/>
-                <outlet property="spinner" destination="706-l8-r0m" id="XGj-Ns-FKN"/>
+                <outlet property="spinner" destination="Kgj-hy-L8n" id="mrr-Fq-hFN"/>
+                <outlet property="table" destination="RNy-xI-ybd" id="7d2-OP-g2H"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,18 +29,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="706-l8-r0m">
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Kgj-hy-L8n">
                     <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                     <color key="color" red="0.01493748254" green="0.1571372982" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="182" y="436" width="37" height="37"/>
-                    </variation>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="hG7-6W-Amy" secondAttribute="trailing" constant="8" id="33P-Ee-nJM"/>
+                <constraint firstAttribute="centerY" secondItem="Kgj-hy-L8n" secondAttribute="centerY" constant="-54.5" id="A65-3S-PaA"/>
                 <constraint firstItem="RNy-xI-ybd" firstAttribute="top" secondItem="hG7-6W-Amy" secondAttribute="bottom" constant="8" id="DBR-3h-8Ul"/>
+                <constraint firstAttribute="centerX" secondItem="Kgj-hy-L8n" secondAttribute="centerX" constant="-0.5" id="E6F-dI-PDl"/>
                 <constraint firstItem="hG7-6W-Amy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="Qzo-Bt-edr"/>
                 <constraint firstAttribute="bottom" secondItem="RNy-xI-ybd" secondAttribute="bottom" id="S03-qb-aiJ"/>
                 <constraint firstAttribute="trailing" secondItem="RNy-xI-ybd" secondAttribute="trailing" id="cUy-Xk-Lza"/>
@@ -51,7 +51,7 @@
                 <mask key="subviews">
                     <exclude reference="hG7-6W-Amy"/>
                     <exclude reference="RNy-xI-ybd"/>
-                    <exclude reference="706-l8-r0m"/>
+                    <exclude reference="Kgj-hy-L8n"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="33P-Ee-nJM"/>
@@ -61,13 +61,15 @@
                     <exclude reference="S03-qb-aiJ"/>
                     <exclude reference="cUy-Xk-Lza"/>
                     <exclude reference="pXx-km-Fwn"/>
+                    <exclude reference="A65-3S-PaA"/>
+                    <exclude reference="E6F-dI-PDl"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="hG7-6W-Amy"/>
                     <include reference="RNy-xI-ybd"/>
-                    <include reference="706-l8-r0m"/>
+                    <include reference="Kgj-hy-L8n"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="33P-Ee-nJM"/>
@@ -77,6 +79,8 @@
                     <include reference="S03-qb-aiJ"/>
                     <include reference="cUy-Xk-Lza"/>
                     <include reference="pXx-km-Fwn"/>
+                    <include reference="A65-3S-PaA"/>
+                    <include reference="E6F-dI-PDl"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="369" y="398"/>
