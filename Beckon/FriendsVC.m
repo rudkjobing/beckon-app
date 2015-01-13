@@ -7,9 +7,11 @@
 //
 
 #import "FriendsVC.h"
+#import "FriendVC.h"
 #import "AFNetworking.h"
 #import "AddFriendStep1VC.h"
 #import "AddFriendNC.h"
+#import "FriendCell.h"
 
 @interface FriendsVC ()
 
@@ -17,6 +19,9 @@
 @property (strong, nonatomic) UIBarButtonItem *addButton;
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) NSArray *friends;
+@property (strong, nonatomic) NSArray *friendsFiltered;
+@property (strong, nonatomic) NSString *currentFilter;
+@property (weak, nonatomic) IBOutlet UITextField *filter;
 
 @end
 
@@ -31,17 +36,42 @@
     self.navigationItem.rightBarButtonItem = self.addButton;
     self.navigationItem.title = @"Friends";
     [self.table registerClass:[FriendRequestCell class] forCellReuseIdentifier:@"FriendRequestCell"];
+    [self.table registerClass:[FriendCell class] forCellReuseIdentifier:@"FriendCell"];
+    [self getFriendships];
+}
+
+- (IBAction)filterTyped:(id)sender {
+    self.currentFilter = [self.filter.text lowercaseString];
+    if([self.currentFilter isEqualToString:@""]){
+        self.friendsFiltered = [self.friends copy];
+    }
+    else{
+        NSMutableArray *friendsNewFilter = [NSMutableArray new];
+        for(NSDictionary *friend in self.friends){
+            NSDictionary *user = [friend objectForKey:@"friend"];
+            NSString *nickname = [[friend objectForKey:@"nickname"] lowercaseString];
+            NSString *email = [[user objectForKey:@"email"] lowercaseString];
+            NSString *firstName = [[user objectForKey:@"firstName"] lowercaseString];
+            NSString *lastName = [[user objectForKey:@"lastName"] lowercaseString];
+            if([email hasPrefix:self.currentFilter] || [nickname hasPrefix:self.currentFilter] || [firstName hasPrefix:self.currentFilter] || [lastName hasPrefix:self.currentFilter]){
+                [friendsNewFilter addObject:friend];
+            }
+        }
+        self.friendsFiltered = [friendsNewFilter copy];
+    }
+    [self.table reloadData];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.friends.count;
+    return self.friendsFiltered.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSDictionary *friend = [self.friends objectAtIndex:indexPath.row];
+    NSDictionary *friend = [self.friendsFiltered objectAtIndex:indexPath.row];
+    /* Present the friendrequest cell if this is a friend request */
     if([[friend objectForKey:@"status"] isEqualToString:@"PENDING"]){
         static NSString *cellIdentifier = @"FriendRequestCell";
         [tableView registerNib:[UINib nibWithNibName:@"FriendRequestCell" bundle: nil] forCellReuseIdentifier:@"FriendRequestCell"];
@@ -51,24 +81,35 @@
         }
         cell.delegate = self;
         NSDictionary *user = [friend objectForKey:@"friend"];
-        cell.name.text = [user objectForKey:@"firstName"];
-        cell.friend = friend;
+        cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
         return cell;
     }
+    /* Or present a normal friend cell if the friendship is established */
     else{
         static NSString *cellIdentifier = @"FriendCell";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        [tableView registerNib:[UINib nibWithNibName:@"FriendCell" bundle: nil] forCellReuseIdentifier:@"FriendCell"];
+        FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+            cell = [tableView dequeueReusableCellWithIdentifier:@"FriendCell"];
         }
-        cell.textLabel.text = [friend objectForKey:@"nickname"];
+        NSDictionary *user = [friend objectForKey:@"friend"];
+        cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
+        cell.email.text = [user objectForKey:@"email"];
+        cell.phoneNumber.text = [user objectForKey:@"phoneNumber"];
+        cell.nickname.text = [friend objectForKey:@"nickname"];
         return cell;
+
     }
     return nil;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //Goto the selected friend
+    NSDictionary *friend = [self.friendsFiltered objectAtIndex:indexPath.row];
+    if([[friend objectForKey:@"status"] isEqualToString:@"ACCEPTED"]){
+        FriendVC *friendVC = [FriendVC new];
+        friendVC.friend = friend;
+        [self.navigationController pushViewController:friendVC animated:YES];
+    }
 }
 
 -(void)acceptFriendRequestAction:(id)sender{
@@ -124,7 +165,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [self getFriendships];
+    
 }
 
 -(void)getFriendships{
@@ -136,6 +177,7 @@
      {
          NSLog(@"JSON: %@", responseObject);
          self.friends = responseObject;
+         self.friendsFiltered =  [self.friends copy];
          [self.table reloadData];
          [self.spinner stopAnimating];
      }

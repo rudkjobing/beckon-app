@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsVC">
             <connections>
+                <outlet property="filter" destination="yIr-so-HLS" id="5Dd-qL-j98"/>
                 <outlet property="spinner" destination="MJy-5u-S8v" id="lsf-PD-mb4"/>
                 <outlet property="table" destination="smq-lm-cTe" id="eUl-9K-aQ7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,6 +21,9 @@
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="filterTyped:" destination="-1" eventType="editingChanged" id="AQX-AG-NjK"/>
+                    </connections>
                 </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="smq-lm-cTe">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>

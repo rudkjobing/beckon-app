@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateBeckonStep2VC">
             <connections>
+                <outlet property="filter" destination="LaZ-04-EhK" id="rWA-AU-Zmk"/>
+                <outlet property="spinner" destination="sAU-sd-MCJ" id="sWG-zn-fDr"/>
+                <outlet property="table" destination="oYE-6x-mOH" id="4dd-eb-1jB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,40 +17,73 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nCy-tk-j6k">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LaZ-04-EhK">
+                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="filterTyped:" destination="-1" eventType="editingChanged" id="HrN-Cl-rM6"/>
+                    </connections>
+                </textField>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sAU-sd-MCJ">
+                    <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                    <color key="color" red="0.01493748254" green="0.1571372982" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oYE-6x-mOH">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="nCy-tk-j6k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hnr-wk-Kmw"/>
-                <constraint firstItem="nCy-tk-j6k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pby-Ez-rbp"/>
-                <constraint firstAttribute="trailing" secondItem="nCy-tk-j6k" secondAttribute="trailing" id="Pwt-R3-jho"/>
-                <constraint firstAttribute="bottom" secondItem="nCy-tk-j6k" secondAttribute="bottom" id="Xz1-M9-Ths"/>
+                <constraint firstAttribute="bottom" secondItem="oYE-6x-mOH" secondAttribute="bottom" id="Rmf-aB-jgh"/>
+                <constraint firstAttribute="centerY" secondItem="sAU-sd-MCJ" secondAttribute="centerY" constant="0.5" id="Ul4-6e-Hji"/>
+                <constraint firstAttribute="centerX" secondItem="sAU-sd-MCJ" secondAttribute="centerX" constant="-0.5" id="d3p-Pu-cKd"/>
+                <constraint firstAttribute="trailing" secondItem="LaZ-04-EhK" secondAttribute="trailing" constant="8" id="hyK-7R-FT2"/>
+                <constraint firstItem="oYE-6x-mOH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l7W-42-Ecr"/>
+                <constraint firstAttribute="trailing" secondItem="oYE-6x-mOH" secondAttribute="trailing" id="ofa-mY-cSa"/>
+                <constraint firstItem="oYE-6x-mOH" firstAttribute="top" secondItem="LaZ-04-EhK" secondAttribute="bottom" constant="8" id="qf7-4L-zKy"/>
+                <constraint firstItem="LaZ-04-EhK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="tXm-9w-wFS"/>
+                <constraint firstItem="LaZ-04-EhK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="71" id="uzc-lA-QeS"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="nCy-tk-j6k"/>
+                    <exclude reference="LaZ-04-EhK"/>
+                    <exclude reference="sAU-sd-MCJ"/>
+                    <exclude reference="oYE-6x-mOH"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="Hnr-wk-Kmw"/>
-                    <exclude reference="Pby-Ez-rbp"/>
-                    <exclude reference="Pwt-R3-jho"/>
-                    <exclude reference="Xz1-M9-Ths"/>
+                    <exclude reference="hyK-7R-FT2"/>
+                    <exclude reference="tXm-9w-wFS"/>
+                    <exclude reference="uzc-lA-QeS"/>
+                    <exclude reference="Rmf-aB-jgh"/>
+                    <exclude reference="l7W-42-Ecr"/>
+                    <exclude reference="ofa-mY-cSa"/>
+                    <exclude reference="qf7-4L-zKy"/>
+                    <exclude reference="Ul4-6e-Hji"/>
+                    <exclude reference="d3p-Pu-cKd"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
-                    <include reference="nCy-tk-j6k"/>
+                    <include reference="LaZ-04-EhK"/>
+                    <include reference="sAU-sd-MCJ"/>
+                    <include reference="oYE-6x-mOH"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="Hnr-wk-Kmw"/>
-                    <include reference="Pby-Ez-rbp"/>
-                    <include reference="Pwt-R3-jho"/>
-                    <include reference="Xz1-M9-Ths"/>
+                    <include reference="hyK-7R-FT2"/>
+                    <include reference="tXm-9w-wFS"/>
+                    <include reference="uzc-lA-QeS"/>
+                    <include reference="Rmf-aB-jgh"/>
+                    <include reference="l7W-42-Ecr"/>
+                    <include reference="ofa-mY-cSa"/>
+                    <include reference="qf7-4L-zKy"/>
+                    <include reference="Ul4-6e-Hji"/>
+                    <include reference="d3p-Pu-cKd"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="366" y="409"/>
         </view>
     </objects>
 </document>

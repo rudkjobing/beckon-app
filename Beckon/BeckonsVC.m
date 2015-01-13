@@ -25,6 +25,7 @@
     self.addButton.tintColor = [UIColor blackColor];
     self.navigationItem.rightBarButtonItem = self.addButton;
     self.navigationItem.title = @"Beckons";
+    [self getBeckons];
 }
 
 - (void)addBeckon{
@@ -33,7 +34,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [self getBeckons];
+
 }
 
 -(void)getBeckons{

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FriendRequestCell.h"
 
-@interface CreateBeckonStep2VC : UIViewController
+@interface CreateBeckonStep2VC : UIViewController <UITableViewDataSource, UITableViewDelegate, FriendRequestCellDelegate>
 
 @end

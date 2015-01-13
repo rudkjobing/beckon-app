@@ -1,15 +1,15 @@
 //
-//  AddFriendStep2VC.m
+//  FriendVC.m
 //  Beckon
 //
-//  Created by Steffen Rudkjøbing on 04/01/15.
+//  Created by Steffen Rudkjøbing on 12/01/15.
 //  Copyright (c) 2015 Beckon IVS. All rights reserved.
 //
 
-#import "AddFriendStep2VC.h"
+#import "FriendVC.h"
 #import "AFNetworking.h"
 
-@interface AddFriendStep2VC ()
+@interface FriendVC ()
 
 @property (strong, nonatomic) UIBarButtonItem *previousButton;
 @property (strong, nonatomic) UIBarButtonItem *doneButton;
@@ -18,27 +18,30 @@
 @property (weak, nonatomic) IBOutlet UILabel *email;
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumber;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
-@property (weak, nonatomic) IBOutlet UILabel *errorLabel;
+@property (strong, nonatomic) NSDictionary *user;
+@property (strong, nonatomic) NSString *initialNickname;
 
 @end
 
-@implementation AddFriendStep2VC
+@implementation FriendVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Add friend";
+    self.navigationItem.title = @"Edit friend";
     
     self.previousButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self  action:@selector(previous)];
     self.previousButton.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem = self.previousButton;
     
-    self.doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(done)];
+    self.doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Update" style:UIBarButtonItemStylePlain target:self action:@selector(update)];
     self.doneButton.tintColor = [UIColor blackColor];
     self.navigationItem.rightBarButtonItem = self.doneButton;
     
-    self.nickname.text = [self.user objectForKey:@"firstName"];
-    self.name.text = [self.user objectForKey:@"firstName"];
+    self.user = [self.friend objectForKey:@"friend"];
+    
+    self.nickname.text = [self.friend objectForKey:@"nickname"];
+    self.name.text = [[[self.user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[self.user objectForKey:@"lastName"]];
     self.email.text = [self.user objectForKey:@"email"];
     self.phoneNumber.text = [self.user objectForKey:@"phoneNumber"];
     
@@ -48,26 +51,20 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
-- (void) done{
-    NSLog(@"OK");
-    if([self.nickname.text isEqualToString:@""]){
-        self.errorLabel.text = @"Please choose a nickname.";
-    }
-    else{
-        [self addFriend];
-    }
+- (void) update{
+    [self updateFriend];
 }
 
--(void)addFriend{
+-(void)updateFriend{
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    NSDictionary *parameters = @{@"userId": [self.user objectForKey:@"id"],
+    NSDictionary *parameters = @{@"friendId": [self.friend objectForKey:@"id"],
                                  @"nickname": self.nickname.text};
-    [manager PUT:@"http://localhost:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://localhost:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
-         [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
+         [self.navigationController popToRootViewControllerAnimated:YES];
      }
           failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {

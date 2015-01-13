@@ -10,8 +10,6 @@
 
 @interface CreateBeckonSwipeVC : SwipeVC
 
-@property (strong, nonatomic) NSDictionary *beckon;
-
-- (NSString *) commitBeckon;
+@property (strong, nonatomic) NSMutableDictionary *beckon;
 
 @end

@@ -43,6 +43,10 @@
 		F960A7581A57285E000BB047 /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7541A57285E000BB047 /* SignUpVC.m */; };
 		F9DCFB331A63205D00B58029 /* FriendRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB311A63205D00B58029 /* FriendRequestCell.m */; };
 		F9DCFB341A63205D00B58029 /* FriendRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */; };
+		F9DCFB381A640F2A00B58029 /* FriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB361A640F2A00B58029 /* FriendVC.m */; };
+		F9DCFB391A640F2A00B58029 /* FriendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DCFB371A640F2A00B58029 /* FriendVC.xib */; };
+		F9DCFB3E1A64143100B58029 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB3C1A64143100B58029 /* FriendCell.m */; };
+		F9DCFB3F1A64143100B58029 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DCFB3D1A64143100B58029 /* FriendCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,12 @@
 		F9DCFB301A63205D00B58029 /* FriendRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendRequestCell.h; sourceTree = "<group>"; };
 		F9DCFB311A63205D00B58029 /* FriendRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendRequestCell.m; sourceTree = "<group>"; };
 		F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendRequestCell.xib; sourceTree = "<group>"; };
+		F9DCFB351A640F2A00B58029 /* FriendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendVC.h; sourceTree = "<group>"; };
+		F9DCFB361A640F2A00B58029 /* FriendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendVC.m; sourceTree = "<group>"; };
+		F9DCFB371A640F2A00B58029 /* FriendVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendVC.xib; sourceTree = "<group>"; };
+		F9DCFB3B1A64143100B58029 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		F9DCFB3C1A64143100B58029 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		F9DCFB3D1A64143100B58029 /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +209,7 @@
 		F92CC0B41A596DFA00AA0B70 /* Detail scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F9DCFB3A1A640F3100B58029 /* Friend scenes */,
 				F92CC0D21A599E8A00AA0B70 /* Add Friend scenes */,
 				F92CC0B51A596E0300AA0B70 /* Create Beckon scenes */,
 			);
@@ -312,8 +323,21 @@
 				F9DCFB301A63205D00B58029 /* FriendRequestCell.h */,
 				F9DCFB311A63205D00B58029 /* FriendRequestCell.m */,
 				F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */,
+				F9DCFB3B1A64143100B58029 /* FriendCell.h */,
+				F9DCFB3C1A64143100B58029 /* FriendCell.m */,
+				F9DCFB3D1A64143100B58029 /* FriendCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		F9DCFB3A1A640F3100B58029 /* Friend scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F9DCFB351A640F2A00B58029 /* FriendVC.h */,
+				F9DCFB361A640F2A00B58029 /* FriendVC.m */,
+				F9DCFB371A640F2A00B58029 /* FriendVC.xib */,
+			);
+			name = "Friend scenes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,7 +427,9 @@
 				F92CC0D11A597EB500AA0B70 /* CreateBeckonStep4VC.xib in Resources */,
 				F92CC0AA1A5890BB00AA0B70 /* FriendsVC.xib in Resources */,
 				F95F301B1A57262D00D2CC3B /* Main.storyboard in Resources */,
+				F9DCFB391A640F2A00B58029 /* FriendVC.xib in Resources */,
 				F92811451A618C220073B33E /* AddFriendStep1VC.xib in Resources */,
+				F9DCFB3F1A64143100B58029 /* FriendCell.xib in Resources */,
 				F92CC0AF1A5891F900AA0B70 /* OverviewVC.xib in Resources */,
 				F95F30201A57262D00D2CC3B /* LaunchScreen.xib in Resources */,
 				F92CC0C21A596F6E00AA0B70 /* CreateBeckonStep2VC.xib in Resources */,
@@ -474,12 +500,14 @@
 				F92CC0D01A597EB500AA0B70 /* CreateBeckonStep4VC.m in Sources */,
 				F92CC0C61A597E0800AA0B70 /* CreateBeckonStep3VC.m in Sources */,
 				F92CC0991A581CDF00AA0B70 /* BeckonsVC.m in Sources */,
+				F9DCFB3E1A64143100B58029 /* FriendCell.m in Sources */,
 				F92CC0E21A59A52300AA0B70 /* SwipeVC.m in Sources */,
 				F960A7571A57285E000BB047 /* SignInVC.m in Sources */,
 				F92CC0D91A599ED000AA0B70 /* AddFriendStep1VC.m in Sources */,
 				F92CC0AE1A5891F900AA0B70 /* OverviewVC.m in Sources */,
 				F9DCFB331A63205D00B58029 /* FriendRequestCell.m in Sources */,
 				F95F30151A57262D00D2CC3B /* AppDelegate.m in Sources */,
+				F9DCFB381A640F2A00B58029 /* FriendVC.m in Sources */,
 				F95F30121A57262D00D2CC3B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

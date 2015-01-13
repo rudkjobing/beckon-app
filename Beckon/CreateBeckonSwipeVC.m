@@ -21,7 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.beckon = [NSDictionary new];
+    self.beckon = [NSMutableDictionary new];
+    NSMutableArray * members = [NSMutableArray new];
+    [self.beckon setValue:members forKey:@"members"];
     //Create the Step 1 controller
     CreateBeckonStep1VC *step1 = [CreateBeckonStep1VC new];
     UINavigationController *navCon1 = [[UINavigationController alloc]initWithRootViewController:step1];
@@ -37,15 +39,8 @@
     //Create the Step 4 controller
     CreateBeckonStep4VC *step4 = [CreateBeckonStep4VC new];
     UINavigationController *navCon4 = [[UINavigationController alloc] initWithRootViewController:step4];
-    
-
-    
-    self.viewControllers = @[navCon1, navCon2, navCon3, navCon4];
-}
-
-- (NSString *)commitBeckon {
         
-    return @"OK";
+    self.viewControllers = @[navCon1, navCon2, navCon3, navCon4];
 }
 
 @end
