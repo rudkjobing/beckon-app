@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSArray *friends;
 @property (strong, nonatomic) NSArray *friendsFiltered;
 @property (strong, nonatomic) NSString *currentFilter;
+@property (strong, nonatomic) NSMutableArray *beckonMembers;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UITextField *filter;
 
@@ -32,6 +33,8 @@
     self.table.delegate = self;
     self.table.dataSource = self;
 
+    self.beckonMembers = [NSMutableArray new];
+    
     self.swipeVC = (CreateBeckonSwipeVC*)self.parentViewController.parentViewController;
     
     self.navigationItem.title = @"Participants";
@@ -98,6 +101,12 @@
         cell.delegate = self;
         NSDictionary *user = [friend objectForKey:@"friend"];
         cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
+        if([self.beckonMembers containsObject:friend]){
+            cell.backgroundColor = [UIColor grayColor];
+        }
+        else{
+            cell.backgroundColor = [UIColor whiteColor];
+        }
         return cell;
     }
     /* Or present a normal friend cell if the friendship is established */
@@ -113,6 +122,12 @@
         cell.email.text = [user objectForKey:@"email"];
         cell.phoneNumber.text = [user objectForKey:@"phoneNumber"];
         cell.nickname.text = [friend objectForKey:@"nickname"];
+        if([self.beckonMembers containsObject:friend]){
+            cell.backgroundColor = [UIColor grayColor];
+        }
+        else{
+            cell.backgroundColor = [UIColor whiteColor];
+        }
         return cell;
         
     }
@@ -121,7 +136,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *friend = [self.friendsFiltered objectAtIndex:indexPath.row];
-    
+    if([self.beckonMembers containsObject:friend]){
+        [self.beckonMembers removeObject:friend];
+    }
+    else{
+        [self.beckonMembers addObject:friend];
+    }
+    [self.table reloadData];
 }
 
 -(void)acceptFriendRequestAction:(id)sender{
@@ -135,7 +156,7 @@
     [manager POST:@"http://localhost:9000/friend/accept" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
-         [self getFriendships];
+         [self getFriendships];//TODO Possible but when reloading friends, that may cause selected friends to corrupt
      }
           failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
@@ -158,7 +179,7 @@
     [manager POST:@"http://localhost:9000/friend/decline" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
-         [self getFriendships];
+         [self getFriendships];//TODO Possible but when reloading friends, that may cause selected friends to corrupt
      }
           failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
@@ -175,11 +196,12 @@
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager GET:@"http://localhost:9000/friendships" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+    NSDictionary *parameters = @{@"id": [NSNumber numberWithLong:0L]};
+    [manager GET:@"http://localhost:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
          self.friends = responseObject;
-         self.friendsFiltered = self.friends.copy;
+         self.friendsFiltered = [self.friends copy];
          [self.table reloadData];
          [self.spinner stopAnimating];
      }
