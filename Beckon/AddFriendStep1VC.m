@@ -85,7 +85,7 @@
     self.searchedText = self.searchTextField.text;
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    NSDictionary *parameters = @{@"searchString": self.searchedText};
+    NSDictionary *parameters = @{@"queryString": self.searchedText};
     [manager POST:@"http://localhost:9000/users/search" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];

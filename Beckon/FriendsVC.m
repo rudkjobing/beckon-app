@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSArray *friendsFiltered;
 @property (strong, nonatomic) NSString *currentFilter;
 @property (weak, nonatomic) IBOutlet UITextField *filter;
+@property (strong, nonatomic) NSNumber *latestFriendId;
 
 @end
 
@@ -29,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.latestFriendId = [NSNumber numberWithLong:(0L)];
     self.table.dataSource = self;
     self.table.delegate = self;
     self.addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFriend)];
@@ -37,7 +39,6 @@
     self.navigationItem.title = @"Friends";
     [self.table registerClass:[FriendRequestCell class] forCellReuseIdentifier:@"FriendRequestCell"];
     [self.table registerClass:[FriendCell class] forCellReuseIdentifier:@"FriendCell"];
-    [self getFriendships];
 }
 
 - (IBAction)filterTyped:(id)sender {
@@ -93,9 +94,16 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"FriendCell"];
         }
         NSDictionary *user = [friend objectForKey:@"friend"];
-        cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
-        cell.email.text = [user objectForKey:@"email"];
-        cell.phoneNumber.text = [user objectForKey:@"phoneNumber"];
+        if([[friend objectForKey:@"status"] isEqualToString:@"INVITED"]){
+            cell.name.text = @"";
+            cell.email.text = @"Awaiting approval";
+            cell.phoneNumber.text = @"";
+        }
+        else{
+            cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
+            cell.email.text = [user objectForKey:@"email"];
+            cell.phoneNumber.text = [user objectForKey:@"phoneNumber"];
+        }
         cell.nickname.text = [friend objectForKey:@"nickname"];
         return cell;
 
@@ -165,7 +173,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    
+    [self getFriendships];
 }
 
 -(void)getFriendships{
@@ -173,12 +181,32 @@
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager GET:@"http://localhost:9000/friendships" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+    NSDictionary *parameters = @{@"id": self.latestFriendId};
+    [manager GET:@"http://localhost:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         NSLog(@"JSON: %@", responseObject);
-         self.friends = responseObject;
-         self.friendsFiltered =  [self.friends copy];
-         [self.table reloadData];
+//         NSInteger statusCode = operation.response.statusCode;
+//         NSLog(@"JSON: %@", responseObject);
+//         NSLog(@"%ld", (long)statusCode);
+         
+         NSNumber *newestId = [self.latestFriendId copy];
+         for(NSDictionary *friend in responseObject){
+             NSNumber *id = [friend objectForKey:@"id"];
+             if([id longLongValue] > [newestId longLongValue]){
+                 newestId = id;
+             }
+         }
+         if([newestId longLongValue] > [self.latestFriendId longLongValue] && [self.latestFriendId longLongValue] == 0L){
+             self.friends = responseObject;
+             self.friendsFiltered =  [self.friends copy];
+             
+             [self.table reloadData];
+         }
+         else if([newestId longLongValue] > [self.latestFriendId longLongValue]){
+             self.friends = [self.friends arrayByAddingObjectsFromArray:responseObject];
+             self.friendsFiltered =  [self.friends copy];
+             [self.table reloadData];
+         }
+         self.latestFriendId = [newestId copy];
          [self.spinner stopAnimating];
      }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)
