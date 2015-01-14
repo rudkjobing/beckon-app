@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -55,7 +56,7 @@
                                     <rect key="frame" x="99" y="104" width="203" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ex7-nd-aIo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ex7-nd-aIo">
                                 <rect key="frame" x="199" y="104" width="203" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -136,6 +137,9 @@
                                 <exclude reference="Ex7-nd-aIo"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="9mo-09-DnC"/>
+                                <exclude reference="FQv-jj-axB"/>
+                                <exclude reference="knE-3g-7Ou"/>
                                 <exclude reference="CeD-pd-JEj"/>
                                 <exclude reference="NEv-LY-NRA"/>
                                 <exclude reference="jL4-9I-T54"/>
@@ -151,9 +155,6 @@
                                 <exclude reference="CcN-4A-bjo"/>
                                 <exclude reference="cgu-wk-AaU"/>
                                 <exclude reference="yBl-x9-U1o"/>
-                                <exclude reference="9mo-09-DnC"/>
-                                <exclude reference="FQv-jj-axB"/>
-                                <exclude reference="knE-3g-7Ou"/>
                                 <exclude reference="4q0-OD-Pkf"/>
                                 <exclude reference="WIs-83-Dyn"/>
                             </mask>
@@ -163,6 +164,9 @@
                                 <include reference="Ex7-nd-aIo"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="9mo-09-DnC"/>
+                                <include reference="FQv-jj-axB"/>
+                                <include reference="knE-3g-7Ou"/>
                                 <include reference="CeD-pd-JEj"/>
                                 <include reference="NEv-LY-NRA"/>
                                 <include reference="jL4-9I-T54"/>
@@ -178,9 +182,6 @@
                                 <include reference="CcN-4A-bjo"/>
                                 <include reference="cgu-wk-AaU"/>
                                 <include reference="yBl-x9-U1o"/>
-                                <include reference="9mo-09-DnC"/>
-                                <include reference="FQv-jj-axB"/>
-                                <include reference="knE-3g-7Ou"/>
                                 <include reference="4q0-OD-Pkf"/>
                                 <include reference="WIs-83-Dyn"/>
                             </mask>

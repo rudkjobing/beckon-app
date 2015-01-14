@@ -43,7 +43,8 @@
     UINavigationController *scene2 = [[UINavigationController alloc] initWithRootViewController:friends];
     
     //Create the Overview controller
-    OverviewVC *scene3 = [OverviewVC new];
+    OverviewVC *overview = [OverviewVC new];
+    UINavigationController *scene3 = [[UINavigationController alloc] initWithRootViewController:overview];
 
     //Create the Options controller
     SettingsVC *settings = [SettingsVC new];
@@ -55,11 +56,16 @@
 
 -(void)goToSignIn:(NSNotification*) notification{
     if(self.userLoggedIn){
+        BOOL t = [self presentedViewController] == nil;
         self.userLoggedIn = NO;
-        [self dismissViewControllerAnimated:NO completion:^{
+        if(t){
             [self performSegueWithIdentifier:@"goto_login" sender:self];
-        }];
-        
+        }
+        else{
+            [self.presentedViewController dismissViewControllerAnimated:NO completion:^{
+                [self performSegueWithIdentifier:@"goto_login" sender:self];
+            }];
+        }
     }
 }
 
