@@ -14,7 +14,7 @@
 #import "SettingsVC.h"
 
 @interface MainSwipeVC ()
-
+@property (nonatomic, assign)BOOL userLoggedIn;
 @end
 
 @implementation MainSwipeVC
@@ -26,7 +26,14 @@
      selector:@selector(goToSignIn:)
      name:@"UserUnautherized"
      object:nil];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(userLoggedInEvent:)
+     name:@"UserLoggedIn"
+     object:nil];
  
+    self.userLoggedIn = YES;
+    
     //Create the Beckons controller
     BeckonsVC *beckons = [BeckonsVC new];
     UINavigationController *scene1 = [[UINavigationController alloc]initWithRootViewController:beckons];
@@ -47,7 +54,17 @@
 }
 
 -(void)goToSignIn:(NSNotification*) notification{
-    [self performSegueWithIdentifier:@"goto_login" sender:self];
+    if(self.userLoggedIn){
+        self.userLoggedIn = NO;
+        [self dismissViewControllerAnimated:NO completion:^{
+            [self performSegueWithIdentifier:@"goto_login" sender:self];
+        }];
+        
+    }
+}
+
+-(void)userLoggedInEvent:(NSNotification*) notification{
+    self.userLoggedIn = YES;
 }
 
 @end

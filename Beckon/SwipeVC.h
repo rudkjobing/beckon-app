@@ -10,8 +10,8 @@
 
 @interface SwipeVC : YZSwipeBetweenViewController
 
-- (void)swipeToIndex: (NSInteger)index;
-- (void)swipeToNext: (id)sender;
-- (void)swipeToPrevious: (id)sender;
+- (void)swipeToIndex: (NSInteger)index sender:(id)sender;
+- (void)swipeToNext: (id)controllerToSwipe sender:(id)sender;
+- (void)swipeToPrevious: (id)controllerToSwipe sender:(id)sender;
 
 @end

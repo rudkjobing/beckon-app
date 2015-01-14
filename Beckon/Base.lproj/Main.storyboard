@@ -20,7 +20,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="A5R-Jg-nVI"/>
                     <connections>
-                        <segue destination="mwv-GP-smv" kind="presentation" identifier="goto_login" id="0EH-xS-JcQ"/>
+                        <segue destination="mwv-GP-smv" kind="presentation" identifier="goto_login" animates="NO" id="0EH-xS-JcQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

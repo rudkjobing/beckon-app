@@ -116,6 +116,7 @@
     if([[friend objectForKey:@"status"] isEqualToString:@"ACCEPTED"]){
         FriendVC *friendVC = [FriendVC new];
         friendVC.friend = friend;
+        self.latestFriendId = [NSNumber numberWithLong:(0L)];//Force a reload of friends after finished editing. In case changes were made.
         [self.navigationController pushViewController:friendVC animated:YES];
     }
 }

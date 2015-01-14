@@ -18,23 +18,23 @@
     [super viewDidLoad];
 }
 
-- (void)swipeToPrevious:(id)sender {
-    NSInteger currentIndex = [self.viewControllers indexOfObject:sender];
+- (void)swipeToPrevious:(id)controllerToSwipe sender:(id)sender {
+    NSInteger currentIndex = [self.viewControllers indexOfObject:controllerToSwipe];
     NSInteger newIndex = currentIndex - 1;
     if(currentIndex != 0){
         [self scrollToViewControllerAtIndex:newIndex animated:YES];
     }
 }
 
-- (void)swipeToNext:(id)sender {
-    NSInteger currentIndex = [self.viewControllers indexOfObject:sender];
+- (void)swipeToNext:(id)controllerToSwipe sender:(id)sender {
+    NSInteger currentIndex = [self.viewControllers indexOfObject:controllerToSwipe];
     NSInteger newIndex = currentIndex + 1;
     if(newIndex <= self.viewControllers.count){
         [self scrollToViewControllerAtIndex:newIndex animated:YES];
     }
 }
 
-- (void)swipeToIndex:(NSInteger)index{
+- (void)swipeToIndex:(NSInteger)index sender:(id)sender{
     [self scrollToViewControllerAtIndex:index animated:YES];
 }
 

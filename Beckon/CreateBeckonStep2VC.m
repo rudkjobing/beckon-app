@@ -32,12 +32,12 @@
     [super viewDidLoad];
     self.table.delegate = self;
     self.table.dataSource = self;
-
-    self.beckonMembers = [NSMutableArray new];
     
     self.swipeVC = (CreateBeckonSwipeVC*)self.parentViewController.parentViewController;
+    self.beckonMembers = [NSMutableArray new];
+    [self.swipeVC.beckon setObject:self.beckonMembers forKey:@"members"];
     
-    self.navigationItem.title = @"Participants";
+    self.navigationItem.title = @"Participants(1)";
     
     self.previousButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self  action:@selector(previous)];
     self.previousButton.tintColor = [UIColor blackColor];
@@ -51,11 +51,11 @@
 }
 
 - (void) previous{
-    [self.swipeVC swipeToPrevious:self.parentViewController];
+    [self.swipeVC swipeToPrevious:self.parentViewController sender:self];
 }
 
 - (void) next{
-    [self.swipeVC swipeToNext:self.parentViewController];
+    [self.swipeVC swipeToNext:self.parentViewController sender:self];
 }
 
 - (IBAction)filterTyped:(id)sender {
@@ -91,47 +91,24 @@
     
     NSDictionary *friend = [self.friendsFiltered objectAtIndex:indexPath.row];
     /* Present the friendrequest cell if this is a friend request */
-    if([[friend objectForKey:@"status"] isEqualToString:@"PENDING"]){
-        static NSString *cellIdentifier = @"FriendRequestCell";
-        [tableView registerNib:[UINib nibWithNibName:@"FriendRequestCell" bundle: nil] forCellReuseIdentifier:@"FriendRequestCell"];
-        FriendRequestCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-        if (!cell) {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"FriendRequestCell"];
-        }
-        cell.delegate = self;
-        NSDictionary *user = [friend objectForKey:@"friend"];
-        cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
-        if([self.beckonMembers containsObject:friend]){
-            cell.backgroundColor = [UIColor grayColor];
-        }
-        else{
-            cell.backgroundColor = [UIColor whiteColor];
-        }
-        return cell;
+    static NSString *cellIdentifier = @"FriendCell";
+    [tableView registerNib:[UINib nibWithNibName:@"FriendCell" bundle: nil] forCellReuseIdentifier:@"FriendCell"];
+    FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"FriendCell"];
     }
-    /* Or present a normal friend cell if the friendship is established */
+    NSDictionary *user = [friend objectForKey:@"friend"];
+    cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
+    cell.email.text = [user objectForKey:@"email"];
+    cell.phoneNumber.text = [user objectForKey:@"phoneNumber"];
+    cell.nickname.text = [friend objectForKey:@"nickname"];
+    if([self.beckonMembers containsObject:friend]){
+        cell.backgroundColor = [UIColor lightGrayColor];
+    }
     else{
-        static NSString *cellIdentifier = @"FriendCell";
-        [tableView registerNib:[UINib nibWithNibName:@"FriendCell" bundle: nil] forCellReuseIdentifier:@"FriendCell"];
-        FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-        if (!cell) {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"FriendCell"];
-        }
-        NSDictionary *user = [friend objectForKey:@"friend"];
-        cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
-        cell.email.text = [user objectForKey:@"email"];
-        cell.phoneNumber.text = [user objectForKey:@"phoneNumber"];
-        cell.nickname.text = [friend objectForKey:@"nickname"];
-        if([self.beckonMembers containsObject:friend]){
-            cell.backgroundColor = [UIColor grayColor];
-        }
-        else{
-            cell.backgroundColor = [UIColor whiteColor];
-        }
-        return cell;
-        
+        cell.backgroundColor = [UIColor clearColor];
     }
-    return nil;
+    return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -142,53 +119,8 @@
     else{
         [self.beckonMembers addObject:friend];
     }
+    self.navigationItem.title = [[@"Participants(" stringByAppendingString:[NSString stringWithFormat:@"%li", self.beckonMembers.count + 1]] stringByAppendingString:@")"];
     [self.table reloadData];
-}
-
--(void)acceptFriendRequestAction:(id)sender{
-    /*Accept friend request*/
-    FriendRequestCell *s = (FriendRequestCell*) sender;
-    NSDictionary *friend = s.friend;
-    [self.spinner startAnimating];
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    NSDictionary *parameters = @{@"id": [friend objectForKey:@"id"]};
-    [manager POST:@"http://localhost:9000/friend/accept" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         [self.spinner stopAnimating];
-         [self getFriendships];//TODO Possible but when reloading friends, that may cause selected friends to corrupt
-     }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         [self.spinner stopAnimating];
-         NSInteger statusCode = operation.response.statusCode;
-         if(statusCode == 401) {
-             [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
-         }
-     }];
-}
-
--(void)declineFriendRequestAction:(id)sender{
-    /*Accept friend request*/
-    FriendRequestCell *s = (FriendRequestCell*) sender;
-    NSDictionary *friend = s.friend;
-    [self.spinner startAnimating];
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    NSDictionary *parameters = @{@"id": [friend objectForKey:@"id"]};
-    [manager POST:@"http://localhost:9000/friend/decline" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         [self.spinner stopAnimating];
-         [self getFriendships];//TODO Possible but when reloading friends, that may cause selected friends to corrupt
-     }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         [self.spinner stopAnimating];
-         NSInteger statusCode = operation.response.statusCode;
-         if(statusCode == 401) {
-             [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
-         }
-     }];
 }
 
 -(void)getFriendships{
@@ -196,7 +128,7 @@
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    NSDictionary *parameters = @{@"id": [NSNumber numberWithLong:0L]};
+    NSDictionary *parameters = @{@"id": [NSNumber numberWithLong:0L], @"status": @"ACCEPTED"};
     [manager GET:@"http://localhost:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);

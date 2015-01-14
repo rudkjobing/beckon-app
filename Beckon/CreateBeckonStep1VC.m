@@ -25,6 +25,9 @@
     [super viewDidLoad];
     self.swipeVC = (CreateBeckonSwipeVC*)self.parentViewController.parentViewController;
 
+    [self.swipeVC.beckon setObject:self.beckonTitle.text forKey:@"title"];
+    [self.swipeVC.beckon setObject:self.beckonDescription.text forKey:@"description"];
+    
     self.navigationItem.title = @"Title";
     
     self.cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
@@ -44,7 +47,7 @@
 
 - (void) next{
     NSLog(@"%@", self.swipeVC.beckon);
-    [self.swipeVC swipeToNext:self.parentViewController];
+    [self.swipeVC swipeToNext:self.parentViewController sender:self];
 }
 
 - (IBAction)titleTyped:(id)sender {

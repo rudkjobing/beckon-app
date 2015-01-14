@@ -21,7 +21,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                     <connections>
-                        <action selector="titleEntered:" destination="-1" eventType="editingDidEnd" id="7I9-6G-aW3"/>
                         <action selector="titleTyped:" destination="-1" eventType="editingChanged" id="iBR-eH-4xj"/>
                     </connections>
                 </textField>

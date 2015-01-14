@@ -37,7 +37,7 @@
 }
 
 - (void) previous{
-    [self.swipeVC swipeToPrevious:self.parentViewController];
+    [self.swipeVC swipeToPrevious:self.parentViewController sender:self];
 }
 
 - (void) done{

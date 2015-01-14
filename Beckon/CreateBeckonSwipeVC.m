@@ -22,8 +22,6 @@
     [super viewDidLoad];
     
     self.beckon = [NSMutableDictionary new];
-    NSMutableArray * members = [NSMutableArray new];
-    [self.beckon setValue:members forKey:@"members"];
     //Create the Step 1 controller
     CreateBeckonStep1VC *step1 = [CreateBeckonStep1VC new];
     UINavigationController *navCon1 = [[UINavigationController alloc]initWithRootViewController:step1];
