@@ -207,6 +207,10 @@
              self.friendsFiltered =  [self.friends copy];
              [self.table reloadData];
          }
+         else if(newestId == 0L){
+             self.friends = [NSArray new];
+             [self.table reloadData];
+         }
          self.latestFriendId = [newestId copy];
          [self.spinner stopAnimating];
      }

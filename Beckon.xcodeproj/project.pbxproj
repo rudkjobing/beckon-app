@@ -47,6 +47,7 @@
 		F9DCFB391A640F2A00B58029 /* FriendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DCFB371A640F2A00B58029 /* FriendVC.xib */; };
 		F9DCFB3E1A64143100B58029 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB3C1A64143100B58029 /* FriendCell.m */; };
 		F9DCFB3F1A64143100B58029 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DCFB3D1A64143100B58029 /* FriendCell.xib */; };
+		F9DCFB411A6C428300B58029 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DCFB401A6C428300B58029 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		F9DCFB3B1A64143100B58029 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
 		F9DCFB3C1A64143100B58029 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 		F9DCFB3D1A64143100B58029 /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		F9DCFB401A6C428300B58029 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9DCFB411A6C428300B58029 /* CoreLocation.framework in Frameworks */,
 				F92CC0B11A5892C000AA0B70 /* MapKit.framework in Frameworks */,
 				F86B5F92F994ED81B331AF04 /* libPods.a in Frameworks */,
 			);
@@ -160,6 +163,7 @@
 		E1FD63CD532B91CB4A006EDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9DCFB401A6C428300B58029 /* CoreLocation.framework */,
 				F92CC0B01A5892C000AA0B70 /* MapKit.framework */,
 				44392AE8194A2CA435B8E275 /* libPods.a */,
 			);

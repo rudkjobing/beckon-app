@@ -44,13 +44,12 @@
     
     //Create the Overview controller
     OverviewVC *overview = [OverviewVC new];
-    UINavigationController *scene3 = [[UINavigationController alloc] initWithRootViewController:overview];
 
     //Create the Options controller
     SettingsVC *settings = [SettingsVC new];
     UINavigationController *scene4 = [[UINavigationController alloc] initWithRootViewController:settings];
     
-    self.viewControllers = @[scene1, scene2, scene3, scene4];
+    self.viewControllers = @[scene1, scene2, overview, scene4];
     
 }
 

@@ -57,12 +57,12 @@
                     <exclude reference="hyK-7R-FT2"/>
                     <exclude reference="tXm-9w-wFS"/>
                     <exclude reference="uzc-lA-QeS"/>
+                    <exclude reference="Ul4-6e-Hji"/>
+                    <exclude reference="d3p-Pu-cKd"/>
                     <exclude reference="Rmf-aB-jgh"/>
                     <exclude reference="l7W-42-Ecr"/>
                     <exclude reference="ofa-mY-cSa"/>
                     <exclude reference="qf7-4L-zKy"/>
-                    <exclude reference="Ul4-6e-Hji"/>
-                    <exclude reference="d3p-Pu-cKd"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -75,15 +75,15 @@
                     <include reference="hyK-7R-FT2"/>
                     <include reference="tXm-9w-wFS"/>
                     <include reference="uzc-lA-QeS"/>
+                    <include reference="Ul4-6e-Hji"/>
+                    <include reference="d3p-Pu-cKd"/>
                     <include reference="Rmf-aB-jgh"/>
                     <include reference="l7W-42-Ecr"/>
                     <include reference="ofa-mY-cSa"/>
                     <include reference="qf7-4L-zKy"/>
-                    <include reference="Ul4-6e-Hji"/>
-                    <include reference="d3p-Pu-cKd"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="366" y="409"/>
+            <point key="canvasLocation" x="-165" y="322"/>
         </view>
     </objects>
 </document>
