@@ -25,8 +25,6 @@
 		F92CC0C21A596F6E00AA0B70 /* CreateBeckonStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0C01A596F6E00AA0B70 /* CreateBeckonStep2VC.xib */; };
 		F92CC0C61A597E0800AA0B70 /* CreateBeckonStep3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0C41A597E0800AA0B70 /* CreateBeckonStep3VC.m */; };
 		F92CC0C71A597E0800AA0B70 /* CreateBeckonStep3VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0C51A597E0800AA0B70 /* CreateBeckonStep3VC.xib */; };
-		F92CC0D01A597EB500AA0B70 /* CreateBeckonStep4VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0CE1A597EB500AA0B70 /* CreateBeckonStep4VC.m */; };
-		F92CC0D11A597EB500AA0B70 /* CreateBeckonStep4VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0CF1A597EB500AA0B70 /* CreateBeckonStep4VC.xib */; };
 		F92CC0D91A599ED000AA0B70 /* AddFriendStep1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0D71A599ED000AA0B70 /* AddFriendStep1VC.m */; };
 		F92CC0DE1A599EE200AA0B70 /* AddFriendStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0DC1A599EE200AA0B70 /* AddFriendStep2VC.m */; };
 		F92CC0E21A59A52300AA0B70 /* SwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0E11A59A52300AA0B70 /* SwipeVC.m */; };
@@ -89,9 +87,6 @@
 		F92CC0C31A597E0800AA0B70 /* CreateBeckonStep3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonStep3VC.h; sourceTree = "<group>"; };
 		F92CC0C41A597E0800AA0B70 /* CreateBeckonStep3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonStep3VC.m; sourceTree = "<group>"; };
 		F92CC0C51A597E0800AA0B70 /* CreateBeckonStep3VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateBeckonStep3VC.xib; sourceTree = "<group>"; };
-		F92CC0CD1A597EB500AA0B70 /* CreateBeckonStep4VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonStep4VC.h; sourceTree = "<group>"; };
-		F92CC0CE1A597EB500AA0B70 /* CreateBeckonStep4VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonStep4VC.m; sourceTree = "<group>"; };
-		F92CC0CF1A597EB500AA0B70 /* CreateBeckonStep4VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateBeckonStep4VC.xib; sourceTree = "<group>"; };
 		F92CC0D61A599ED000AA0B70 /* AddFriendStep1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendStep1VC.h; sourceTree = "<group>"; };
 		F92CC0D71A599ED000AA0B70 /* AddFriendStep1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendStep1VC.m; sourceTree = "<group>"; };
 		F92CC0DB1A599EE200AA0B70 /* AddFriendStep2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendStep2VC.h; sourceTree = "<group>"; };
@@ -234,9 +229,6 @@
 				F92CC0C31A597E0800AA0B70 /* CreateBeckonStep3VC.h */,
 				F92CC0C41A597E0800AA0B70 /* CreateBeckonStep3VC.m */,
 				F92CC0C51A597E0800AA0B70 /* CreateBeckonStep3VC.xib */,
-				F92CC0CD1A597EB500AA0B70 /* CreateBeckonStep4VC.h */,
-				F92CC0CE1A597EB500AA0B70 /* CreateBeckonStep4VC.m */,
-				F92CC0CF1A597EB500AA0B70 /* CreateBeckonStep4VC.xib */,
 			);
 			name = "Create Beckon scenes";
 			sourceTree = "<group>";
@@ -395,9 +387,11 @@
 				TargetAttributes = {
 					F95F300B1A57262D00D2CC3B = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 24ZKBP96S6;
 					};
 					F95F30241A57262D00D2CC3B = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 24ZKBP96S6;
 						TestTargetID = F95F300B1A57262D00D2CC3B;
 					};
 				};
@@ -428,7 +422,6 @@
 			files = (
 				F92CC09A1A581CDF00AA0B70 /* BeckonsVC.xib in Resources */,
 				F92811461A618C220073B33E /* AddFriendStep2VC.xib in Resources */,
-				F92CC0D11A597EB500AA0B70 /* CreateBeckonStep4VC.xib in Resources */,
 				F92CC0AA1A5890BB00AA0B70 /* FriendsVC.xib in Resources */,
 				F95F301B1A57262D00D2CC3B /* Main.storyboard in Resources */,
 				F9DCFB391A640F2A00B58029 /* FriendVC.xib in Resources */,
@@ -501,7 +494,6 @@
 				F92CC0E61A59CB7600AA0B70 /* SettingsVC.m in Sources */,
 				F92CC0DE1A599EE200AA0B70 /* AddFriendStep2VC.m in Sources */,
 				F960A7551A57285E000BB047 /* MainSwipeVC.m in Sources */,
-				F92CC0D01A597EB500AA0B70 /* CreateBeckonStep4VC.m in Sources */,
 				F92CC0C61A597E0800AA0B70 /* CreateBeckonStep3VC.m in Sources */,
 				F92CC0991A581CDF00AA0B70 /* BeckonsVC.m in Sources */,
 				F9DCFB3E1A64143100B58029 /* FriendCell.m in Sources */,
@@ -571,7 +563,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steffen Rudkjobing (NF4RM385UN)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -591,6 +584,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "12789b4e-b76e-47d1-b7ab-721e70d54741";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -626,6 +620,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "12789b4e-b76e-47d1-b7ab-721e70d54741";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -636,9 +631,12 @@
 			baseConfigurationReference = 153D9C6F3363723670029AF8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Beckon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -647,9 +645,12 @@
 			baseConfigurationReference = C48ADF593C1D89D1A6F65F7A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Beckon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -657,6 +658,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -668,6 +671,7 @@
 				INFOPLIST_FILE = BeckonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beckon.app/Beckon";
 			};
 			name = Debug;
@@ -676,6 +680,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -683,6 +689,7 @@
 				INFOPLIST_FILE = BeckonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beckon.app/Beckon";
 			};
 			name = Release;
@@ -724,6 +731,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "12789b4e-b76e-47d1-b7ab-721e70d54741";
 				SDKROOT = iphoneos;
 			};
 			name = Test;
@@ -733,9 +741,12 @@
 			baseConfigurationReference = 153D9C6F3363723670029AF8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Beckon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Test;
 		};
@@ -743,6 +754,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -754,6 +767,7 @@
 				INFOPLIST_FILE = BeckonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beckon.app/Beckon";
 			};
 			name = Test;

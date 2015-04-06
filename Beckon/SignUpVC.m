@@ -59,7 +59,7 @@
                                  @"firstName": self.firstNameTextField.text,
                                  @"lastName": self.lastNameTextField.text,
                                  @"password": self.passwordTextField.text};
-    [manager POST:@"http://localhost:9000/account/signUp" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://192.168.1.84:9000/account/signUp" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
         [self dismissViewControllerAnimated:YES completion:nil];
 //        NSLog(@"JSON: %@", responseObject);

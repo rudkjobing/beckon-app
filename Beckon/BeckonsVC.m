@@ -34,23 +34,23 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-
+    //Register for notifications
+    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
 -(void)getBeckons{
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager GET:@"http://localhost:9000/beckons" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://192.168.1.84:9000/beckons" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         NSLog(@"JSON: %@", responseObject);
          [self.spinner stopAnimating];
      }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
          [self.spinner stopAnimating];
          NSInteger statusCode = operation.response.statusCode;
-         NSLog(@"%ld", (long)statusCode);
          if(statusCode == 401) {
              [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
          }

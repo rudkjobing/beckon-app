@@ -32,8 +32,6 @@
      name:@"UserLoggedIn"
      object:nil];
  
-    self.userLoggedIn = YES;
-    
     //Create the Beckons controller
     BeckonsVC *beckons = [BeckonsVC new];
     UINavigationController *scene1 = [[UINavigationController alloc]initWithRootViewController:beckons];
@@ -44,12 +42,14 @@
     
     //Create the Overview controller
     OverviewVC *overview = [OverviewVC new];
-
+    
     //Create the Options controller
     SettingsVC *settings = [SettingsVC new];
     UINavigationController *scene4 = [[UINavigationController alloc] initWithRootViewController:settings];
     
     self.viewControllers = @[scene1, scene2, overview, scene4];
+    
+    self.userLoggedIn = YES;
     
 }
 
@@ -70,6 +70,23 @@
 
 -(void)userLoggedInEvent:(NSNotification*) notification{
     self.userLoggedIn = YES;
+    
+    //Create the Beckons controller
+    BeckonsVC *beckons = [BeckonsVC new];
+    UINavigationController *scene1 = [[UINavigationController alloc]initWithRootViewController:beckons];
+    
+    //Create the Friends controller
+    FriendsVC *friends = [FriendsVC new];
+    UINavigationController *scene2 = [[UINavigationController alloc] initWithRootViewController:friends];
+    
+    //Create the Overview controller
+    OverviewVC *overview = [OverviewVC new];
+    
+    //Create the Options controller
+    SettingsVC *settings = [SettingsVC new];
+    UINavigationController *scene4 = [[UINavigationController alloc] initWithRootViewController:settings];
+    
+    self.viewControllers = @[scene1, scene2, overview, scene4];
 }
 
 @end

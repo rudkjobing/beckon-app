@@ -10,7 +10,6 @@
 #import "CreateBeckonStep1VC.h"
 #import "CreateBeckonStep2VC.h"
 #import "CreateBeckonStep3VC.h"
-#import "CreateBeckonStep4VC.h"
 
 @interface CreateBeckonSwipeVC ()
 
@@ -33,12 +32,8 @@
     //Create the Step 3 controller
     CreateBeckonStep3VC *step3 = [CreateBeckonStep3VC new];
     UINavigationController *navCon3 = [[UINavigationController alloc] initWithRootViewController:step3];
-    
-    //Create the Step 4 controller
-    CreateBeckonStep4VC *step4 = [CreateBeckonStep4VC new];
-    UINavigationController *navCon4 = [[UINavigationController alloc] initWithRootViewController:step4];
         
-    self.viewControllers = @[navCon1, navCon2, navCon3, navCon4];
+    self.viewControllers = @[navCon1, navCon2, navCon3];
 }
 
 @end

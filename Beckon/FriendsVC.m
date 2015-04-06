@@ -83,6 +83,7 @@
         cell.delegate = self;
         NSDictionary *user = [friend objectForKey:@"friend"];
         cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
+        cell.friend = friend;
         return cell;
     }
     /* Or present a normal friend cell if the friendship is established */
@@ -123,13 +124,14 @@
 
 -(void)acceptFriendRequestAction:(id)sender{
     /*Accept friend request*/
+    self.latestFriendId = [NSNumber numberWithLong:(0L)];
     FriendRequestCell *s = (FriendRequestCell*) sender;
     NSDictionary *friend = s.friend;
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [friend objectForKey:@"id"]};
-    [manager POST:@"http://localhost:9000/friend/accept" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://192.168.1.84:9000/friend/accept" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self getFriendships];
@@ -146,13 +148,14 @@
 
 -(void)declineFriendRequestAction:(id)sender{
     /*Accept friend request*/
+    self.latestFriendId = [NSNumber numberWithLong:(0L)];
     FriendRequestCell *s = (FriendRequestCell*) sender;
     NSDictionary *friend = s.friend;
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [friend objectForKey:@"id"]};
-    [manager POST:@"http://localhost:9000/friend/decline" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://192.168.1.84:9000/friend/decline" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self getFriendships];
@@ -183,7 +186,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": self.latestFriendId};
-    [manager GET:@"http://localhost:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://192.168.1.84:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
 //         NSInteger statusCode = operation.response.statusCode;
 //         NSLog(@"JSON: %@", responseObject);

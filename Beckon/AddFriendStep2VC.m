@@ -49,7 +49,6 @@
 }
 
 - (void) done{
-    NSLog(@"OK");
     if([self.nickname.text isEqualToString:@""]){
         self.errorLabel.text = @"Please choose a nickname.";
     }
@@ -64,7 +63,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"userId": [self.user objectForKey:@"id"],
                                  @"nickname": self.nickname.text};
-    [manager PUT:@"http://localhost:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager PUT:@"http://192.168.1.84:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self.parentViewController dismissViewControllerAnimated:YES completion:nil];

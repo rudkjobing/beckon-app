@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -126,30 +126,30 @@
                     <exclude reference="957-4J-g45"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="M8y-5h-asp"/>
-                    <exclude reference="lvU-RY-NOU"/>
-                    <exclude reference="nns-aq-LJ0"/>
-                    <exclude reference="tVh-PD-SEt"/>
                     <exclude reference="2wT-uw-xyd"/>
                     <exclude reference="Dof-Qv-tfu"/>
                     <exclude reference="ZTj-rU-wGa"/>
                     <exclude reference="cxS-lm-xai"/>
                     <exclude reference="FFb-tl-Z4j"/>
                     <exclude reference="PRP-l0-d0A"/>
-                    <exclude reference="NCD-23-ULh"/>
-                    <exclude reference="TUd-8G-h0k"/>
-                    <exclude reference="o0J-E7-Id6"/>
-                    <exclude reference="pNq-1S-MLu"/>
+                    <exclude reference="nns-aq-LJ0"/>
+                    <exclude reference="tVh-PD-SEt"/>
                     <exclude reference="1l1-E8-jqo"/>
                     <exclude reference="BvU-qM-GEu"/>
                     <exclude reference="Pa3-aM-A4D"/>
                     <exclude reference="lcD-by-Ug1"/>
+                    <exclude reference="M8y-5h-asp"/>
+                    <exclude reference="lvU-RY-NOU"/>
                     <exclude reference="AGr-sX-T50"/>
                     <exclude reference="qQW-hF-jen"/>
                     <exclude reference="BxY-ce-lwl"/>
                     <exclude reference="Ge6-Oo-h9R"/>
                     <exclude reference="UjS-aX-QYH"/>
                     <exclude reference="vLs-hs-E3F"/>
+                    <exclude reference="NCD-23-ULh"/>
+                    <exclude reference="TUd-8G-h0k"/>
+                    <exclude reference="o0J-E7-Id6"/>
+                    <exclude reference="pNq-1S-MLu"/>
                     <exclude reference="0mm-NO-Vs4"/>
                     <exclude reference="lR9-Mn-vs7"/>
                 </mask>
@@ -168,30 +168,30 @@
                     <include reference="957-4J-g45"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="M8y-5h-asp"/>
-                    <include reference="lvU-RY-NOU"/>
-                    <include reference="nns-aq-LJ0"/>
-                    <include reference="tVh-PD-SEt"/>
                     <include reference="2wT-uw-xyd"/>
                     <include reference="Dof-Qv-tfu"/>
                     <include reference="ZTj-rU-wGa"/>
                     <include reference="cxS-lm-xai"/>
                     <include reference="FFb-tl-Z4j"/>
                     <include reference="PRP-l0-d0A"/>
-                    <include reference="NCD-23-ULh"/>
-                    <include reference="TUd-8G-h0k"/>
-                    <include reference="o0J-E7-Id6"/>
-                    <include reference="pNq-1S-MLu"/>
+                    <include reference="nns-aq-LJ0"/>
+                    <include reference="tVh-PD-SEt"/>
                     <include reference="1l1-E8-jqo"/>
                     <include reference="BvU-qM-GEu"/>
                     <include reference="Pa3-aM-A4D"/>
                     <include reference="lcD-by-Ug1"/>
+                    <include reference="M8y-5h-asp"/>
+                    <include reference="lvU-RY-NOU"/>
                     <include reference="AGr-sX-T50"/>
                     <include reference="qQW-hF-jen"/>
                     <include reference="BxY-ce-lwl"/>
                     <include reference="Ge6-Oo-h9R"/>
                     <include reference="UjS-aX-QYH"/>
                     <include reference="vLs-hs-E3F"/>
+                    <include reference="NCD-23-ULh"/>
+                    <include reference="TUd-8G-h0k"/>
+                    <include reference="o0J-E7-Id6"/>
+                    <include reference="pNq-1S-MLu"/>
                     <include reference="0mm-NO-Vs4"/>
                     <include reference="lR9-Mn-vs7"/>
                 </mask>

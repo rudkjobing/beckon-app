@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D127a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateBeckonStep3VC">
@@ -28,7 +28,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="searchAction:" destination="-1" eventType="editingChanged" id="VEU-v9-bz3"/>
+                        <action selector="searchChangedAction:" destination="-1" eventType="editingChanged" id="yX6-Fa-lKY"/>
                         <action selector="searchInitAction:" destination="-1" eventType="editingDidBegin" id="quJ-S2-j5P"/>
                     </connections>
                 </textField>
@@ -72,19 +72,19 @@
                     <exclude reference="0ff-gm-tdU"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="J0f-Wz-zK1"/>
+                    <exclude reference="aoK-bd-bFF"/>
+                    <exclude reference="gET-oV-lQz"/>
+                    <exclude reference="L9u-c0-eZe"/>
+                    <exclude reference="UKl-Ku-Ekc"/>
                     <exclude reference="Cbk-CU-kuR"/>
                     <exclude reference="SZO-jL-pL5"/>
                     <exclude reference="XwA-pV-lvC"/>
                     <exclude reference="yeQ-w1-QBq"/>
-                    <exclude reference="J0f-Wz-zK1"/>
-                    <exclude reference="aoK-bd-bFF"/>
-                    <exclude reference="gET-oV-lQz"/>
                     <exclude reference="7Rn-BU-elX"/>
                     <exclude reference="Snr-v7-oQw"/>
                     <exclude reference="eqx-6Z-yTX"/>
                     <exclude reference="fG1-Fx-Q0x"/>
-                    <exclude reference="L9u-c0-eZe"/>
-                    <exclude reference="UKl-Ku-Ekc"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -95,19 +95,19 @@
                     <include reference="0ff-gm-tdU"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="J0f-Wz-zK1"/>
+                    <include reference="aoK-bd-bFF"/>
+                    <include reference="gET-oV-lQz"/>
+                    <include reference="L9u-c0-eZe"/>
+                    <include reference="UKl-Ku-Ekc"/>
                     <include reference="Cbk-CU-kuR"/>
                     <include reference="SZO-jL-pL5"/>
                     <include reference="XwA-pV-lvC"/>
                     <include reference="yeQ-w1-QBq"/>
-                    <include reference="J0f-Wz-zK1"/>
-                    <include reference="aoK-bd-bFF"/>
-                    <include reference="gET-oV-lQz"/>
                     <include reference="7Rn-BU-elX"/>
                     <include reference="Snr-v7-oQw"/>
                     <include reference="eqx-6Z-yTX"/>
                     <include reference="fG1-Fx-Q0x"/>
-                    <include reference="L9u-c0-eZe"/>
-                    <include reference="UKl-Ku-Ekc"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="-123" y="331"/>

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateBeckonStep3VC : UIViewController
+@interface CreateBeckonStep3VC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

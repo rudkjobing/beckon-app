@@ -119,7 +119,7 @@
     else{
         [self.beckonMembers addObject:friend];
     }
-    self.navigationItem.title = [[@"Participants(" stringByAppendingString:[NSString stringWithFormat:@"%li", self.beckonMembers.count + 1]] stringByAppendingString:@")"];
+    self.navigationItem.title = [[@"Participants(" stringByAppendingString:[NSString stringWithFormat:@"%lu", self.beckonMembers.count + 1]] stringByAppendingString:@")"];
     [self.table reloadData];
 }
 
@@ -129,7 +129,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [NSNumber numberWithLong:0L], @"status": @"ACCEPTED"};
-    [manager GET:@"http://localhost:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://192.168.1.84:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
          self.friends = responseObject;
