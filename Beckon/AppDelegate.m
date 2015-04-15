@@ -25,9 +25,9 @@
                                  @"uuid": token,
                                  @"type": @"APPLE"
                                  };
-    [manager POST:@"http://192.168.1.84:9000/account/device/register" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://192.168.1.192:9000/account/device/register" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         NSLog(@"JSON: %@", responseObject);
+
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
          

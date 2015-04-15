@@ -35,7 +35,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"email": email,
                                  @"password": password};
-    [manager POST:@"http://192.168.1.84:9000/account/signIn" parameters:parameters
+    [manager POST:@"http://192.168.1.192:9000/account/signIn" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               [[NSNotificationCenter defaultCenter] postNotificationName:@"UserLoggedIn" object:self];
               [self dismissViewControllerAnimated:YES completion:nil];

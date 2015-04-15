@@ -37,13 +37,13 @@
     self.beckonMembers = [NSMutableArray new];
     [self.swipeVC.beckon setObject:self.beckonMembers forKey:@"members"];
     
-    self.navigationItem.title = @"Participants(1)";
+    self.navigationItem.title = @"Who(1)";
     
     self.previousButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self  action:@selector(previous)];
     self.previousButton.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem = self.previousButton;
     
-    self.nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(next)];
+    self.nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Go" style:UIBarButtonItemStylePlain target:self action:@selector(go)];
     self.nextButton.tintColor = [UIColor blackColor];
     self.navigationItem.rightBarButtonItem = self.nextButton;
     
@@ -54,8 +54,9 @@
     [self.swipeVC swipeToPrevious:self.parentViewController sender:self];
 }
 
-- (void) next{
-    [self.swipeVC swipeToNext:self.parentViewController sender:self];
+- (void) go{
+    NSLog(@"%@", self.swipeVC.beckon);
+    [self createBeckon:self.swipeVC.beckon];
 }
 
 - (IBAction)filterTyped:(id)sender {
@@ -129,7 +130,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [NSNumber numberWithLong:0L], @"status": @"ACCEPTED"};
-    [manager GET:@"http://192.168.1.84:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://192.168.1.192:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
          self.friends = responseObject;
@@ -146,6 +147,21 @@
              [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
          }
      }];
+    
+}
+
+-(void)createBeckon:(NSDictionary*)beckonRequest{
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSDictionary *parameters = beckonRequest;
+    [manager POST:@"http://192.168.1.192:9000/beckon" parameters:parameters
+          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              NSLog(@"JSON: %@", responseObject);
+              [self.swipeVC dismissViewControllerAnimated:YES completion:nil];
+          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              
+          }];
     
 }
 

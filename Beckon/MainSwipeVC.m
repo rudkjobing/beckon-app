@@ -10,7 +10,6 @@
 #import "AFNetworking.h"
 #import "BeckonsVC.h"
 #import "FriendsVC.h"
-#import "OverviewVC.h"
 #import "SettingsVC.h"
 
 @interface MainSwipeVC ()
@@ -40,14 +39,11 @@
     FriendsVC *friends = [FriendsVC new];
     UINavigationController *scene2 = [[UINavigationController alloc] initWithRootViewController:friends];
     
-    //Create the Overview controller
-    OverviewVC *overview = [OverviewVC new];
-    
     //Create the Options controller
     SettingsVC *settings = [SettingsVC new];
     UINavigationController *scene4 = [[UINavigationController alloc] initWithRootViewController:settings];
     
-    self.viewControllers = @[scene1, scene2, overview, scene4];
+    self.viewControllers = @[scene1, scene2];
     
     self.userLoggedIn = YES;
     
@@ -78,15 +74,12 @@
     //Create the Friends controller
     FriendsVC *friends = [FriendsVC new];
     UINavigationController *scene2 = [[UINavigationController alloc] initWithRootViewController:friends];
-    
-    //Create the Overview controller
-    OverviewVC *overview = [OverviewVC new];
-    
+  
     //Create the Options controller
     SettingsVC *settings = [SettingsVC new];
     UINavigationController *scene4 = [[UINavigationController alloc] initWithRootViewController:settings];
     
-    self.viewControllers = @[scene1, scene2, overview, scene4];
+    self.viewControllers = @[scene1, scene2];
 }
 
 @end

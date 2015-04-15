@@ -25,7 +25,6 @@
     self.addButton.tintColor = [UIColor blackColor];
     self.navigationItem.rightBarButtonItem = self.addButton;
     self.navigationItem.title = @"Beckons";
-    [self getBeckons];
 }
 
 - (void)addBeckon{
@@ -35,6 +34,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     //Register for notifications
+    [self getBeckons];
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
@@ -43,8 +43,9 @@
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager GET:@"http://192.168.1.84:9000/beckons" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://192.168.1.192:9000/beckons" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
+         NSLog(@"JSON: %@", responseObject);
          [self.spinner stopAnimating];
      }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)
