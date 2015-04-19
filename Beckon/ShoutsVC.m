@@ -135,9 +135,8 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager POST:@"http://192.168.1.91:9000/shout/membership/status" parameters:shout success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         NSLog(@"JSON: %@", self.shouts);
-         [self.shoutTable reloadData];
          [self.spinner stopAnimating];
+         [self getBeckons];
      }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
