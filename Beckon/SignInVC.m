@@ -1,9 +1,9 @@
 //
 //  SignInVC.m
-//  Beckon
+//  BroShout
 //
 //  Created by Steffen Rudkjøbing on 02/01/15.
-//  Copyright (c) 2015 Beckon IVS. All rights reserved.
+//  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 #import "SignInVC.h"
 #import "AFNetworking.h"
@@ -35,7 +35,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"email": email,
                                  @"password": password};
-    [manager POST:@"http://192.168.1.192:9000/account/signIn" parameters:parameters
+    [manager POST:@"http://192.168.1.91:9000/account/signIn" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               [[NSNotificationCenter defaultCenter] postNotificationName:@"UserLoggedIn" object:self];
               [self dismissViewControllerAnimated:YES completion:nil];

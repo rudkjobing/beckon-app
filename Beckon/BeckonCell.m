@@ -1,9 +1,9 @@
 //
-//  BeckonCell.m
-//  Beckon
+//  BroShoutCell.m
+//  BroShout
 //
 //  Created by Steffen Rudkjøbing on 15/04/15.
-//  Copyright (c) 2015 Beckon IVS. All rights reserved.
+//  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
 #import "BeckonCell.h"

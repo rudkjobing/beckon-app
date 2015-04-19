@@ -1,9 +1,9 @@
 //
 //  FriendVC.m
-//  Beckon
+//  BroShout
 //
 //  Created by Steffen Rudkjøbing on 12/01/15.
-//  Copyright (c) 2015 Beckon IVS. All rights reserved.
+//  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
 #import "FriendVC.h"
@@ -61,7 +61,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [self.friend objectForKey:@"id"],
                                  @"nickname": self.nickname.text};
-    [manager POST:@"http://192.168.1.192:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://192.168.1.91:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self.navigationController popToRootViewControllerAnimated:YES];

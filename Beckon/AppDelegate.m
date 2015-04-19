@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  Beckon
+//  BroShout
 //
 //  Created by Steffen Rudkjøbing on 02/01/15.
-//  Copyright (c) 2015 Beckon IVS. All rights reserved.
+//  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -25,7 +25,7 @@
                                  @"uuid": token,
                                  @"type": @"APPLE"
                                  };
-    [manager POST:@"http://192.168.1.192:9000/account/device/register" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://192.168.1.91:9000/account/device/register" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
 
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)

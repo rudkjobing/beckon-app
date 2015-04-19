@@ -1,9 +1,9 @@
 //
 //  FriendsVC.m
-//  Beckon
+//  BroShout
 //
 //  Created by Steffen Rudkjøbing on 03/01/15.
-//  Copyright (c) 2015 Beckon IVS. All rights reserved.
+//  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
 #import "FriendsVC.h"
@@ -131,7 +131,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [friend objectForKey:@"id"]};
-    [manager POST:@"http://192.168.1.192:9000/friend/accept" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://192.168.1.91:9000/friend/accept" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self getFriendships];
@@ -155,7 +155,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [friend objectForKey:@"id"]};
-    [manager POST:@"http://192.168.1.192:9000/friend/decline" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://192.168.1.91:9000/friend/decline" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self getFriendships];
@@ -186,7 +186,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": self.latestFriendId};
-    [manager GET:@"http://192.168.1.192:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://192.168.1.91:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
 //         NSInteger statusCode = operation.response.statusCode;
 //         NSLog(@"JSON: %@", responseObject);

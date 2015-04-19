@@ -1,9 +1,9 @@
 //
 //  AddFriendStep1VC.m
-//  Beckon
+//  BroShout
 //
 //  Created by Steffen Rudkjøbing on 04/01/15.
-//  Copyright (c) 2015 Beckon IVS. All rights reserved.
+//  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
 #import "AddFriendStep1VC.h"
@@ -86,7 +86,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"queryString": self.searchedText};
-    [manager POST:@"http://192.168.1.192:9000/users/search" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://192.168.1.91:9000/users/search" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          self.isSearching = NO;

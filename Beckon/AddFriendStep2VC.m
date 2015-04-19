@@ -1,9 +1,9 @@
 //
 //  AddFriendStep2VC.m
-//  Beckon
+//  BroShout
 //
 //  Created by Steffen Rudkjøbing on 04/01/15.
-//  Copyright (c) 2015 Beckon IVS. All rights reserved.
+//  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
 #import "AddFriendStep2VC.h"
@@ -63,7 +63,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"userId": [self.user objectForKey:@"id"],
                                  @"nickname": self.nickname.text};
-    [manager PUT:@"http://192.168.1.192:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager PUT:@"http://192.168.1.91:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self.parentViewController dismissViewControllerAnimated:YES completion:nil];

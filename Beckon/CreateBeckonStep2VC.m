@@ -1,9 +1,9 @@
 //
 //  CreateBeckonStep2VC.m
-//  Beckon
+//  BroShout
 //
 //  Created by Steffen Rudkjøbing on 04/01/15.
-//  Copyright (c) 2015 Beckon IVS. All rights reserved.
+//  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
 #import "CreateBeckonStep2VC.h"
@@ -130,7 +130,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [NSNumber numberWithLong:0L], @"status": @"ACCEPTED"};
-    [manager GET:@"http://192.168.1.192:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://192.168.1.91:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
          self.friends = responseObject;
@@ -155,7 +155,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = beckonRequest;
-    [manager POST:@"http://192.168.1.192:9000/beckon" parameters:parameters
+    [manager POST:@"http://192.168.1.91:9000/beckon" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               NSLog(@"JSON: %@", responseObject);
               [self.swipeVC dismissViewControllerAnimated:YES completion:nil];

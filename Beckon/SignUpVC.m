@@ -1,9 +1,9 @@
 //
 //  SignUpVC.m
-//  Beckon
+//  BroShout
 //
 //  Created by Steffen Rudkjøbing on 02/01/15.
-//  Copyright (c) 2015 Beckon IVS. All rights reserved.
+//  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
 #import "SignUpVC.h"
@@ -59,7 +59,7 @@
                                  @"firstName": self.firstNameTextField.text,
                                  @"lastName": self.lastNameTextField.text,
                                  @"password": self.passwordTextField.text};
-    [manager POST:@"http://192.168.1.192:9000/account/signUp" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://192.168.1.91:9000/account/signUp" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
         [self dismissViewControllerAnimated:YES completion:nil];
 //        NSLog(@"JSON: %@", responseObject);
