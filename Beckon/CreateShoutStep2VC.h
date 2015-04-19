@@ -1,5 +1,5 @@
 //
-//  CreateBeckonStep1VC.h
+//  CreateBeckonStep2VC.h
 //  BroShout
 //
 //  Created by Steffen Rudkjøbing on 04/01/15.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FriendRequestCell.h"
 
-@interface CreateBeckonStep1VC : UIViewController
+@interface CreateShoutStep2VC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

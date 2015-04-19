@@ -1,14 +1,14 @@
 //
-//  BroShoutRequestCell.m
+//  BroShoutCell.m
 //  BroShout
 //
 //  Created by Steffen Rudkjøbing on 15/04/15.
 //  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
-#import "BeckonRequestCell.h"
+#import "ShoutCell.h"
 
-@implementation BeckonRequestCell
+@implementation ShoutCell
 
 - (void)awakeFromNib {
     // Initialization code

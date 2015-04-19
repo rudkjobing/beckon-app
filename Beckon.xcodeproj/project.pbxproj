@@ -11,16 +11,16 @@
 		F92811451A618C220073B33E /* AddFriendStep1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92811431A618C220073B33E /* AddFriendStep1VC.xib */; };
 		F92811461A618C220073B33E /* AddFriendStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92811441A618C220073B33E /* AddFriendStep2VC.xib */; };
 		F92811491A618CD20073B33E /* AddFriendNC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92811481A618CD20073B33E /* AddFriendNC.m */; };
-		F92CC0991A581CDF00AA0B70 /* BeckonsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0971A581CDF00AA0B70 /* BeckonsVC.m */; };
-		F92CC09A1A581CDF00AA0B70 /* BeckonsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0981A581CDF00AA0B70 /* BeckonsVC.xib */; };
+		F92CC0991A581CDF00AA0B70 /* ShoutsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0971A581CDF00AA0B70 /* ShoutsVC.m */; };
+		F92CC09A1A581CDF00AA0B70 /* ShoutsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0981A581CDF00AA0B70 /* ShoutsVC.xib */; };
 		F92CC0A91A5890BB00AA0B70 /* FriendsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0A71A5890BB00AA0B70 /* FriendsVC.m */; };
 		F92CC0AA1A5890BB00AA0B70 /* FriendsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0A81A5890BB00AA0B70 /* FriendsVC.xib */; };
 		F92CC0B11A5892C000AA0B70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92CC0B01A5892C000AA0B70 /* MapKit.framework */; };
-		F92CC0B81A596F1300AA0B70 /* CreateBeckonSwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0B71A596F1300AA0B70 /* CreateBeckonSwipeVC.m */; };
-		F92CC0BC1A596F5600AA0B70 /* CreateBeckonStep1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0BA1A596F5600AA0B70 /* CreateBeckonStep1VC.m */; };
-		F92CC0BD1A596F5600AA0B70 /* CreateBeckonStep1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0BB1A596F5600AA0B70 /* CreateBeckonStep1VC.xib */; };
-		F92CC0C11A596F6E00AA0B70 /* CreateBeckonStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0BF1A596F6E00AA0B70 /* CreateBeckonStep2VC.m */; };
-		F92CC0C21A596F6E00AA0B70 /* CreateBeckonStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0C01A596F6E00AA0B70 /* CreateBeckonStep2VC.xib */; };
+		F92CC0B81A596F1300AA0B70 /* CreateShoutSwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0B71A596F1300AA0B70 /* CreateShoutSwipeVC.m */; };
+		F92CC0BC1A596F5600AA0B70 /* CreateShoutStep1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0BA1A596F5600AA0B70 /* CreateShoutStep1VC.m */; };
+		F92CC0BD1A596F5600AA0B70 /* CreateShoutStep1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0BB1A596F5600AA0B70 /* CreateShoutStep1VC.xib */; };
+		F92CC0C11A596F6E00AA0B70 /* CreateShoutStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0BF1A596F6E00AA0B70 /* CreateShoutStep2VC.m */; };
+		F92CC0C21A596F6E00AA0B70 /* CreateShoutStep2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92CC0C01A596F6E00AA0B70 /* CreateShoutStep2VC.xib */; };
 		F92CC0D91A599ED000AA0B70 /* AddFriendStep1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0D71A599ED000AA0B70 /* AddFriendStep1VC.m */; };
 		F92CC0DE1A599EE200AA0B70 /* AddFriendStep2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0DC1A599EE200AA0B70 /* AddFriendStep2VC.m */; };
 		F92CC0E21A59A52300AA0B70 /* SwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CC0E11A59A52300AA0B70 /* SwipeVC.m */; };
@@ -35,10 +35,10 @@
 		F960A7551A57285E000BB047 /* MainSwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A74E1A57285E000BB047 /* MainSwipeVC.m */; };
 		F960A7571A57285E000BB047 /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7521A57285E000BB047 /* SignInVC.m */; };
 		F960A7581A57285E000BB047 /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7541A57285E000BB047 /* SignUpVC.m */; };
-		F97A05CF1ADEEB0900D9168D /* BeckonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97A05CD1ADEEB0900D9168D /* BeckonCell.m */; };
-		F97A05D01ADEEB0900D9168D /* BeckonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97A05CE1ADEEB0900D9168D /* BeckonCell.xib */; };
-		F97A05D41ADEF0BD00D9168D /* BeckonRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97A05D21ADEF0BD00D9168D /* BeckonRequestCell.m */; };
-		F97A05D51ADEF0BD00D9168D /* BeckonRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97A05D31ADEF0BD00D9168D /* BeckonRequestCell.xib */; };
+		F97A05CF1ADEEB0900D9168D /* ShoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97A05CD1ADEEB0900D9168D /* ShoutCell.m */; };
+		F97A05D01ADEEB0900D9168D /* ShoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97A05CE1ADEEB0900D9168D /* ShoutCell.xib */; };
+		F97A05D41ADEF0BD00D9168D /* ShoutRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97A05D21ADEF0BD00D9168D /* ShoutRequestCell.m */; };
+		F97A05D51ADEF0BD00D9168D /* ShoutRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97A05D31ADEF0BD00D9168D /* ShoutRequestCell.xib */; };
 		F9DCFB331A63205D00B58029 /* FriendRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB311A63205D00B58029 /* FriendRequestCell.m */; };
 		F9DCFB341A63205D00B58029 /* FriendRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */; };
 		F9DCFB381A640F2A00B58029 /* FriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB361A640F2A00B58029 /* FriendVC.m */; };
@@ -66,21 +66,21 @@
 		F92811441A618C220073B33E /* AddFriendStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendStep2VC.xib; sourceTree = "<group>"; };
 		F92811471A618CD20073B33E /* AddFriendNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendNC.h; sourceTree = "<group>"; };
 		F92811481A618CD20073B33E /* AddFriendNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendNC.m; sourceTree = "<group>"; };
-		F92CC0961A581CDF00AA0B70 /* BeckonsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckonsVC.h; sourceTree = "<group>"; };
-		F92CC0971A581CDF00AA0B70 /* BeckonsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckonsVC.m; sourceTree = "<group>"; };
-		F92CC0981A581CDF00AA0B70 /* BeckonsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeckonsVC.xib; sourceTree = "<group>"; };
+		F92CC0961A581CDF00AA0B70 /* ShoutsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutsVC.h; sourceTree = "<group>"; };
+		F92CC0971A581CDF00AA0B70 /* ShoutsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutsVC.m; sourceTree = "<group>"; };
+		F92CC0981A581CDF00AA0B70 /* ShoutsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutsVC.xib; sourceTree = "<group>"; };
 		F92CC0A61A5890BB00AA0B70 /* FriendsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsVC.h; sourceTree = "<group>"; };
 		F92CC0A71A5890BB00AA0B70 /* FriendsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsVC.m; sourceTree = "<group>"; };
 		F92CC0A81A5890BB00AA0B70 /* FriendsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsVC.xib; sourceTree = "<group>"; };
 		F92CC0B01A5892C000AA0B70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		F92CC0B61A596F1300AA0B70 /* CreateBeckonSwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonSwipeVC.h; sourceTree = "<group>"; };
-		F92CC0B71A596F1300AA0B70 /* CreateBeckonSwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonSwipeVC.m; sourceTree = "<group>"; };
-		F92CC0B91A596F5600AA0B70 /* CreateBeckonStep1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonStep1VC.h; sourceTree = "<group>"; };
-		F92CC0BA1A596F5600AA0B70 /* CreateBeckonStep1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonStep1VC.m; sourceTree = "<group>"; };
-		F92CC0BB1A596F5600AA0B70 /* CreateBeckonStep1VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateBeckonStep1VC.xib; sourceTree = "<group>"; };
-		F92CC0BE1A596F6E00AA0B70 /* CreateBeckonStep2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeckonStep2VC.h; sourceTree = "<group>"; };
-		F92CC0BF1A596F6E00AA0B70 /* CreateBeckonStep2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeckonStep2VC.m; sourceTree = "<group>"; };
-		F92CC0C01A596F6E00AA0B70 /* CreateBeckonStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateBeckonStep2VC.xib; sourceTree = "<group>"; };
+		F92CC0B61A596F1300AA0B70 /* CreateShoutSwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateShoutSwipeVC.h; sourceTree = "<group>"; };
+		F92CC0B71A596F1300AA0B70 /* CreateShoutSwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateShoutSwipeVC.m; sourceTree = "<group>"; };
+		F92CC0B91A596F5600AA0B70 /* CreateShoutStep1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateShoutStep1VC.h; sourceTree = "<group>"; };
+		F92CC0BA1A596F5600AA0B70 /* CreateShoutStep1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateShoutStep1VC.m; sourceTree = "<group>"; };
+		F92CC0BB1A596F5600AA0B70 /* CreateShoutStep1VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateShoutStep1VC.xib; sourceTree = "<group>"; };
+		F92CC0BE1A596F6E00AA0B70 /* CreateShoutStep2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateShoutStep2VC.h; sourceTree = "<group>"; };
+		F92CC0BF1A596F6E00AA0B70 /* CreateShoutStep2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateShoutStep2VC.m; sourceTree = "<group>"; };
+		F92CC0C01A596F6E00AA0B70 /* CreateShoutStep2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateShoutStep2VC.xib; sourceTree = "<group>"; };
 		F92CC0D61A599ED000AA0B70 /* AddFriendStep1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendStep1VC.h; sourceTree = "<group>"; };
 		F92CC0D71A599ED000AA0B70 /* AddFriendStep1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendStep1VC.m; sourceTree = "<group>"; };
 		F92CC0DB1A599EE200AA0B70 /* AddFriendStep2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendStep2VC.h; sourceTree = "<group>"; };
@@ -107,12 +107,12 @@
 		F960A7521A57285E000BB047 /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInVC.m; sourceTree = "<group>"; };
 		F960A7531A57285E000BB047 /* SignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpVC.h; sourceTree = "<group>"; };
 		F960A7541A57285E000BB047 /* SignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpVC.m; sourceTree = "<group>"; };
-		F97A05CC1ADEEB0900D9168D /* BeckonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckonCell.h; sourceTree = "<group>"; };
-		F97A05CD1ADEEB0900D9168D /* BeckonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckonCell.m; sourceTree = "<group>"; };
-		F97A05CE1ADEEB0900D9168D /* BeckonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeckonCell.xib; sourceTree = "<group>"; };
-		F97A05D11ADEF0BD00D9168D /* BeckonRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckonRequestCell.h; sourceTree = "<group>"; };
-		F97A05D21ADEF0BD00D9168D /* BeckonRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckonRequestCell.m; sourceTree = "<group>"; };
-		F97A05D31ADEF0BD00D9168D /* BeckonRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeckonRequestCell.xib; sourceTree = "<group>"; };
+		F97A05CC1ADEEB0900D9168D /* ShoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutCell.h; sourceTree = "<group>"; };
+		F97A05CD1ADEEB0900D9168D /* ShoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutCell.m; sourceTree = "<group>"; };
+		F97A05CE1ADEEB0900D9168D /* ShoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutCell.xib; sourceTree = "<group>"; };
+		F97A05D11ADEF0BD00D9168D /* ShoutRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutRequestCell.h; sourceTree = "<group>"; };
+		F97A05D21ADEF0BD00D9168D /* ShoutRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutRequestCell.m; sourceTree = "<group>"; };
+		F97A05D31ADEF0BD00D9168D /* ShoutRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutRequestCell.xib; sourceTree = "<group>"; };
 		F9DCFB301A63205D00B58029 /* FriendRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendRequestCell.h; sourceTree = "<group>"; };
 		F9DCFB311A63205D00B58029 /* FriendRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendRequestCell.m; sourceTree = "<group>"; };
 		F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendRequestCell.xib; sourceTree = "<group>"; };
@@ -170,9 +170,9 @@
 			children = (
 				F960A74D1A57285E000BB047 /* MainSwipeVC.h */,
 				F960A74E1A57285E000BB047 /* MainSwipeVC.m */,
-				F92CC0961A581CDF00AA0B70 /* BeckonsVC.h */,
-				F92CC0971A581CDF00AA0B70 /* BeckonsVC.m */,
-				F92CC0981A581CDF00AA0B70 /* BeckonsVC.xib */,
+				F92CC0961A581CDF00AA0B70 /* ShoutsVC.h */,
+				F92CC0971A581CDF00AA0B70 /* ShoutsVC.m */,
+				F92CC0981A581CDF00AA0B70 /* ShoutsVC.xib */,
 				F92CC0A61A5890BB00AA0B70 /* FriendsVC.h */,
 				F92CC0A71A5890BB00AA0B70 /* FriendsVC.m */,
 				F92CC0A81A5890BB00AA0B70 /* FriendsVC.xib */,
@@ -215,14 +215,14 @@
 		F92CC0B51A596E0300AA0B70 /* Create Beckon scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F92CC0B61A596F1300AA0B70 /* CreateBeckonSwipeVC.h */,
-				F92CC0B71A596F1300AA0B70 /* CreateBeckonSwipeVC.m */,
-				F92CC0B91A596F5600AA0B70 /* CreateBeckonStep1VC.h */,
-				F92CC0BA1A596F5600AA0B70 /* CreateBeckonStep1VC.m */,
-				F92CC0BB1A596F5600AA0B70 /* CreateBeckonStep1VC.xib */,
-				F92CC0BE1A596F6E00AA0B70 /* CreateBeckonStep2VC.h */,
-				F92CC0BF1A596F6E00AA0B70 /* CreateBeckonStep2VC.m */,
-				F92CC0C01A596F6E00AA0B70 /* CreateBeckonStep2VC.xib */,
+				F92CC0B61A596F1300AA0B70 /* CreateShoutSwipeVC.h */,
+				F92CC0B71A596F1300AA0B70 /* CreateShoutSwipeVC.m */,
+				F92CC0B91A596F5600AA0B70 /* CreateShoutStep1VC.h */,
+				F92CC0BA1A596F5600AA0B70 /* CreateShoutStep1VC.m */,
+				F92CC0BB1A596F5600AA0B70 /* CreateShoutStep1VC.xib */,
+				F92CC0BE1A596F6E00AA0B70 /* CreateShoutStep2VC.h */,
+				F92CC0BF1A596F6E00AA0B70 /* CreateShoutStep2VC.m */,
+				F92CC0C01A596F6E00AA0B70 /* CreateShoutStep2VC.xib */,
 			);
 			name = "Create Beckon scenes";
 			sourceTree = "<group>";
@@ -316,12 +316,12 @@
 				F9DCFB3B1A64143100B58029 /* FriendCell.h */,
 				F9DCFB3C1A64143100B58029 /* FriendCell.m */,
 				F9DCFB3D1A64143100B58029 /* FriendCell.xib */,
-				F97A05CC1ADEEB0900D9168D /* BeckonCell.h */,
-				F97A05CD1ADEEB0900D9168D /* BeckonCell.m */,
-				F97A05CE1ADEEB0900D9168D /* BeckonCell.xib */,
-				F97A05D11ADEF0BD00D9168D /* BeckonRequestCell.h */,
-				F97A05D21ADEF0BD00D9168D /* BeckonRequestCell.m */,
-				F97A05D31ADEF0BD00D9168D /* BeckonRequestCell.xib */,
+				F97A05CC1ADEEB0900D9168D /* ShoutCell.h */,
+				F97A05CD1ADEEB0900D9168D /* ShoutCell.m */,
+				F97A05CE1ADEEB0900D9168D /* ShoutCell.xib */,
+				F97A05D11ADEF0BD00D9168D /* ShoutRequestCell.h */,
+				F97A05D21ADEF0BD00D9168D /* ShoutRequestCell.m */,
+				F97A05D31ADEF0BD00D9168D /* ShoutRequestCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -420,19 +420,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F92CC09A1A581CDF00AA0B70 /* BeckonsVC.xib in Resources */,
+				F92CC09A1A581CDF00AA0B70 /* ShoutsVC.xib in Resources */,
 				F92811461A618C220073B33E /* AddFriendStep2VC.xib in Resources */,
 				F92CC0AA1A5890BB00AA0B70 /* FriendsVC.xib in Resources */,
 				F95F301B1A57262D00D2CC3B /* Main.storyboard in Resources */,
 				F9DCFB391A640F2A00B58029 /* FriendVC.xib in Resources */,
 				F92811451A618C220073B33E /* AddFriendStep1VC.xib in Resources */,
 				F9DCFB3F1A64143100B58029 /* FriendCell.xib in Resources */,
-				F97A05D01ADEEB0900D9168D /* BeckonCell.xib in Resources */,
+				F97A05D01ADEEB0900D9168D /* ShoutCell.xib in Resources */,
 				F95F30201A57262D00D2CC3B /* LaunchScreen.xib in Resources */,
-				F92CC0C21A596F6E00AA0B70 /* CreateBeckonStep2VC.xib in Resources */,
+				F92CC0C21A596F6E00AA0B70 /* CreateShoutStep2VC.xib in Resources */,
 				F95F301D1A57262D00D2CC3B /* Images.xcassets in Resources */,
-				F92CC0BD1A596F5600AA0B70 /* CreateBeckonStep1VC.xib in Resources */,
-				F97A05D51ADEF0BD00D9168D /* BeckonRequestCell.xib in Resources */,
+				F92CC0BD1A596F5600AA0B70 /* CreateShoutStep1VC.xib in Resources */,
+				F97A05D51ADEF0BD00D9168D /* ShoutRequestCell.xib in Resources */,
 				F92CC0E71A59CB7600AA0B70 /* SettingsVC.xib in Resources */,
 				F9DCFB341A63205D00B58029 /* FriendRequestCell.xib in Resources */,
 			);
@@ -486,17 +486,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F960A7581A57285E000BB047 /* SignUpVC.m in Sources */,
-				F92CC0B81A596F1300AA0B70 /* CreateBeckonSwipeVC.m in Sources */,
-				F97A05CF1ADEEB0900D9168D /* BeckonCell.m in Sources */,
-				F92CC0C11A596F6E00AA0B70 /* CreateBeckonStep2VC.m in Sources */,
-				F92CC0BC1A596F5600AA0B70 /* CreateBeckonStep1VC.m in Sources */,
+				F92CC0B81A596F1300AA0B70 /* CreateShoutSwipeVC.m in Sources */,
+				F97A05CF1ADEEB0900D9168D /* ShoutCell.m in Sources */,
+				F92CC0C11A596F6E00AA0B70 /* CreateShoutStep2VC.m in Sources */,
+				F92CC0BC1A596F5600AA0B70 /* CreateShoutStep1VC.m in Sources */,
 				F92811491A618CD20073B33E /* AddFriendNC.m in Sources */,
 				F92CC0A91A5890BB00AA0B70 /* FriendsVC.m in Sources */,
 				F92CC0E61A59CB7600AA0B70 /* SettingsVC.m in Sources */,
 				F92CC0DE1A599EE200AA0B70 /* AddFriendStep2VC.m in Sources */,
-				F97A05D41ADEF0BD00D9168D /* BeckonRequestCell.m in Sources */,
+				F97A05D41ADEF0BD00D9168D /* ShoutRequestCell.m in Sources */,
 				F960A7551A57285E000BB047 /* MainSwipeVC.m in Sources */,
-				F92CC0991A581CDF00AA0B70 /* BeckonsVC.m in Sources */,
+				F92CC0991A581CDF00AA0B70 /* ShoutsVC.m in Sources */,
 				F9DCFB3E1A64143100B58029 /* FriendCell.m in Sources */,
 				F92CC0E21A59A52300AA0B70 /* SwipeVC.m in Sources */,
 				F960A7571A57285E000BB047 /* SignInVC.m in Sources */,

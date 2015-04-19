@@ -6,31 +6,31 @@
 //  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
-#import "CreateBeckonStep1VC.h"
-#import "CreateBeckonSwipeVC.h"
+#import "CreateShoutStep1VC.h"
+#import "CreateShoutSwipeVC.h"
 
-@interface CreateBeckonStep1VC ()
+@interface CreateShoutStep1VC ()
 
 @property (strong, nonatomic) UIBarButtonItem *cancelButton;
 @property (strong, nonatomic) UIBarButtonItem *nextButton;
-@property (strong, nonatomic) CreateBeckonSwipeVC *swipeVC;
+@property (strong, nonatomic) CreateShoutSwipeVC *swipeVC;
 @property (weak, nonatomic) IBOutlet UITextField *beckonTitle;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UITextField *where;
 
 @end
 
-@implementation CreateBeckonStep1VC
+@implementation CreateShoutStep1VC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.swipeVC = (CreateBeckonSwipeVC*)self.parentViewController.parentViewController;
+    self.swipeVC = (CreateShoutSwipeVC*)self.parentViewController.parentViewController;
 
     [self.swipeVC.beckon setObject:self.beckonTitle.text forKey:@"title"];
     [self.swipeVC.beckon setObject:[NSMutableDictionary new] forKey:@"location"];
     [self.swipeVC.beckon setObject:self.datePicker.date.description forKey:@"begins"];
     
-    self.navigationItem.title = @"Create Beckon";
+    self.navigationItem.title = @"Shout";
     
     self.cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     self.cancelButton.tintColor = [UIColor blackColor];

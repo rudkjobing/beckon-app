@@ -8,7 +8,7 @@
 
 #import "MainSwipeVC.h"
 #import "AFNetworking.h"
-#import "BeckonsVC.h"
+#import "ShoutsVC.h"
 #import "FriendsVC.h"
 #import "SettingsVC.h"
 
@@ -32,7 +32,7 @@
      object:nil];
  
     //Create the Beckons controller
-    BeckonsVC *beckons = [BeckonsVC new];
+    ShoutsVC *beckons = [ShoutsVC new];
     UINavigationController *scene1 = [[UINavigationController alloc]initWithRootViewController:beckons];
     
     //Create the Friends controller
@@ -68,7 +68,7 @@
     self.userLoggedIn = YES;
     
     //Create the Beckons controller
-    BeckonsVC *beckons = [BeckonsVC new];
+    ShoutsVC *beckons = [ShoutsVC new];
     UINavigationController *scene1 = [[UINavigationController alloc]initWithRootViewController:beckons];
     
     //Create the Friends controller

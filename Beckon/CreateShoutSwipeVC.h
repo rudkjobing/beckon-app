@@ -8,7 +8,7 @@
 
 #import "SwipeVC.h"
 
-@interface CreateBeckonSwipeVC : SwipeVC
+@interface CreateShoutSwipeVC : SwipeVC
 
 @property (strong, nonatomic) NSMutableDictionary *beckon;
 

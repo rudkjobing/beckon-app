@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BeckonRequestCell : UITableViewCell
+@protocol ShoutRequestCellDelegate <NSObject>
+- (void) acceptShoutRequestAction: (id) sender;
+- (void) maybeShoutRequestAction: (id) sender;
+- (void) declineShoutRequestAction: (id) sender;
+@end
+
+@interface ShoutRequestCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *headline;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *location;

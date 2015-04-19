@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateBeckonStep1VC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateShoutStep1VC">
             <connections>
                 <outlet property="beckonTitle" destination="o1Y-HK-Dcn" id="L1I-Bw-i2j"/>
                 <outlet property="datePicker" destination="mqM-u7-9r0" id="hvg-MF-zVI"/>
@@ -96,15 +96,15 @@
                     <exclude reference="MA8-f6-VH4"/>
                     <exclude reference="NMw-7p-SEQ"/>
                     <exclude reference="y4Y-eZ-6Gg"/>
-                    <exclude reference="8Yw-XW-td3"/>
-                    <exclude reference="9iw-am-HHI"/>
-                    <exclude reference="KRQ-Bw-bjN"/>
-                    <exclude reference="D3h-VH-TKa"/>
-                    <exclude reference="T9J-sq-VPW"/>
-                    <exclude reference="tqa-1m-NOZ"/>
                     <exclude reference="BUm-Wh-eec"/>
                     <exclude reference="fjk-ac-gQa"/>
                     <exclude reference="gBy-aA-4o1"/>
+                    <exclude reference="D3h-VH-TKa"/>
+                    <exclude reference="T9J-sq-VPW"/>
+                    <exclude reference="tqa-1m-NOZ"/>
+                    <exclude reference="8Yw-XW-td3"/>
+                    <exclude reference="9iw-am-HHI"/>
+                    <exclude reference="KRQ-Bw-bjN"/>
                     <exclude reference="U6B-Vf-edO"/>
                     <exclude reference="uYQ-fk-Omf"/>
                     <exclude reference="xGZ-wa-wJS"/>
@@ -126,15 +126,15 @@
                     <include reference="MA8-f6-VH4"/>
                     <include reference="NMw-7p-SEQ"/>
                     <include reference="y4Y-eZ-6Gg"/>
-                    <include reference="8Yw-XW-td3"/>
-                    <include reference="9iw-am-HHI"/>
-                    <include reference="KRQ-Bw-bjN"/>
-                    <include reference="D3h-VH-TKa"/>
-                    <include reference="T9J-sq-VPW"/>
-                    <include reference="tqa-1m-NOZ"/>
                     <include reference="BUm-Wh-eec"/>
                     <include reference="fjk-ac-gQa"/>
                     <include reference="gBy-aA-4o1"/>
+                    <include reference="D3h-VH-TKa"/>
+                    <include reference="T9J-sq-VPW"/>
+                    <include reference="tqa-1m-NOZ"/>
+                    <include reference="8Yw-XW-td3"/>
+                    <include reference="9iw-am-HHI"/>
+                    <include reference="KRQ-Bw-bjN"/>
                     <include reference="U6B-Vf-edO"/>
                     <include reference="uYQ-fk-Omf"/>
                     <include reference="xGZ-wa-wJS"/>

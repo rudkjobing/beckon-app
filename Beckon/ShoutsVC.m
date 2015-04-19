@@ -6,12 +6,13 @@
 //  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
-#import "BeckonsVC.h"
+#import "ShoutsVC.h"
 #import "AFNetworking.h"
-#import "CreateBeckonSwipeVC.h"
-#import "BeckonRequestCell.h"
+#import "CreateShoutSwipeVC.h"
+#import "ShoutRequestCell.h"
+#import "ShoutCell.h"
 
-@interface BeckonsVC ()
+@interface ShoutsVC ()
 
 @property (strong, nonatomic) UIBarButtonItem *addButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
@@ -20,7 +21,7 @@
 
 @end
 
-@implementation BeckonsVC
+@implementation ShoutsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,8 +29,9 @@
     self.addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addBeckon)];
     self.addButton.tintColor = [UIColor blackColor];
     self.navigationItem.rightBarButtonItem = self.addButton;
-    self.navigationItem.title = @"Beckons";
-    [self.shoutTable registerClass:[BeckonRequestCell class] forCellReuseIdentifier:@"BeckonRequestCell"];
+    self.navigationItem.title = @"Shouts";
+    [self.shoutTable registerClass:[ShoutRequestCell class] forCellReuseIdentifier:@"ShoutRequestCell"];
+    [self.shoutTable registerClass:[ShoutCell class] forCellReuseIdentifier:@"ShoutCell"];
     self.shoutTable.dataSource = self;
     self.shoutTable.delegate = self;
 }
@@ -39,11 +41,11 @@
     NSDictionary *shout = [self.shouts objectAtIndex:indexPath.row];
     /* Present the friendrequest cell if this is a friend request */
     if([[shout objectForKey:@"status"] isEqualToString:@"INVITED"]){
-        static NSString *cellIdentifier = @"BeckonRequestCell";
-        [tableView registerNib:[UINib nibWithNibName:@"BeckonRequestCell" bundle: nil] forCellReuseIdentifier:@"BeckonRequestCell"];
-        BeckonRequestCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        static NSString *cellIdentifier = @"ShoutRequestCell";
+        [tableView registerNib:[UINib nibWithNibName:@"ShoutRequestCell" bundle: nil] forCellReuseIdentifier:@"ShoutRequestCell"];
+        ShoutRequestCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         if (!cell) {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"BeckonRequestCell"];
+            cell = [tableView dequeueReusableCellWithIdentifier:@"ShoutRequestCell"];
         }
         //cell.delegate = self;
         
@@ -55,7 +57,18 @@
     }
     /* Or present a normal friend cell if the friendship is established */
     else{
+        static NSString *cellIdentifier = @"ShoutCell";
+        [tableView registerNib:[UINib nibWithNibName:@"ShoutCell" bundle: nil] forCellReuseIdentifier:@"ShoutCell"];
+        ShoutCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (!cell) {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"ShoutCell"];
+        }
         
+        cell.title.text = [shout objectForKey:@"title"];
+        cell.location.text = [[shout objectForKey:@"location"] objectForKey:@"name"];
+        cell.members.text = [shout objectForKey:@"acceptedMemberList"];
+        
+        return cell;
     }
     return nil;
 }
@@ -68,12 +81,18 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 177.0;
+    NSDictionary *shout = [self.shouts objectAtIndex:indexPath.row];
+    
+    if([[shout objectForKey:@"status"] isEqualToString:@"INVITED"]){
+        return 177.0;
+    }
+    
+    return 100.0;
 }
 
 
 - (void)addBeckon{
-    CreateBeckonSwipeVC *createBeckonModal = [CreateBeckonSwipeVC new];
+    CreateShoutSwipeVC *createBeckonModal = [CreateShoutSwipeVC new];
     [self presentViewController:createBeckonModal animated:YES completion:nil];
 }
 
@@ -92,7 +111,7 @@
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager GET:@"http://192.168.1.91:9000/beckons" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://192.168.1.91:9000/shouts" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          self.shouts = responseObject;
          NSLog(@"JSON: %@", self.shouts);

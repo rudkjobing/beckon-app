@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 Steffen Harbom Rudkjøbing. All rights reserved.
 //
 
-#import "CreateBeckonStep2VC.h"
-#import "CreateBeckonSwipeVC.h"
+#import "CreateShoutStep2VC.h"
+#import "CreateShoutSwipeVC.h"
 #import "FriendCell.h"
 #import "AFNetworking.h"
 
-@interface CreateBeckonStep2VC ()
+@interface CreateShoutStep2VC ()
 
 @property (strong, nonatomic) UIBarButtonItem *previousButton;
 @property (strong, nonatomic) UIBarButtonItem *nextButton;
-@property (strong, nonatomic) CreateBeckonSwipeVC *swipeVC;
+@property (strong, nonatomic) CreateShoutSwipeVC *swipeVC;
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) NSArray *friends;
 @property (strong, nonatomic) NSArray *friendsFiltered;
@@ -26,14 +26,14 @@
 
 @end
 
-@implementation CreateBeckonStep2VC
+@implementation CreateShoutStep2VC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.table.delegate = self;
     self.table.dataSource = self;
     
-    self.swipeVC = (CreateBeckonSwipeVC*)self.parentViewController.parentViewController;
+    self.swipeVC = (CreateShoutSwipeVC*)self.parentViewController.parentViewController;
     self.beckonMembers = [NSMutableArray new];
     [self.swipeVC.beckon setObject:self.beckonMembers forKey:@"members"];
     
@@ -155,7 +155,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = beckonRequest;
-    [manager POST:@"http://192.168.1.91:9000/beckon" parameters:parameters
+    [manager POST:@"http://192.168.1.91:9000/shout" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               NSLog(@"JSON: %@", responseObject);
               [self.swipeVC dismissViewControllerAnimated:YES completion:nil];
