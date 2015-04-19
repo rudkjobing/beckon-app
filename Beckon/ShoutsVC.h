@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShoutRequestCell.h"
 
-@interface ShoutsVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ShoutsVC : UIViewController <UITableViewDataSource, UITableViewDelegate, ShoutRequestCellDelegate>
 
 @end

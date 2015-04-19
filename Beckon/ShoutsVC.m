@@ -9,7 +9,6 @@
 #import "ShoutsVC.h"
 #import "AFNetworking.h"
 #import "CreateShoutSwipeVC.h"
-#import "ShoutRequestCell.h"
 #import "ShoutCell.h"
 
 @interface ShoutsVC ()
@@ -48,7 +47,8 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"ShoutRequestCell"];
         }
         //cell.delegate = self;
-        
+        cell.delegate = self;
+        cell.shout = shout;
         cell.headline.text = [[shout objectForKey:@"createrName"] stringByAppendingString:@" has invited you to"];
         cell.title.text = [shout objectForKey:@"title"];
         cell.location.text = [[shout objectForKey:@"location"] objectForKey:@"name"];
@@ -127,6 +127,46 @@
          }
      }];
     
+}
+
+-(void)updateShoutMemberShout: (NSDictionary *) shout shoutOriginal: (NSDictionary *) original{
+    [self.spinner startAnimating];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager POST:@"http://192.168.1.91:9000/shout/membership/status" parameters:shout success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSLog(@"JSON: %@", self.shouts);
+         [self.shoutTable reloadData];
+         [self.spinner stopAnimating];
+     }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         [self.spinner stopAnimating];
+         NSInteger statusCode = operation.response.statusCode;
+         NSLog(@"%ld", (long)statusCode);
+         if(statusCode == 401) {
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
+         }
+     }];
+    
+}
+
+-(void)acceptShoutRequestAction:(id)sender{
+    ShoutRequestCell *s = (ShoutRequestCell*) sender;
+    NSDictionary *update = @{@"memberId": [s.shout objectForKey:@"memberId"], @"shoutId": [s.shout objectForKey:@"id"], @"status": @"ACCEPTED"};
+    [self updateShoutMemberShout:update shoutOriginal:s.shout];
+}
+
+-(void)maybeShoutRequestAction:(id)sender{
+    ShoutRequestCell *s = (ShoutRequestCell*) sender;
+    NSDictionary *update = @{@"memberId": [s.shout objectForKey:@"memberId"], @"shoutId": [s.shout objectForKey:@"id"], @"status": @"MAYBE"};
+    [self updateShoutMemberShout:update shoutOriginal:s.shout];
+}
+
+-(void)declineShoutRequestAction:(id)sender{
+    ShoutRequestCell *s = (ShoutRequestCell*) sender;
+    NSDictionary *update = @{@"memberId": [s.shout objectForKey:@"memberId"], @"shoutId": [s.shout objectForKey:@"id"], @"status": @"DECLINED"};
+    [self updateShoutMemberShout:update shoutOriginal:s.shout];
 }
 
 @end

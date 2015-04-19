@@ -20,4 +20,16 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)acceptAction:(id)sender {
+    [self.delegate acceptShoutRequestAction:self];
+}
+
+- (IBAction)maybeAction:(id)sender {
+    [self.delegate maybeShoutRequestAction:self];
+}
+
+- (IBAction)declineAction:(id)sender {
+    [self.delegate declineShoutRequestAction:self];
+}
+
 @end

@@ -24,6 +24,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="maybeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="m53-x3-uIB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yw-5D-ShA">
                                 <rect key="frame" x="216" y="130" width="96" height="30"/>
@@ -32,6 +35,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="declineAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hcd-my-3Ru"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nukku invites you to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ux2-XP-64r">
                                 <rect key="frame" x="8" y="8" width="304" height="21"/>
@@ -63,6 +69,9 @@
                                 <state key="normal" title="Cool">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="acceptAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BTP-QU-T4E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3843137254901961" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
