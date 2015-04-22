@@ -46,12 +46,17 @@
         if (!cell) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"ShoutRequestCell"];
         }
-        //cell.delegate = self;
+
         cell.delegate = self;
         cell.shout = shout;
         cell.headline.text = [[shout objectForKey:@"createrName"] stringByAppendingString:@" has invited you to"];
         cell.title.text = [shout objectForKey:@"title"];
         cell.location.text = [[shout objectForKey:@"location"] objectForKey:@"name"];
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat: @"yyyy-MM-dd HH:mm:ss"];
+        NSDate *begins = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] integerValue] / 1000];
+        cell.begins.text = [formatter stringFromDate:begins];
         
         return cell;
     }
@@ -67,6 +72,11 @@
         cell.title.text = [shout objectForKey:@"title"];
         cell.location.text = [[shout objectForKey:@"location"] objectForKey:@"name"];
         cell.members.text = [shout objectForKey:@"acceptedMemberList"];
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat: @"yyyy-MM-dd HH:mm:ss"];
+        NSDate *begins = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] integerValue] / 1000];
+        cell.date.text = [formatter stringFromDate:begins];
         
         return cell;
     }
