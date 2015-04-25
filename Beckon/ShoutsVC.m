@@ -38,7 +38,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *shout = [self.shouts objectAtIndex:indexPath.row];
-    /* Present the friendrequest cell if this is a friend request */
+    /* Present the shout cell if this is a shout invitation */
     if([[shout objectForKey:@"status"] isEqualToString:@"INVITED"]){
         static NSString *cellIdentifier = @"ShoutRequestCell";
         [tableView registerNib:[UINib nibWithNibName:@"ShoutRequestCell" bundle: nil] forCellReuseIdentifier:@"ShoutRequestCell"];
@@ -54,13 +54,13 @@
         cell.location.text = [[shout objectForKey:@"location"] objectForKey:@"name"];
         
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat: @"yyyy-MM-dd HH:mm:ss"];
+        [formatter setDateFormat: @"yyyy-MM-dd HH:mm"];
         NSDate *begins = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] integerValue] / 1000];
         cell.begins.text = [formatter stringFromDate:begins];
         
         return cell;
     }
-    /* Or present a normal friend cell if the friendship is established */
+    /* Or present a normal shout cell */
     else{
         static NSString *cellIdentifier = @"ShoutCell";
         [tableView registerNib:[UINib nibWithNibName:@"ShoutCell" bundle: nil] forCellReuseIdentifier:@"ShoutCell"];
@@ -74,9 +74,12 @@
         cell.members.text = [shout objectForKey:@"acceptedMemberList"];
         
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat: @"yyyy-MM-dd HH:mm:ss"];
+        [formatter setDateFormat: @"yyyy-MM-dd HH:mm"];
         NSDate *begins = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] integerValue] / 1000];
+        cell.begins = begins;
         cell.date.text = [formatter stringFromDate:begins];
+        
+        [cell startTimer];
         
         return cell;
     }
