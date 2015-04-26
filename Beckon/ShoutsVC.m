@@ -35,8 +35,12 @@
     self.shoutTable.delegate = self;
 }
 
-- (void) viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
+    //Register for notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getShouts) name:@"PleaseUpdate" object:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    [self getShouts];
 }
 
 - (void) viewWillDisappear:(BOOL)animated{
@@ -121,13 +125,6 @@
 
 - (void)viewEnteredForeground{
     [self getShouts];
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-    //Register for notifications
-    [self getShouts];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
 -(void)getShouts{

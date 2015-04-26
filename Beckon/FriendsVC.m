@@ -42,6 +42,7 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated{
+    [self getFriendships];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getFriendships) name:@"PleaseUpdate" object:nil];
 }
 
@@ -184,10 +185,6 @@
     AddFriendStep1VC *step1 = [AddFriendStep1VC new];
     AddFriendNC *navCon = [[AddFriendNC alloc] initWithRootViewController:step1];
     [self presentViewController:navCon animated:YES completion:nil];
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-    [self getFriendships];
 }
 
 -(void)getFriendships{
