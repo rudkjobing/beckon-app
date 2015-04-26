@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -120,6 +120,28 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfM-cD-JTW">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4Tx-Gu-8Td"/>
+                                    <constraint firstAttribute="height" constant="21" id="pme-mv-GIQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4Tx-Gu-8Td"/>
+                                        <exclude reference="pme-mv-GIQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4Tx-Gu-8Td"/>
+                                        <include reference="pme-mv-GIQ"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -128,6 +150,7 @@
                             <constraint firstItem="P2d-oM-Ajj" firstAttribute="trailing" secondItem="pYA-Vj-utX" secondAttribute="trailingMargin" id="A9T-Xl-hu6"/>
                             <constraint firstItem="YTD-1g-saG" firstAttribute="top" secondItem="P2d-oM-Ajj" secondAttribute="bottom" constant="8" symbolic="YES" id="CcN-4A-bjo"/>
                             <constraint firstItem="U4L-ow-3Ah" firstAttribute="top" secondItem="Est-Zy-D8S" secondAttribute="bottom" constant="8" id="CeD-pd-JEj"/>
+                            <constraint firstAttribute="centerX" secondItem="hfM-cD-JTW" secondAttribute="centerX" id="FVh-3a-zgz"/>
                             <constraint firstItem="Ex7-nd-aIo" firstAttribute="trailing" secondItem="Afw-3I-qdw" secondAttribute="trailing" id="IjR-vR-qb4"/>
                             <constraint firstItem="P2d-oM-Ajj" firstAttribute="top" secondItem="Ex7-nd-aIo" secondAttribute="bottom" constant="8" symbolic="YES" id="Mts-7c-4Uc"/>
                             <constraint firstItem="U4L-ow-3Ah" firstAttribute="leading" secondItem="pYA-Vj-utX" secondAttribute="leadingMargin" id="NEv-LY-NRA"/>
@@ -137,15 +160,19 @@
                             <constraint firstItem="Kaq-ms-I1a" firstAttribute="top" secondItem="P2d-oM-Ajj" secondAttribute="bottom" constant="46" id="WIs-83-Dyn"/>
                             <constraint firstItem="Afw-3I-qdw" firstAttribute="top" secondItem="U4L-ow-3Ah" secondAttribute="bottom" constant="8" id="cED-lf-HQY"/>
                             <constraint firstItem="YTD-1g-saG" firstAttribute="centerX" secondItem="Kaq-ms-I1a" secondAttribute="centerX" id="cgu-wk-AaU"/>
+                            <constraint firstItem="hfM-cD-JTW" firstAttribute="trailing" secondItem="pYA-Vj-utX" secondAttribute="trailingMargin" id="djK-dJ-YCm"/>
                             <constraint firstItem="P2d-oM-Ajj" firstAttribute="leading" secondItem="pYA-Vj-utX" secondAttribute="leadingMargin" id="fKv-TG-DNU"/>
                             <constraint firstItem="Afw-3I-qdw" firstAttribute="leading" secondItem="pYA-Vj-utX" secondAttribute="leadingMargin" id="fxJ-dP-Ig8"/>
                             <constraint firstItem="U4L-ow-3Ah" firstAttribute="trailing" secondItem="pYA-Vj-utX" secondAttribute="trailingMargin" id="jL4-9I-T54"/>
+                            <constraint firstItem="hfM-cD-JTW" firstAttribute="leading" secondItem="pYA-Vj-utX" secondAttribute="leadingMargin" id="nbY-vO-FQg"/>
+                            <constraint firstItem="hfM-cD-JTW" firstAttribute="top" secondItem="Kaq-ms-I1a" secondAttribute="bottom" constant="8" id="vLe-4m-a0U"/>
                             <constraint firstItem="Ex7-nd-aIo" firstAttribute="baseline" secondItem="kOV-jT-Y3e" secondAttribute="baseline" id="w1h-vo-BhA"/>
                             <constraint firstItem="YTD-1g-saG" firstAttribute="leading" secondItem="pYA-Vj-utX" secondAttribute="leadingMargin" constant="83" id="yBl-x9-U1o"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Ex7-nd-aIo"/>
+                                <exclude reference="hfM-cD-JTW"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="CeD-pd-JEj"/>
@@ -167,11 +194,16 @@
                                 <exclude reference="w1h-vo-BhA"/>
                                 <exclude reference="4q0-OD-Pkf"/>
                                 <exclude reference="WIs-83-Dyn"/>
+                                <exclude reference="FVh-3a-zgz"/>
+                                <exclude reference="djK-dJ-YCm"/>
+                                <exclude reference="nbY-vO-FQg"/>
+                                <exclude reference="vLe-4m-a0U"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Ex7-nd-aIo"/>
+                                <include reference="hfM-cD-JTW"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="CeD-pd-JEj"/>
@@ -193,6 +225,10 @@
                                 <include reference="w1h-vo-BhA"/>
                                 <include reference="4q0-OD-Pkf"/>
                                 <include reference="WIs-83-Dyn"/>
+                                <include reference="FVh-3a-zgz"/>
+                                <include reference="djK-dJ-YCm"/>
+                                <include reference="nbY-vO-FQg"/>
+                                <include reference="vLe-4m-a0U"/>
                             </mask>
                         </variation>
                     </view>
@@ -200,6 +236,7 @@
                         <outlet property="emailTextField" destination="U4L-ow-3Ah" id="s1d-wF-qE2"/>
                         <outlet property="firstNameTextField" destination="kOV-jT-Y3e" id="och-AF-kEd"/>
                         <outlet property="lastNameTextField" destination="Ex7-nd-aIo" id="KEn-vC-N5N"/>
+                        <outlet property="message" destination="hfM-cD-JTW" id="cno-qb-kee"/>
                         <outlet property="passwordTextField" destination="P2d-oM-Ajj" id="YuB-mE-usZ"/>
                         <outlet property="phoneNumberTextField" destination="Afw-3I-qdw" id="EwN-G9-wi1"/>
                     </connections>
@@ -264,6 +301,25 @@
                                     <rect key="frame" x="99" y="28" width="203" height="30"/>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjl-3R-ApB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="aeW-Tx-Xwz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aeW-Tx-Xwz"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="aeW-Tx-Xwz"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -276,10 +332,16 @@
                             <constraint firstItem="ejY-a8-XuY" firstAttribute="top" secondItem="sDZ-cj-zT9" secondAttribute="bottom" constant="8" id="WaR-nh-sUY"/>
                             <constraint firstItem="sDZ-cj-zT9" firstAttribute="leading" secondItem="dgV-UK-LJA" secondAttribute="leadingMargin" id="bhG-yt-uxW"/>
                             <constraint firstItem="8D3-bs-azK" firstAttribute="trailing" secondItem="dgV-UK-LJA" secondAttribute="trailingMargin" id="dMj-qm-bsk"/>
+                            <constraint firstItem="Qjl-3R-ApB" firstAttribute="top" secondItem="zaV-qd-YYC" secondAttribute="bottom" constant="8" id="eWp-ES-jOp"/>
+                            <constraint firstItem="Qjl-3R-ApB" firstAttribute="trailing" secondItem="dgV-UK-LJA" secondAttribute="trailingMargin" id="g7b-3V-WFe"/>
                             <constraint firstItem="8D3-bs-azK" firstAttribute="top" secondItem="o4U-sI-3F0" secondAttribute="bottom" constant="8" id="lM4-WY-dBD"/>
                             <constraint firstItem="ejY-a8-XuY" firstAttribute="leading" secondItem="dgV-UK-LJA" secondAttribute="leadingMargin" constant="83" id="wS9-9q-l40"/>
+                            <constraint firstItem="Qjl-3R-ApB" firstAttribute="leading" secondItem="dgV-UK-LJA" secondAttribute="leadingMargin" id="yXQ-wo-WLW"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Qjl-3R-ApB"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="0Q2-Yp-mfg"/>
                                 <exclude reference="dMj-qm-bsk"/>
@@ -290,11 +352,17 @@
                                 <exclude reference="BZQ-60-EgR"/>
                                 <exclude reference="WaR-nh-sUY"/>
                                 <exclude reference="wS9-9q-l40"/>
+                                <exclude reference="eWp-ES-jOp"/>
+                                <exclude reference="g7b-3V-WFe"/>
+                                <exclude reference="yXQ-wo-WLW"/>
                                 <exclude reference="89P-qt-LCo"/>
                                 <exclude reference="UY0-zS-iFE"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Qjl-3R-ApB"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="0Q2-Yp-mfg"/>
                                 <include reference="dMj-qm-bsk"/>
@@ -305,6 +373,9 @@
                                 <include reference="BZQ-60-EgR"/>
                                 <include reference="WaR-nh-sUY"/>
                                 <include reference="wS9-9q-l40"/>
+                                <include reference="eWp-ES-jOp"/>
+                                <include reference="g7b-3V-WFe"/>
+                                <include reference="yXQ-wo-WLW"/>
                                 <include reference="89P-qt-LCo"/>
                                 <include reference="UY0-zS-iFE"/>
                             </mask>
@@ -312,6 +383,7 @@
                     </view>
                     <connections>
                         <outlet property="emailAddressTextField" destination="8D3-bs-azK" id="4Tg-W9-lxJ"/>
+                        <outlet property="message" destination="Qjl-3R-ApB" id="reL-x3-4Lk"/>
                         <outlet property="notAMemberButton" destination="zaV-qd-YYC" id="faU-OM-G1t"/>
                         <outlet property="passwordTextField" destination="sDZ-cj-zT9" id="UTU-pd-LqN"/>
                     </connections>

@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
+@property (weak, nonatomic) IBOutlet UILabel *message;
 
 @end
 
@@ -61,15 +62,17 @@
                                  @"password": self.passwordTextField.text};
     [manager POST:@"http://192.168.1.91:9000/account/signUp" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
+        self.message.text = @"";
+        [self.message setTextColor:[UIColor blackColor]];
         [self dismissViewControllerAnimated:YES completion:nil];
-//        NSLog(@"JSON: %@", responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
-        //TODO Present error message
-        
-//        NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
-//        NSDictionary *serializedData = [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
-//        NSLog(@"Error: %@", serializedData);
+        NSInteger statusCode = operation.response.statusCode;
+        if(statusCode == 400) {
+            NSDictionary *data = operation.responseObject;
+            self.message.text = [data objectForKey:@"message"];
+            [self.message setTextColor:[UIColor redColor]];
+        }
     }];
     
 }

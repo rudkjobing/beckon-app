@@ -10,6 +10,8 @@
 
 @interface SignInVC : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *message;
+
 -(void)signInWithEmail:(NSString*)email andPassword:(NSString*)password;
 
 @end

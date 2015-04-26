@@ -22,19 +22,17 @@
                 </tableView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="OuC-yT-NJZ">
                     <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                    <color key="color" red="0.014937482544099101" green="0.15713729816554889" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="color" red="0.85875660967040846" green="0.9892006516456604" blue="0.9892006516456604" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ZcT-pz-h1b" secondAttribute="bottom" id="684-3b-EIj"/>
                 <constraint firstAttribute="trailing" secondItem="ZcT-pz-h1b" secondAttribute="trailing" id="6BD-xm-FCu"/>
-                <constraint firstAttribute="centerX" secondItem="OuC-yT-NJZ" secondAttribute="centerX" constant="-8.5" id="Acj-Xi-Y1b"/>
-                <constraint firstItem="OuC-yT-NJZ" firstAttribute="centerX" secondItem="ZcT-pz-h1b" secondAttribute="centerX" constant="8.5" id="amk-M4-pbA"/>
-                <constraint firstAttribute="centerY" secondItem="OuC-yT-NJZ" secondAttribute="centerY" constant="-8.5" id="hnx-fq-cr0"/>
+                <constraint firstAttribute="centerY" secondItem="OuC-yT-NJZ" secondAttribute="centerY" constant="-8.5" id="JY5-Sg-7xB"/>
                 <constraint firstItem="ZcT-pz-h1b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pm4-i0-f0e"/>
-                <constraint firstItem="OuC-yT-NJZ" firstAttribute="centerY" secondItem="ZcT-pz-h1b" secondAttribute="centerY" constant="8.5" id="qdZ-5l-ZQK"/>
                 <constraint firstItem="ZcT-pz-h1b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ueJ-P2-vIL"/>
+                <constraint firstAttribute="centerX" secondItem="OuC-yT-NJZ" secondAttribute="centerX" constant="-8.5" id="yVb-nj-h1h"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
@@ -42,14 +40,12 @@
                     <exclude reference="OuC-yT-NJZ"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="Acj-Xi-Y1b"/>
-                    <exclude reference="amk-M4-pbA"/>
-                    <exclude reference="hnx-fq-cr0"/>
-                    <exclude reference="qdZ-5l-ZQK"/>
                     <exclude reference="684-3b-EIj"/>
                     <exclude reference="6BD-xm-FCu"/>
                     <exclude reference="pm4-i0-f0e"/>
                     <exclude reference="ueJ-P2-vIL"/>
+                    <exclude reference="JY5-Sg-7xB"/>
+                    <exclude reference="yVb-nj-h1h"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -58,14 +54,12 @@
                     <include reference="OuC-yT-NJZ"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="Acj-Xi-Y1b"/>
-                    <include reference="amk-M4-pbA"/>
-                    <include reference="hnx-fq-cr0"/>
-                    <include reference="qdZ-5l-ZQK"/>
                     <include reference="684-3b-EIj"/>
                     <include reference="6BD-xm-FCu"/>
                     <include reference="pm4-i0-f0e"/>
                     <include reference="ueJ-P2-vIL"/>
+                    <include reference="JY5-Sg-7xB"/>
+                    <include reference="yVb-nj-h1h"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="377" y="540"/>

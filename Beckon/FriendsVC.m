@@ -41,6 +41,16 @@
     [self.table registerClass:[FriendCell class] forCellReuseIdentifier:@"FriendCell"];
 }
 
+- (void) viewDidAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getFriendships) name:@"PleaseUpdate" object:nil];
+}
+
+- (void) viewWillDisappear:(BOOL)animated{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+}
+
 - (IBAction)filterTyped:(id)sender {
     self.currentFilter = [self.filter.text lowercaseString];
     if([self.currentFilter isEqualToString:@""]){

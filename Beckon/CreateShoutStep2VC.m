@@ -30,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.table.delegate = self;
     self.table.dataSource = self;
     
@@ -48,6 +49,16 @@
     self.navigationItem.rightBarButtonItem = self.nextButton;
     
     [self getFriendships];
+}
+
+- (void) viewDidAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getFriendships) name:@"PleaseUpdate" object:nil];
+}
+
+- (void) viewWillDisappear:(BOOL)animated{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
 }
 
 - (void) previous{

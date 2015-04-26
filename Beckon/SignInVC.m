@@ -37,10 +37,17 @@
                                  @"password": password};
     [manager POST:@"http://192.168.1.91:9000/account/signIn" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              self.message.text = @"";
+              [self.message setTextColor:[UIColor blackColor]];
               [[NSNotificationCenter defaultCenter] postNotificationName:@"UserLoggedIn" object:self];
               [self dismissViewControllerAnimated:YES completion:nil];
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-              
+              NSInteger statusCode = operation.response.statusCode;
+              if(statusCode == 400) {
+                  NSLog(@"Bah");
+                  self.message.text = @"Hmm, wrong email or password :(";
+                  [self.message setTextColor:[UIColor redColor]];
+              }
           }];
     
 }

@@ -35,6 +35,16 @@
     self.shoutTable.delegate = self;
 }
 
+- (void) viewDidAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getShouts) name:@"PleaseUpdate" object:nil];
+}
+
+- (void) viewWillDisappear:(BOOL)animated{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *shout = [self.shouts objectAtIndex:indexPath.row];
@@ -110,17 +120,17 @@
 }
 
 - (void)viewEnteredForeground{
-    [self getBeckons];
+    [self getShouts];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     //Register for notifications
-    [self getBeckons];
+    [self getShouts];
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
--(void)getBeckons{
+-(void)getShouts{
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -149,7 +159,7 @@
     [manager POST:@"http://192.168.1.91:9000/shout/membership/status" parameters:shout success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
-         [self getBeckons];
+         [self getShouts];
      }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {

@@ -35,6 +35,13 @@
 
 }
 
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    UIApplicationState state = [application applicationState];
+    if (state == UIApplicationStateActive) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"PleaseUpdate" object:self];
+    }
+}
+
 - (void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
 
 }
