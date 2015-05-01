@@ -131,7 +131,7 @@
     else{
         [self.beckonMembers addObject:friend];
     }
-    self.navigationItem.title = [[@"Participants(" stringByAppendingString:[NSString stringWithFormat:@"%u", self.beckonMembers.count + 1]] stringByAppendingString:@")"];
+    self.navigationItem.title = [[@"Participants(" stringByAppendingString:[NSString stringWithFormat:@"%lu", self.beckonMembers.count + 1]] stringByAppendingString:@")"];
     [self.table reloadData];
 }
 

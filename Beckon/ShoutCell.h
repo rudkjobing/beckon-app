@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *members;
 @property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UILabel *timeLeft;
+@property (weak, nonatomic) IBOutlet UILabel *timeOfDay;
+
 @property(strong,nonatomic) NSDate *begins;
 
 - (void) startTimer;

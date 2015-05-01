@@ -52,24 +52,43 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *shout = [self.shouts objectAtIndex:indexPath.row];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat: @"MMM d."];
+    
+    NSDateFormatter *timeOfDayFormatter = [[NSDateFormatter alloc] init];
+    [timeOfDayFormatter setDateFormat: @"HH:mm"];
+    
+    NSDate *begins = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] integerValue] / 1000];
+    NSString *title = [shout objectForKey:@"title"];
+    NSString *location = [[shout objectForKey:@"location"] objectForKey:@"name"];
+    NSArray *members = [shout objectForKey:@"memberList"];
+    NSString *creator = @"";
+    
+    
     /* Present the shout cell if this is a shout invitation */
     if([[shout objectForKey:@"status"] isEqualToString:@"INVITED"]){
         static NSString *cellIdentifier = @"ShoutRequestCell";
         [tableView registerNib:[UINib nibWithNibName:@"ShoutRequestCell" bundle: nil] forCellReuseIdentifier:@"ShoutRequestCell"];
+        
         ShoutRequestCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         if (!cell) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"ShoutRequestCell"];
         }
-
+        
+        for (NSDictionary *member in members) {
+            if ([[member objectForKey:@"role"] isEqualToString:@"CREATOR"]) {
+                creator = [member objectForKey:@"name"];
+                break;
+            }
+        }
+        
         cell.delegate = self;
         cell.shout = shout;
-        cell.headline.text = [[shout objectForKey:@"createrName"] stringByAppendingString:@" has invited you to"];
-        cell.title.text = [shout objectForKey:@"title"];
-        cell.location.text = [[shout objectForKey:@"location"] objectForKey:@"name"];
-        
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat: @"yyyy-MM-dd HH:mm"];
-        NSDate *begins = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] integerValue] / 1000];
+        cell.headline.text = [creator stringByAppendingString:@" has invited you to"];
+        cell.title.text = title;
+        cell.location.text = location;
+
         cell.begins.text = [formatter stringFromDate:begins];
         
         return cell;
@@ -78,19 +97,36 @@
     else{
         static NSString *cellIdentifier = @"ShoutCell";
         [tableView registerNib:[UINib nibWithNibName:@"ShoutCell" bundle: nil] forCellReuseIdentifier:@"ShoutCell"];
+        
         ShoutCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         if (!cell) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"ShoutCell"];
         }
+        NSMutableAttributedString *names = [[NSMutableAttributedString alloc] initWithString:@""];
+        for (NSDictionary *member in members) {
+            
+            NSMutableAttributedString *name = names.length == 0 ? [[NSMutableAttributedString alloc] initWithString:[member objectForKey:@"name"]] : [[NSMutableAttributedString alloc] initWithString:[@" " stringByAppendingString:[member objectForKey:@"name"]]];
+            if ([[member objectForKey:@"role"] isEqualToString:@"CREATOR"]) {
+                [name addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:NSMakeRange(0, name.length)];
+            }
+            else if ([[member objectForKey:@"status"] isEqualToString:@"ACCEPTED"]) {
+                [name addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(0, name.length)];
+            }
+            else if ([[member objectForKey:@"status"] isEqualToString:@"DECLINED"]) {
+                [name addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, name.length)];
+            }
+            else if ([[member objectForKey:@"status"] isEqualToString:@"INVITED"] || [[member objectForKey:@"status"] isEqualToString:@"MAYBE"]) {
+                [name addAttribute:NSForegroundColorAttributeName value:[UIColor purpleColor] range:NSMakeRange(0, name.length)];
+            }
+            [names appendAttributedString:name];
+            
+        }
         
-        cell.title.text = [shout objectForKey:@"title"];
-        cell.location.text = [[shout objectForKey:@"location"] objectForKey:@"name"];
-        cell.members.text = [shout objectForKey:@"acceptedMemberList"];
-        
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat: @"yyyy-MM-dd HH:mm"];
-        NSDate *begins = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] integerValue] / 1000];
+        cell.title.text = title;
+        cell.location.text = location;
+        [cell.members setAttributedText: names];
         cell.begins = begins;
+        cell.timeOfDay.text = [timeOfDayFormatter stringFromDate:begins];
         cell.date.text = [formatter stringFromDate:begins];
         
         [cell startTimer];

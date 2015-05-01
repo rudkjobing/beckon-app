@@ -44,7 +44,6 @@
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSInteger statusCode = operation.response.statusCode;
               if(statusCode == 400) {
-                  NSLog(@"Bah");
                   self.message.text = @"Hmm, wrong email or password :(";
                   [self.message setTextColor:[UIColor redColor]];
               }

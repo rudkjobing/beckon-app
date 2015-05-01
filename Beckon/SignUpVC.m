@@ -70,6 +70,7 @@
         NSInteger statusCode = operation.response.statusCode;
         if(statusCode == 400) {
             NSDictionary *data = operation.responseObject;
+            NSLog(@"%@", [data objectForKey:@"message"]);
             self.message.text = [data objectForKey:@"message"];
             [self.message setTextColor:[UIColor redColor]];
         }

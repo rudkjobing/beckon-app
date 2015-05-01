@@ -23,11 +23,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 Hours" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ux-3w-Lvp">
-                                <rect key="frame" x="259" y="62" width="53" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="53" id="rTD-QG-Noq"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Months" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ux-3w-Lvp">
+                                <rect key="frame" x="252" y="62" width="60" height="15"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -44,9 +41,21 @@
                                 <color key="textColor" red="0.42605949932809173" green="0.99852645399999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:30 24/12/2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Mb-QUI">
-                                <rect key="frame" x="8" y="62" width="245" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 30." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Mb-QUI">
+                                <rect key="frame" x="8" y="62" width="92" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="poO-MI-1LS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP6-H5-qkw">
+                                <rect key="frame" x="139" y="62" width="43" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="eEF-V7-E8n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -55,20 +64,22 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="L68-9i-gDt" secondAttribute="trailing" constant="8" id="3bc-Y2-ANt"/>
                             <constraint firstAttribute="trailing" secondItem="WBU-xF-MQ7" secondAttribute="trailing" constant="8" id="3bx-ck-XE5"/>
-                            <constraint firstItem="If2-Mb-QUI" firstAttribute="leading" secondItem="Gwj-ba-Rbt" secondAttribute="leading" constant="8" id="4rw-an-9N7"/>
                             <constraint firstItem="LWv-3u-nE7" firstAttribute="leading" secondItem="Gwj-ba-Rbt" secondAttribute="leading" constant="8" id="7ei-Zo-qi8"/>
-                            <constraint firstAttribute="trailing" secondItem="1Ux-3w-Lvp" secondAttribute="trailing" constant="8" id="GNJ-RV-ZaJ"/>
                             <constraint firstItem="L68-9i-gDt" firstAttribute="leading" secondItem="Gwj-ba-Rbt" secondAttribute="leading" constant="8" id="HCV-uJ-lue"/>
                             <constraint firstItem="L68-9i-gDt" firstAttribute="top" secondItem="Gwj-ba-Rbt" secondAttribute="top" constant="8" id="JT0-sT-Vm8"/>
                             <constraint firstItem="LWv-3u-nE7" firstAttribute="top" secondItem="L68-9i-gDt" secondAttribute="bottom" constant="1" id="JW3-Pz-ryN"/>
+                            <constraint firstItem="If2-Mb-QUI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gwj-ba-Rbt" secondAttribute="leading" constant="8" id="Jsm-dq-QGe"/>
                             <constraint firstAttribute="trailing" secondItem="LWv-3u-nE7" secondAttribute="trailing" constant="8" id="NHp-Ta-hdO"/>
+                            <constraint firstItem="If2-Mb-QUI" firstAttribute="top" secondItem="WBU-xF-MQ7" secondAttribute="bottom" constant="2" id="Ppv-HN-A9k"/>
+                            <constraint firstItem="If2-Mb-QUI" firstAttribute="leading" secondItem="Gwj-ba-Rbt" secondAttribute="leading" constant="8" id="SLa-ti-KGw"/>
                             <constraint firstAttribute="centerY" secondItem="L68-9i-gDt" secondAttribute="centerY" constant="27" id="Vg8-G5-ODm"/>
+                            <constraint firstAttribute="centerX" secondItem="dP6-H5-qkw" secondAttribute="centerX" constant="-0.5" id="Wr3-0K-xoY"/>
+                            <constraint firstItem="dP6-H5-qkw" firstAttribute="top" secondItem="WBU-xF-MQ7" secondAttribute="bottom" constant="2" id="bPo-rk-cJ8"/>
+                            <constraint firstAttribute="trailing" secondItem="1Ux-3w-Lvp" secondAttribute="trailing" constant="8" id="cof-9n-wlT"/>
                             <constraint firstItem="WBU-xF-MQ7" firstAttribute="top" secondItem="LWv-3u-nE7" secondAttribute="bottom" constant="1" id="dxN-wd-OgS"/>
+                            <constraint firstItem="1Ux-3w-Lvp" firstAttribute="top" secondItem="WBU-xF-MQ7" secondAttribute="bottom" constant="2" id="fZz-05-wAf"/>
                             <constraint firstItem="WBU-xF-MQ7" firstAttribute="leading" secondItem="Gwj-ba-Rbt" secondAttribute="leading" constant="8" id="kgg-y3-hi3"/>
-                            <constraint firstItem="1Ux-3w-Lvp" firstAttribute="top" secondItem="WBU-xF-MQ7" secondAttribute="bottom" constant="2" id="nh0-6X-7dv"/>
                             <constraint firstAttribute="bottom" secondItem="WBU-xF-MQ7" secondAttribute="bottom" constant="31" id="o2A-LI-AzQ"/>
-                            <constraint firstItem="If2-Mb-QUI" firstAttribute="top" secondItem="WBU-xF-MQ7" secondAttribute="bottom" constant="2" id="sCE-GI-oaW"/>
-                            <constraint firstItem="1Ux-3w-Lvp" firstAttribute="leading" secondItem="If2-Mb-QUI" secondAttribute="trailing" constant="6" id="tYh-gK-sMI"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -84,6 +95,7 @@
                 <outlet property="location" destination="LWv-3u-nE7" id="7Lr-ug-RZP"/>
                 <outlet property="members" destination="WBU-xF-MQ7" id="KgB-jb-2Uw"/>
                 <outlet property="timeLeft" destination="1Ux-3w-Lvp" id="KT4-S5-Mqn"/>
+                <outlet property="timeOfDay" destination="dP6-H5-qkw" id="M1a-50-xdX"/>
                 <outlet property="title" destination="L68-9i-gDt" id="XHe-Qb-iCl"/>
             </connections>
             <point key="canvasLocation" x="311" y="236"/>
