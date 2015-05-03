@@ -102,6 +102,8 @@
         if (!cell) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"ShoutCell"];
         }
+        
+        //Color member names according to status and role
         NSMutableAttributedString *names = [[NSMutableAttributedString alloc] initWithString:@""];
         for (NSDictionary *member in members) {
             

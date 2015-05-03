@@ -60,7 +60,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.1844509213331415" green="0.5" blue="0.00579985007101258" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.5725490196078431" green="0.20784313725490197" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="L68-9i-gDt" secondAttribute="trailing" constant="8" id="3bc-Y2-ANt"/>
                             <constraint firstAttribute="trailing" secondItem="WBU-xF-MQ7" secondAttribute="trailing" constant="8" id="3bx-ck-XE5"/>
@@ -91,6 +91,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="bgView" destination="Gwj-ba-Rbt" id="hmV-oi-cZm"/>
                 <outlet property="date" destination="If2-Mb-QUI" id="Rgh-8V-UgY"/>
                 <outlet property="location" destination="LWv-3u-nE7" id="7Lr-ug-RZP"/>
                 <outlet property="members" destination="WBU-xF-MQ7" id="KgB-jb-2Uw"/>

@@ -38,6 +38,15 @@
 
 - (NSString *)stringFromTimeInterval:(NSTimeInterval)interval
 {
+ 
+    if(interval > 60*60*24){
+        [self.bgView setAlpha:0.7];
+    }
+    
+    if(interval > 60*60*24*7){
+        [self.bgView setAlpha:0.5];
+    }
+    
     if(interval > 60*60*24){
         NSInteger ti = (NSInteger)interval;
         NSInteger days = ti/60/60/24;
@@ -62,7 +71,7 @@
         }
         return [NSString stringWithFormat:@"%li Minutes", (long)minutes];
     }
-
+    
     return @"NOW";
 }
 @end

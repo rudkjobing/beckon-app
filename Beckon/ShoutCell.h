@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UILabel *timeLeft;
 @property (weak, nonatomic) IBOutlet UILabel *timeOfDay;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 
 @property(strong,nonatomic) NSDate *begins;
 

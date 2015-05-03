@@ -10,4 +10,7 @@
 
 @interface SignUpVC : UIViewController
 
+@property (strong, nonatomic) UILabel *feedbackLabel;
+@property (strong, nonatomic) UITextField *signInVCemailTextField;
+
 @end

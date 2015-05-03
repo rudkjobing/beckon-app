@@ -10,9 +10,7 @@
 
 @interface FriendCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *nickname;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *email;
-@property (weak, nonatomic) IBOutlet UILabel *phoneNumber;
 
 @end

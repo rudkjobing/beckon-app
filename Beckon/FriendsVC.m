@@ -61,11 +61,10 @@
         NSMutableArray *friendsNewFilter = [NSMutableArray new];
         for(NSDictionary *friend in self.friends){
             NSDictionary *user = [friend objectForKey:@"friend"];
-            NSString *nickname = [[friend objectForKey:@"nickname"] lowercaseString];
             NSString *email = [[user objectForKey:@"email"] lowercaseString];
             NSString *firstName = [[user objectForKey:@"firstName"] lowercaseString];
             NSString *lastName = [[user objectForKey:@"lastName"] lowercaseString];
-            if([email hasPrefix:self.currentFilter] || [nickname hasPrefix:self.currentFilter] || [firstName hasPrefix:self.currentFilter] || [lastName hasPrefix:self.currentFilter]){
+            if([email hasPrefix:self.currentFilter] || [firstName hasPrefix:self.currentFilter] || [lastName hasPrefix:self.currentFilter]){
                 [friendsNewFilter addObject:friend];
             }
         }
@@ -109,14 +108,11 @@
         if([[friend objectForKey:@"status"] isEqualToString:@"INVITED"]){
             cell.name.text = @"";
             cell.email.text = @"Awaiting approval";
-            cell.phoneNumber.text = @"";
         }
         else{
             cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
             cell.email.text = [user objectForKey:@"email"];
-            cell.phoneNumber.text = [user objectForKey:@"phoneNumber"];
         }
-        cell.nickname.text = [friend objectForKey:@"nickname"];
         return cell;
 
     }

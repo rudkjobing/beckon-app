@@ -112,8 +112,6 @@
     NSDictionary *user = [friend objectForKey:@"friend"];
     cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
     cell.email.text = [user objectForKey:@"email"];
-    cell.phoneNumber.text = [user objectForKey:@"phoneNumber"];
-    cell.nickname.text = [friend objectForKey:@"nickname"];
     if([self.beckonMembers containsObject:friend]){
         cell.backgroundColor = [UIColor lightGrayColor];
     }

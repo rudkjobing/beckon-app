@@ -12,7 +12,6 @@
 @interface SignUpVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
-@property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
@@ -56,7 +55,6 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
 //    manager.responseSerializer = [JSONResponseSerializerWithData serializer];
     NSDictionary *parameters = @{@"email": self.emailTextField.text,
-                                 @"phoneNumber": self.phoneNumberTextField.text,
                                  @"firstName": self.firstNameTextField.text,
                                  @"lastName": self.lastNameTextField.text,
                                  @"password": self.passwordTextField.text};
@@ -64,6 +62,9 @@
     {
         self.message.text = @"";
         [self.message setTextColor:[UIColor blackColor]];
+        [self.feedbackLabel setTextColor:[UIColor blackColor]];
+        self.feedbackLabel.text = @"Check your email for activation details.";
+        self.signInVCemailTextField.text = self.emailTextField.text;
         [self dismissViewControllerAnimated:YES completion:nil];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {

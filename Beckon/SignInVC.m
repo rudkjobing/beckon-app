@@ -7,6 +7,7 @@
 //
 #import "SignInVC.h"
 #import "AFNetworking.h"
+#import "SignUpVC.h"
 
 @interface SignInVC ()
 
@@ -49,6 +50,18 @@
               }
           }];
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"gotoSignup"])
+    {
+        // Get reference to the destination view controller
+        SignUpVC *vc = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        vc.feedbackLabel = self.message;
+        vc.signInVCemailTextField = self.emailAddressTextField;
+    }
 }
 
 @end
