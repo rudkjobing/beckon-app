@@ -44,9 +44,7 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated{
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
+        
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,7 +87,7 @@
         cell.title.text = title;
         cell.location.text = location;
 
-        cell.begins.text = [formatter stringFromDate:begins];
+        cell.begins.text = [[[formatter stringFromDate:begins] stringByAppendingString: @" @ "] stringByAppendingString:[timeOfDayFormatter stringFromDate:begins]];
         
         return cell;
     }
@@ -149,7 +147,7 @@
     NSDictionary *shout = [self.shouts objectAtIndex:indexPath.row];
     
     if([[shout objectForKey:@"status"] isEqualToString:@"INVITED"]){
-        return 177.0;
+        return 156.0;
     }
     
     return 100.0;
@@ -169,7 +167,7 @@
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager GET:@"http://192.168.1.91:9000/shouts" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://api.broshout.net:9000/shouts" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          self.shouts = responseObject;
          NSLog(@"JSON: %@", self.shouts);
@@ -191,7 +189,7 @@
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager POST:@"http://192.168.1.91:9000/shout/membership/status" parameters:shout success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://api.broshout.net:9000/shout/membership/status" parameters:shout success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self getShouts];

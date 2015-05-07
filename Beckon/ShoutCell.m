@@ -71,6 +71,7 @@
         }
         return [NSString stringWithFormat:@"%li Minutes", (long)minutes];
     }
+
     
     return @"NOW";
 }

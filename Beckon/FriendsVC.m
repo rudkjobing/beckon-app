@@ -106,8 +106,8 @@
         }
         NSDictionary *user = [friend objectForKey:@"friend"];
         if([[friend objectForKey:@"status"] isEqualToString:@"INVITED"]){
-            cell.name.text = @"";
-            cell.email.text = @"Awaiting approval";
+            cell.name.text =@"Awaiting approval";
+            cell.email.text = [user objectForKey:@"email"] ;
         }
         else{
             cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
@@ -120,13 +120,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *friend = [self.friendsFiltered objectAtIndex:indexPath.row];
-    if([[friend objectForKey:@"status"] isEqualToString:@"ACCEPTED"]){
-        FriendVC *friendVC = [FriendVC new];
-        friendVC.friend = friend;
-        self.latestFriendId = [NSNumber numberWithLong:(0L)];//Force a reload of friends after finished editing. In case changes were made.
-        [self.navigationController pushViewController:friendVC animated:YES];
-    }
+    
 }
 
 -(void)acceptFriendRequestAction:(id)sender{
@@ -138,7 +132,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [friend objectForKey:@"id"]};
-    [manager POST:@"http://192.168.1.91:9000/friend/accept" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://api.broshout.net:9000/friend/accept" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self getFriendships];
@@ -162,7 +156,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [friend objectForKey:@"id"]};
-    [manager POST:@"http://192.168.1.91:9000/friend/decline" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://api.broshout.net:9000/friend/decline" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self getFriendships];
@@ -189,7 +183,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": self.latestFriendId};
-    [manager GET:@"http://192.168.1.91:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://api.broshout.net:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
 //         NSInteger statusCode = operation.response.statusCode;
 //         NSLog(@"JSON: %@", responseObject);

@@ -61,7 +61,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [self.friend objectForKey:@"id"],
                                  @"nickname": self.nickname.text};
-    [manager POST:@"http://192.168.1.91:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://api.broshout.net:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          [self.navigationController popToRootViewControllerAnimated:YES];

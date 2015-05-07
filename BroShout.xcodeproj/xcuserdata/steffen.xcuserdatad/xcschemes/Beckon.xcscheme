@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F95F300B1A57262D00D2CC3B"
-               BuildableName = "Beckon.app"
-               BlueprintName = "Beckon"
-               ReferencedContainer = "container:Beckon.xcodeproj">
+               BuildableName = "BroShout.app"
+               BlueprintName = "BroShout"
+               ReferencedContainer = "container:BroShout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F95F30241A57262D00D2CC3B"
-               BuildableName = "BeckonTests.xctest"
-               BlueprintName = "BeckonTests"
-               ReferencedContainer = "container:Beckon.xcodeproj">
+               BuildableName = "BroShoutTests.xctest"
+               BlueprintName = "BroShoutTests"
+               ReferencedContainer = "container:BroShout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F95F30241A57262D00D2CC3B"
-               BuildableName = "BeckonTests.xctest"
-               BlueprintName = "BeckonTests"
-               ReferencedContainer = "container:Beckon.xcodeproj">
+               BuildableName = "BroShoutTests.xctest"
+               BlueprintName = "BroShoutTests"
+               ReferencedContainer = "container:BroShout.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F95F300B1A57262D00D2CC3B"
-            BuildableName = "Beckon.app"
-            BlueprintName = "Beckon"
-            ReferencedContainer = "container:Beckon.xcodeproj">
+            BuildableName = "BroShout.app"
+            BlueprintName = "BroShout"
+            ReferencedContainer = "container:BroShout.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -72,13 +72,14 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F95F300B1A57262D00D2CC3B"
-            BuildableName = "Beckon.app"
-            BlueprintName = "Beckon"
-            ReferencedContainer = "container:Beckon.xcodeproj">
+            BuildableName = "BroShout.app"
+            BlueprintName = "BroShout"
+            ReferencedContainer = "container:BroShout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -90,13 +91,14 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F95F300B1A57262D00D2CC3B"
-            BuildableName = "Beckon.app"
-            BlueprintName = "Beckon"
-            ReferencedContainer = "container:Beckon.xcodeproj">
+            BuildableName = "BroShout.app"
+            BlueprintName = "BroShout"
+            ReferencedContainer = "container:BroShout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

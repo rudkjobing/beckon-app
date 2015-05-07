@@ -7,8 +7,8 @@
 //
 
 #import "AddFriendStep1VC.h"
-#import "AddFriendStep2VC.h"
 #import "AFNetworking.h"
+#import "AddFriendCell.h"
 
 @interface AddFriendStep1VC ()
 
@@ -33,7 +33,8 @@
     self.cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     self.cancelButton.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem = self.cancelButton;
-    self.navigationItem.title = @"Search";    
+    self.navigationItem.title = @"Search";
+    [self.table registerClass:[AddFriendCell class] forCellReuseIdentifier:@"AddFriendCell"];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -41,32 +42,31 @@
     return self.searchResults.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 66.0;
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"SearchResultCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *cellIdentifier = @"AddFriendCell";
+    [tableView registerNib:[UINib nibWithNibName:@"AddFriendCell" bundle: nil] forCellReuseIdentifier:@"AddFriendCell"];
+    AddFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[AddFriendCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     NSDictionary *user = [self.searchResults objectAtIndex:indexPath.row];
-    cell.textLabel.text = [user objectForKey:@"email"];
+    cell.email.text = [user objectForKey:@"email"];
+    cell.user = user;
+    cell.delegate = self;
     return cell;
 }
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //Goto step2 with the selected user
-    AddFriendStep2VC *step2 = [AddFriendStep2VC new];
-    step2.user = [self.searchResults objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:step2 animated:YES];
-}
-
 
 - (void) cancel{
     [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)searchTextChanged:(id)sender {
-    if(!self.isSearching && self.searchTextField.text.length > 2){
+    if(!self.isSearching && self.searchTextField.text.length > 4){
         [self searchForFriends];
     }
 }
@@ -74,7 +74,7 @@
 - (void) searchFinished: (NSArray*) searchResult{
     self.searchResults = searchResult;
     [self.table reloadData];
-    if(!self.isSearching && self.searchTextField.text.length > 2 && ![self.searchTextField.text isEqualToString:self.searchedText]){
+    if(!self.isSearching && self.searchTextField.text.length > 4 && ![self.searchTextField.text isEqualToString:self.searchedText]){
         [self searchForFriends];
     }
 }
@@ -86,7 +86,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"queryString": self.searchedText};
-    [manager POST:@"http://192.168.1.91:9000/users/search" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager POST:@"http://api.broshout.net:9000/friend/search" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          [self.spinner stopAnimating];
          self.isSearching = NO;
@@ -96,6 +96,27 @@
      {
          [self.spinner stopAnimating];
          self.isSearching = NO;
+         NSInteger statusCode = operation.response.statusCode;
+         if(statusCode == 401) {
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
+         }
+     }];
+    
+}
+
+-(void)inviteFriend: (id) sender{
+    AddFriendCell *cell = (AddFriendCell*)sender;
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSDictionary *parameters = @{@"userId": [cell.user objectForKey:@"id"]};
+    [manager PUT:@"http://api.broshout.net:9000/friend" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         [sender friendAdded];
+     }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         [sender friendNotAdded];
          NSInteger statusCode = operation.response.statusCode;
          if(statusCode == 401) {
              [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];

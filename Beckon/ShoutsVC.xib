@@ -24,13 +24,18 @@
                     <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                     <color key="color" red="0.85875660967040846" green="0.9892006516456604" blue="0.9892006516456604" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bsL-2h-V1D">
+                    <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
+                </adBannerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ZcT-pz-h1b" secondAttribute="bottom" id="684-3b-EIj"/>
                 <constraint firstAttribute="trailing" secondItem="ZcT-pz-h1b" secondAttribute="trailing" id="6BD-xm-FCu"/>
                 <constraint firstAttribute="centerY" secondItem="OuC-yT-NJZ" secondAttribute="centerY" constant="-8.5" id="JY5-Sg-7xB"/>
+                <constraint firstItem="bsL-2h-V1D" firstAttribute="top" secondItem="ZcT-pz-h1b" secondAttribute="bottom" constant="8" id="LLy-bR-ZLW"/>
+                <constraint firstAttribute="bottom" secondItem="bsL-2h-V1D" secondAttribute="bottom" id="l3T-bX-SnC"/>
                 <constraint firstItem="ZcT-pz-h1b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pm4-i0-f0e"/>
+                <constraint firstAttribute="centerX" secondItem="bsL-2h-V1D" secondAttribute="centerX" id="s3M-aU-g2p"/>
                 <constraint firstItem="ZcT-pz-h1b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ueJ-P2-vIL"/>
                 <constraint firstAttribute="centerX" secondItem="OuC-yT-NJZ" secondAttribute="centerX" constant="-8.5" id="yVb-nj-h1h"/>
             </constraints>
@@ -38,28 +43,34 @@
                 <mask key="subviews">
                     <exclude reference="ZcT-pz-h1b"/>
                     <exclude reference="OuC-yT-NJZ"/>
+                    <exclude reference="bsL-2h-V1D"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="684-3b-EIj"/>
+                    <exclude reference="LLy-bR-ZLW"/>
+                    <exclude reference="l3T-bX-SnC"/>
+                    <exclude reference="s3M-aU-g2p"/>
+                    <exclude reference="JY5-Sg-7xB"/>
+                    <exclude reference="yVb-nj-h1h"/>
                     <exclude reference="6BD-xm-FCu"/>
                     <exclude reference="pm4-i0-f0e"/>
                     <exclude reference="ueJ-P2-vIL"/>
-                    <exclude reference="JY5-Sg-7xB"/>
-                    <exclude reference="yVb-nj-h1h"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="ZcT-pz-h1b"/>
                     <include reference="OuC-yT-NJZ"/>
+                    <include reference="bsL-2h-V1D"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="684-3b-EIj"/>
+                    <include reference="LLy-bR-ZLW"/>
+                    <include reference="l3T-bX-SnC"/>
+                    <include reference="s3M-aU-g2p"/>
+                    <include reference="JY5-Sg-7xB"/>
+                    <include reference="yVb-nj-h1h"/>
                     <include reference="6BD-xm-FCu"/>
                     <include reference="pm4-i0-f0e"/>
                     <include reference="ueJ-P2-vIL"/>
-                    <include reference="JY5-Sg-7xB"/>
-                    <include reference="yVb-nj-h1h"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="377" y="540"/>

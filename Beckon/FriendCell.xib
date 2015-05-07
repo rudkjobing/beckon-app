@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,19 +14,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="magnukster@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BY-9Z-fpp">
-                        <rect key="frame" x="8" y="29" width="312" height="14"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bertil Andersen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtR-rz-rTs">
+                        <rect key="frame" x="8" y="8" width="304" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.57254901960000004" green="0.20784313730000001" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bertil Andersen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtR-rz-rTs">
-                        <rect key="frame" x="8" y="4" width="312" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="magnukster@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BY-9Z-fpp">
+                        <rect key="frame" x="8" y="21" width="304" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="XtR-rz-rTs" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="4XM-Cl-6ga"/>
+                    <constraint firstItem="5BY-9Z-fpp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="D3e-0S-8JX"/>
+                    <constraint firstItem="XtR-rz-rTs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="EA4-Bg-cvu"/>
+                    <constraint firstItem="5BY-9Z-fpp" firstAttribute="top" secondItem="XtR-rz-rTs" secondAttribute="bottom" constant="-4" id="ETy-Ku-HWc"/>
+                    <constraint firstItem="5BY-9Z-fpp" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Uoj-Tg-eHZ"/>
+                    <constraint firstItem="XtR-rz-rTs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="dhE-Wu-ucA"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="XtR-rz-rTs" secondAttribute="bottom" constant="10" id="fUf-6n-zT4"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="email" destination="5BY-9Z-fpp" id="C51-Ka-j7v"/>

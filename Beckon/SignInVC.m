@@ -36,7 +36,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"email": email,
                                  @"password": password};
-    [manager POST:@"http://192.168.1.91:9000/account/signIn" parameters:parameters
+    [manager POST:@"http://api.broshout.net:9000/account/signIn" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               self.message.text = @"";
               [self.message setTextColor:[UIColor blackColor]];

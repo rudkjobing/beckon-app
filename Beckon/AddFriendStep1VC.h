@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddFriendCell.h"
 
-@interface AddFriendStep1VC : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface AddFriendStep1VC : UIViewController <UITableViewDataSource, UITableViewDelegate, AddFriendCellDelegate>
 
 @end

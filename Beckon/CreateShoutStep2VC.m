@@ -129,7 +129,7 @@
     else{
         [self.beckonMembers addObject:friend];
     }
-    self.navigationItem.title = [[@"Participants(" stringByAppendingString:[NSString stringWithFormat:@"%lu", self.beckonMembers.count + 1]] stringByAppendingString:@")"];
+    self.navigationItem.title = [[@"Participants(" stringByAppendingString:[NSString stringWithFormat:@"%ld", (unsigned long)self.beckonMembers.count + 1]] stringByAppendingString:@")"];
     [self.table reloadData];
 }
 
@@ -139,7 +139,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"id": [NSNumber numberWithLong:0L], @"status": @"ACCEPTED"};
-    [manager GET:@"http://192.168.1.91:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://api.broshout.net:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
          self.friends = responseObject;
@@ -164,7 +164,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = beckonRequest;
-    [manager POST:@"http://192.168.1.91:9000/shout" parameters:parameters
+    [manager POST:@"http://api.broshout.net:9000/shout" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               NSLog(@"JSON: %@", responseObject);
               [self.swipeVC dismissViewControllerAnimated:YES completion:nil];
