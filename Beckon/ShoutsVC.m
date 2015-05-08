@@ -10,10 +10,13 @@
 #import "AFNetworking.h"
 #import "CreateShoutSwipeVC.h"
 #import "ShoutCell.h"
+#import "MainSwipeVC.h"
 
 @interface ShoutsVC ()
 
+@property (strong, nonatomic) MainSwipeVC *swipeVC;
 @property (strong, nonatomic) UIBarButtonItem *addButton;
+@property (strong, nonatomic) UIBarButtonItem *gotoFriendsButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) NSArray *shouts;
 @property (weak, nonatomic) IBOutlet UITableView *shoutTable;
@@ -24,15 +27,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.swipeVC = (MainSwipeVC*)self.parentViewController.parentViewController;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewEnteredForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+    
     self.addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addBeckon)];
     self.addButton.tintColor = [UIColor blackColor];
+    
+    self.gotoFriendsButton = [[UIBarButtonItem alloc] initWithTitle:@"friends" style:UIBarButtonItemStylePlain target:self action:@selector(gotoFriends)];
+    self.gotoFriendsButton.tintColor = [UIColor blackColor];
+    
+    self.navigationItem.leftBarButtonItem = self.gotoFriendsButton;
     self.navigationItem.rightBarButtonItem = self.addButton;
     self.navigationItem.title = @"Shouts";
+ 
     [self.shoutTable registerClass:[ShoutRequestCell class] forCellReuseIdentifier:@"ShoutRequestCell"];
     [self.shoutTable registerClass:[ShoutCell class] forCellReuseIdentifier:@"ShoutCell"];
     self.shoutTable.dataSource = self;
     self.shoutTable.delegate = self;
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -45,6 +59,10 @@
 
 - (void) viewWillDisappear:(BOOL)animated{
         
+}
+
+- (void) gotoFriends{
+    [self.swipeVC swipeToIndex:1 sender:self];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

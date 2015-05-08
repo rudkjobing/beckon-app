@@ -12,11 +12,14 @@
 #import "AddFriendStep1VC.h"
 #import "AddFriendNC.h"
 #import "FriendCell.h"
+#import "MainSwipeVC.h"
 
 @interface FriendsVC ()
 
+@property (strong, nonatomic) MainSwipeVC *swipeVC;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) UIBarButtonItem *addButton;
+@property (strong, nonatomic) UIBarButtonItem *gotoShoutsButton;
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) NSArray *friends;
 @property (strong, nonatomic) NSArray *friendsFiltered;
@@ -30,12 +33,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.swipeVC = (MainSwipeVC*)self.parentViewController.parentViewController;
     self.latestFriendId = [NSNumber numberWithLong:(0L)];
     self.table.dataSource = self;
     self.table.delegate = self;
+    
+    self.gotoShoutsButton = [[UIBarButtonItem alloc] initWithTitle:@"shouts" style:UIBarButtonItemStylePlain target:self action:@selector(gotoShouts)];
+    self.gotoShoutsButton.tintColor = [UIColor blackColor];
+    
+    self.navigationItem.leftBarButtonItem = self.gotoShoutsButton;
+    
     self.addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFriend)];
     self.addButton.tintColor = [UIColor blackColor];
     self.navigationItem.rightBarButtonItem = self.addButton;
+    
+    
+    
     self.navigationItem.title = @"Friends";
     [self.table registerClass:[FriendRequestCell class] forCellReuseIdentifier:@"FriendRequestCell"];
     [self.table registerClass:[FriendCell class] forCellReuseIdentifier:@"FriendCell"];
@@ -50,6 +63,10 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
+}
+
+- (void) gotoShouts{
+    [self.swipeVC swipeToIndex:0 sender:self];
 }
 
 - (IBAction)filterTyped:(id)sender {
