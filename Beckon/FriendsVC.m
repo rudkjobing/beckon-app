@@ -25,7 +25,6 @@
 @property (strong, nonatomic) NSArray *friendsFiltered;
 @property (strong, nonatomic) NSString *currentFilter;
 @property (weak, nonatomic) IBOutlet UITextField *filter;
-@property (strong, nonatomic) NSNumber *latestFriendId;
 
 @end
 
@@ -34,7 +33,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.swipeVC = (MainSwipeVC*)self.parentViewController.parentViewController;
-    self.latestFriendId = [NSNumber numberWithLong:(0L)];
     self.table.dataSource = self;
     self.table.delegate = self;
     
@@ -47,8 +45,6 @@
     self.addButton.tintColor = [UIColor blackColor];
     self.navigationItem.rightBarButtonItem = self.addButton;
     
-    
-    
     self.navigationItem.title = @"Friends";
     [self.table registerClass:[FriendRequestCell class] forCellReuseIdentifier:@"FriendRequestCell"];
     [self.table registerClass:[FriendCell class] forCellReuseIdentifier:@"FriendCell"];
@@ -60,9 +56,7 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated{
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
+  
 }
 
 - (void) gotoShouts{
@@ -142,7 +136,6 @@
 
 -(void)acceptFriendRequestAction:(id)sender{
     /*Accept friend request*/
-    self.latestFriendId = [NSNumber numberWithLong:(0L)];
     FriendRequestCell *s = (FriendRequestCell*) sender;
     NSDictionary *friend = s.friend;
     [self.spinner startAnimating];
@@ -166,7 +159,6 @@
 
 -(void)declineFriendRequestAction:(id)sender{
     /*Accept friend request*/
-    self.latestFriendId = [NSNumber numberWithLong:(0L)];
     FriendRequestCell *s = (FriendRequestCell*) sender;
     NSDictionary *friend = s.friend;
     [self.spinner startAnimating];
@@ -199,36 +191,20 @@
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    NSDictionary *parameters = @{@"id": self.latestFriendId};
-    [manager GET:@"http://api.broshout.net:9000/friendships" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://api.broshout.net:9000/friendships" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-//         NSInteger statusCode = operation.response.statusCode;
-//         NSLog(@"JSON: %@", responseObject);
-//         NSLog(@"%ld", (long)statusCode);
+         NSLog(@"JSON: %@", responseObject);
          
-         NSNumber *newestId = [self.latestFriendId copy];
          for(NSDictionary *friend in responseObject){
-             NSNumber *id = [friend objectForKey:@"id"];
-             if([id longLongValue] > [newestId longLongValue]){
-                 newestId = id;
+             if([[friend objectForKey:@"status"] isEqualToString:@"PENDING"]){
+                 NSLog(@"Bingo");
              }
          }
-         if([newestId longLongValue] > [self.latestFriendId longLongValue] && [self.latestFriendId longLongValue] == 0L){
-             self.friends = responseObject;
-             self.friendsFiltered =  [self.friends copy];
-             
-             [self.table reloadData];
-         }
-         else if([newestId longLongValue] > [self.latestFriendId longLongValue]){
-             self.friends = [self.friends arrayByAddingObjectsFromArray:responseObject];
-             self.friendsFiltered =  [self.friends copy];
-             [self.table reloadData];
-         }
-         else if(newestId == 0L){
-             self.friends = [NSArray new];
-             [self.table reloadData];
-         }
-         self.latestFriendId = [newestId copy];
+         self.friends = responseObject;
+         self.friendsFiltered =  [self.friends copy];
+         [self.table reloadData];
+         
+
          [self.spinner stopAnimating];
      }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)

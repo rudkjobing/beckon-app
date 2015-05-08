@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoutsVC">
             <connections>
+                <outlet property="banner" destination="bsL-2h-V1D" id="pNH-BU-Cz3"/>
                 <outlet property="shoutTable" destination="ZcT-pz-h1b" id="dxV-25-FRC"/>
                 <outlet property="spinner" destination="OuC-yT-NJZ" id="GAF-ZR-agE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

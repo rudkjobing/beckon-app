@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ShoutRequestCell.h"
+#import <iAd/iAd.h>
 
-@interface ShoutsVC : UIViewController <UITableViewDataSource, UITableViewDelegate, ShoutRequestCellDelegate>
+@interface ShoutsVC : UIViewController <UITableViewDataSource, UITableViewDelegate, ShoutRequestCellDelegate, ADBannerViewDelegate>
 
 @end

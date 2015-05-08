@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AFNetworking.h"
+@import AudioToolbox;
 
 @interface AppDelegate ()
 
@@ -39,6 +40,7 @@
     UIApplicationState state = [application applicationState];
     if (state == UIApplicationStateActive) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"PleaseUpdate" object:self];
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     }
 }
 

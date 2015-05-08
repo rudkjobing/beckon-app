@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) NSArray *shouts;
 @property (weak, nonatomic) IBOutlet UITableView *shoutTable;
+@property (strong, nonatomic) IBOutlet ADBannerView *banner;
 
 @end
 
@@ -46,7 +47,7 @@
     self.shoutTable.dataSource = self;
     self.shoutTable.delegate = self;
     
-    
+    self.banner.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -60,6 +61,7 @@
 - (void) viewWillDisappear:(BOOL)animated{
         
 }
+
 
 - (void) gotoFriends{
     [self.swipeVC swipeToIndex:1 sender:self];
@@ -170,7 +172,6 @@
     
     return 100.0;
 }
-
 
 - (void)addBeckon{
     CreateShoutSwipeVC *createBeckonModal = [CreateShoutSwipeVC new];
