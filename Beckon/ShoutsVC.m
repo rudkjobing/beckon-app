@@ -31,6 +31,7 @@
     self.swipeVC = (MainSwipeVC*)self.parentViewController.parentViewController;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewEnteredForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateFriendRequestCounter:) name:@"PendingFriendRequests" object:nil];
     
     self.addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addBeckon)];
     self.addButton.tintColor = [UIColor blackColor];
@@ -48,6 +49,16 @@
     self.shoutTable.delegate = self;
     
     self.banner.delegate = self;
+}
+
+- (void)updateFriendRequestCounter: (NSNotification *)notification{
+    NSNumber *requests = [notification.userInfo objectForKey:@"requests"];
+    if([requests intValue] > 0){
+        [self.gotoFriendsButton setTitle:[[@"friends(" stringByAppendingString:[requests stringValue]] stringByAppendingString:@")"]];
+    }
+    else{
+        [self.gotoFriendsButton setTitle:@"friends"];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated{

@@ -195,15 +195,19 @@
      {
          NSLog(@"JSON: %@", responseObject);
          
+         NSNumber *friendRequests = [NSNumber numberWithInt:0];
+         
          for(NSDictionary *friend in responseObject){
              if([[friend objectForKey:@"status"] isEqualToString:@"PENDING"]){
-                 NSLog(@"Bingo");
+                 friendRequests = [NSNumber numberWithInt:[friendRequests intValue] + 1];
              }
          }
+         
          self.friends = responseObject;
          self.friendsFiltered =  [self.friends copy];
          [self.table reloadData];
          
+         [[NSNotificationCenter defaultCenter] postNotificationName:@"PendingFriendRequests" object:self userInfo:@{@"requests": friendRequests}];
 
          [self.spinner stopAnimating];
      }
