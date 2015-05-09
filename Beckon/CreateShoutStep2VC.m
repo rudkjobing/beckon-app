@@ -38,7 +38,7 @@
     self.beckonMembers = [NSMutableArray new];
     [self.swipeVC.beckon setObject:self.beckonMembers forKey:@"members"];
     
-    self.navigationItem.title = @"Who(1)";
+    self.navigationItem.title = @"Friends(0)";
     
     self.previousButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self  action:@selector(previous)];
     self.previousButton.tintColor = [UIColor blackColor];
@@ -66,7 +66,6 @@
 }
 
 - (void) go{
-    NSLog(@"%@", self.swipeVC.beckon);
     [self createBeckon:self.swipeVC.beckon];
 }
 
@@ -129,7 +128,7 @@
     else{
         [self.beckonMembers addObject:friend];
     }
-    self.navigationItem.title = [[@"Participants(" stringByAppendingString:[NSString stringWithFormat:@"%ld", (unsigned long)self.beckonMembers.count + 1]] stringByAppendingString:@")"];
+    self.navigationItem.title = [[@"Friends(" stringByAppendingString:[NSString stringWithFormat:@"%ld", (unsigned long)self.beckonMembers.count]] stringByAppendingString:@")"];
     [self.table reloadData];
 }
 

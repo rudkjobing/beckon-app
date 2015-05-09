@@ -54,8 +54,17 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager GET:@"http://api.broshout.net:9000/badge" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSDictionary *response = responseObject;
+         NSInteger badge = [[response objectForKey:@"badge"] intValue];
+         [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badge];
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         
+     }];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {

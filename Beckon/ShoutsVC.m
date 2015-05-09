@@ -36,7 +36,7 @@
     self.addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addBeckon)];
     self.addButton.tintColor = [UIColor blackColor];
     
-    self.gotoFriendsButton = [[UIBarButtonItem alloc] initWithTitle:@"friends" style:UIBarButtonItemStylePlain target:self action:@selector(gotoFriends)];
+    self.gotoFriendsButton = [[UIBarButtonItem alloc] initWithTitle:@"Friends" style:UIBarButtonItemStylePlain target:self action:@selector(gotoFriends)];
     self.gotoFriendsButton.tintColor = [UIColor blackColor];
     
     self.navigationItem.leftBarButtonItem = self.gotoFriendsButton;
@@ -54,10 +54,10 @@
 - (void)updateFriendRequestCounter: (NSNotification *)notification{
     NSNumber *requests = [notification.userInfo objectForKey:@"requests"];
     if([requests intValue] > 0){
-        [self.gotoFriendsButton setTitle:[[@"friends(" stringByAppendingString:[requests stringValue]] stringByAppendingString:@")"]];
+        [self.gotoFriendsButton setTitle:[[@"Friends(" stringByAppendingString:[requests stringValue]] stringByAppendingString:@")"]];
     }
     else{
-        [self.gotoFriendsButton setTitle:@"friends"];
+        [self.gotoFriendsButton setTitle:@"Friends"];
     }
 }
 
@@ -71,6 +71,10 @@
 
 - (void) viewWillDisappear:(BOOL)animated{
         
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+
 }
 
 

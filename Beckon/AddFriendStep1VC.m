@@ -30,9 +30,15 @@
     self.table.dataSource = self;
     self.table.delegate = self;
     self.isSearching = NO;
+    
     self.cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     self.cancelButton.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem = self.cancelButton;
+    
+    self.nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
+    self.nextButton.tintColor = [UIColor blackColor];
+    self.navigationItem.rightBarButtonItem = self.nextButton;
+    
     self.navigationItem.title = @"Search";
     [self.table registerClass:[AddFriendCell class] forCellReuseIdentifier:@"AddFriendCell"];
 }
@@ -43,7 +49,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 66.0;
+    return 77.0;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

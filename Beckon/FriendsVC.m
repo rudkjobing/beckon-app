@@ -36,7 +36,7 @@
     self.table.dataSource = self;
     self.table.delegate = self;
     
-    self.gotoShoutsButton = [[UIBarButtonItem alloc] initWithTitle:@"shouts" style:UIBarButtonItemStylePlain target:self action:@selector(gotoShouts)];
+    self.gotoShoutsButton = [[UIBarButtonItem alloc] initWithTitle:@"Shouts" style:UIBarButtonItemStylePlain target:self action:@selector(gotoShouts)];
     self.gotoShoutsButton.tintColor = [UIColor blackColor];
     
     self.navigationItem.leftBarButtonItem = self.gotoShoutsButton;
@@ -87,6 +87,14 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.friendsFiltered.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *friend = [self.friendsFiltered objectAtIndex:indexPath.row];
+    if([[friend objectForKey:@"status"] isEqualToString:@"PENDING"]){
+        return 92.0;
+    }
+    return 46.0;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

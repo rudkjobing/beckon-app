@@ -7,51 +7,55 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="KGk-i7-Jjw" customClass="AddFriendCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="77" id="KGk-i7-Jjw" customClass="AddFriendCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2e-gH-k0r">
-                        <rect key="frame" x="8" y="11" width="304" height="21"/>
+                        <rect key="frame" x="8" y="8" width="304" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5ge-Tk-Bhc">
-                        <rect key="frame" x="150" y="41" width="20" height="20"/>
-                        <color key="color" red="0.57254901960000004" green="0.20784313730000001" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </activityIndicatorView>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invitation sent" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAH-Dp-hzI">
-                        <rect key="frame" x="106" y="40" width="108" height="21"/>
+                        <rect key="frame" x="106" y="41" width="108" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.57254901960000004" green="0.20784313730000001" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.26979507990000001" green="0.71816729970000004" blue="0.35457963570000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91F-ru-ST9">
-                        <rect key="frame" x="142" y="36" width="37" height="30"/>
+                        <rect key="frame" x="112" y="37" width="97" height="30"/>
+                        <color key="backgroundColor" red="0.63612545490000005" green="0.40268656689999999" blue="0.99852645399999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="97" id="mIa-hT-Jww"/>
+                        </constraints>
                         <state key="normal" title="Invite">
-                            <color key="titleColor" red="0.57254901960000004" green="0.20784313730000001" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
                             <action selector="inviteFriendAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Gr8-hb-Em3"/>
                         </connections>
                     </button>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5ge-Tk-Bhc">
+                        <rect key="frame" x="150" y="42" width="20" height="20"/>
+                        <color key="color" red="0.57254901960000004" green="0.20784313730000001" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="x2e-gH-k0r" secondAttribute="bottom" constant="25" id="224-QJ-pXT"/>
-                    <constraint firstAttribute="centerX" secondItem="5ge-Tk-Bhc" secondAttribute="centerX" id="3E9-DP-Abn"/>
-                    <constraint firstItem="CAH-Dp-hzI" firstAttribute="top" secondItem="x2e-gH-k0r" secondAttribute="bottom" constant="8" id="4Fv-0i-A2j"/>
-                    <constraint firstAttribute="centerX" secondItem="91F-ru-ST9" secondAttribute="centerX" constant="-0.5" id="S9h-6R-er1"/>
-                    <constraint firstItem="x2e-gH-k0r" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="YfC-yn-MtL"/>
-                    <constraint firstItem="91F-ru-ST9" firstAttribute="top" secondItem="x2e-gH-k0r" secondAttribute="bottom" constant="4" id="Z4M-GN-nuN"/>
-                    <constraint firstItem="x2e-gH-k0r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="ahe-ty-dMz"/>
-                    <constraint firstItem="5ge-Tk-Bhc" firstAttribute="top" secondItem="x2e-gH-k0r" secondAttribute="bottom" constant="9" id="g1Y-Z5-23e"/>
-                    <constraint firstItem="x2e-gH-k0r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rW7-MS-waS"/>
-                    <constraint firstAttribute="centerX" secondItem="CAH-Dp-hzI" secondAttribute="centerX" id="uLp-vZ-bEI"/>
+                    <constraint firstItem="x2e-gH-k0r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="2A2-DU-iSE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5ge-Tk-Bhc" secondAttribute="bottom" constant="6" id="4fx-Q5-fg2"/>
+                    <constraint firstItem="CAH-Dp-hzI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="98" id="75m-0T-JwY"/>
+                    <constraint firstItem="x2e-gH-k0r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="CXI-oG-qp2"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="91F-ru-ST9" secondAttribute="bottom" constant="1" id="HTP-4B-GCO"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="CAH-Dp-hzI" secondAttribute="bottom" constant="6" id="LSv-FX-jEL"/>
+                    <constraint firstItem="x2e-gH-k0r" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="MUW-jk-D9v"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CAH-Dp-hzI" secondAttribute="trailing" constant="98" id="cBc-Qm-upp"/>
+                    <constraint firstAttribute="centerX" secondItem="91F-ru-ST9" secondAttribute="centerX" constant="-0.5" id="pEO-l9-3YK"/>
+                    <constraint firstAttribute="centerX" secondItem="5ge-Tk-Bhc" secondAttribute="centerX" id="sU3-Sf-AWX"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -60,7 +64,7 @@
                 <outlet property="invitationSentLabel" destination="CAH-Dp-hzI" id="1kn-8y-HbH"/>
                 <outlet property="inviteButton" destination="91F-ru-ST9" id="F4r-fT-kht"/>
             </connections>
-            <point key="canvasLocation" x="869" y="538"/>
+            <point key="canvasLocation" x="869" y="535.5"/>
         </tableViewCell>
     </objects>
 </document>
