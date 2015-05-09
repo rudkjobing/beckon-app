@@ -25,14 +25,14 @@
                         <action selector="filterTyped:" destination="-1" eventType="editingChanged" id="HrN-Cl-rM6"/>
                     </connections>
                 </textField>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sAU-sd-MCJ">
-                    <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                    <color key="color" red="0.01493748254" green="0.1571372982" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                </activityIndicatorView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oYE-6x-mOH">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sAU-sd-MCJ">
+                    <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                    <color key="color" red="0.01493748254" green="0.1571372982" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -50,8 +50,8 @@
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="LaZ-04-EhK"/>
-                    <exclude reference="sAU-sd-MCJ"/>
                     <exclude reference="oYE-6x-mOH"/>
+                    <exclude reference="sAU-sd-MCJ"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="hyK-7R-FT2"/>
@@ -68,8 +68,8 @@
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="LaZ-04-EhK"/>
-                    <include reference="sAU-sd-MCJ"/>
                     <include reference="oYE-6x-mOH"/>
+                    <include reference="sAU-sd-MCJ"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="hyK-7R-FT2"/>

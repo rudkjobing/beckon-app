@@ -23,6 +23,7 @@
 @property (strong, nonatomic) NSMutableArray *beckonMembers;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UITextField *filter;
+@property (assign) BOOL isSaving;
 
 @end
 
@@ -30,6 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.isSaving = NO;
     
     self.table.delegate = self;
     self.table.dataSource = self;
@@ -122,11 +125,14 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *friend = [self.friendsFiltered objectAtIndex:indexPath.row];
+    FriendCell *cell = (FriendCell *)[tableView cellForRowAtIndexPath:indexPath];
     if([self.beckonMembers containsObject:friend]){
         [self.beckonMembers removeObject:friend];
+        cell.contentView.backgroundColor = [UIColor whiteColor];
     }
     else{
         [self.beckonMembers addObject:friend];
+        cell.contentView.backgroundColor = [UIColor lightGrayColor];
     }
     self.navigationItem.title = [[@"Friends(" stringByAppendingString:[NSString stringWithFormat:@"%ld", (unsigned long)self.beckonMembers.count]] stringByAppendingString:@")"];
     [self.table reloadData];
@@ -159,16 +165,22 @@
 }
 
 -(void)createBeckon:(NSDictionary*)beckonRequest{
-    
+    if(self.isSaving){
+        return;
+    }
+    [self.spinner startAnimating];
+    self.isSaving = YES;
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSDictionary *parameters = beckonRequest;
     [manager POST:@"http://api.broshout.net:9000/shout" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              NSLog(@"JSON: %@", responseObject);
+              self.isSaving = NO;
+              [self.spinner stopAnimating];
               [self.swipeVC dismissViewControllerAnimated:YES completion:nil];
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-              
+              self.isSaving = NO;
+              [self.spinner stopAnimating];
           }];
     
 }
