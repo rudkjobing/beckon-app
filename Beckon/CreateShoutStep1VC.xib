@@ -17,14 +17,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Beer?" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="o1Y-HK-Dcn">
-                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                    <connections>
-                        <action selector="titleTyped:" destination="-1" eventType="editingChanged" id="iBR-eH-4xj"/>
-                    </connections>
-                </textField>
                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="mqM-u7-9r0">
                     <rect key="frame" x="-160" y="-81" width="320" height="162"/>
                     <date key="date" timeIntervalSinceReferenceDate="444503081.17156398">
@@ -37,9 +29,17 @@
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="The Pub!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqb-LL-trI">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <connections>
                         <action selector="whereTyped:" destination="-1" eventType="editingChanged" id="101-jI-xfX"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Beer?" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="o1Y-HK-Dcn">
+                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <connections>
+                        <action selector="titleTyped:" destination="-1" eventType="editingChanged" id="iBR-eH-4xj"/>
                     </connections>
                 </textField>
             </subviews>
@@ -58,17 +58,17 @@
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="o1Y-HK-Dcn"/>
                     <exclude reference="mqM-u7-9r0"/>
                     <exclude reference="aqb-LL-trI"/>
+                    <exclude reference="o1Y-HK-Dcn"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="33j-56-Wi4"/>
-                    <exclude reference="PRm-Gj-6t4"/>
-                    <exclude reference="a17-Mu-fT1"/>
                     <exclude reference="JOR-mD-6Fz"/>
                     <exclude reference="Vfc-yM-1hf"/>
                     <exclude reference="ZW9-pi-2F8"/>
+                    <exclude reference="33j-56-Wi4"/>
+                    <exclude reference="PRm-Gj-6t4"/>
+                    <exclude reference="a17-Mu-fT1"/>
                     <exclude reference="3dv-X9-Ad0"/>
                     <exclude reference="FLj-jD-TCm"/>
                     <exclude reference="zEJ-Vt-Xww"/>
@@ -76,17 +76,17 @@
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
-                    <include reference="o1Y-HK-Dcn"/>
                     <include reference="mqM-u7-9r0"/>
                     <include reference="aqb-LL-trI"/>
+                    <include reference="o1Y-HK-Dcn"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="33j-56-Wi4"/>
-                    <include reference="PRm-Gj-6t4"/>
-                    <include reference="a17-Mu-fT1"/>
                     <include reference="JOR-mD-6Fz"/>
                     <include reference="Vfc-yM-1hf"/>
                     <include reference="ZW9-pi-2F8"/>
+                    <include reference="33j-56-Wi4"/>
+                    <include reference="PRm-Gj-6t4"/>
+                    <include reference="a17-Mu-fT1"/>
                     <include reference="3dv-X9-Ad0"/>
                     <include reference="FLj-jD-TCm"/>
                     <include reference="zEJ-Vt-Xww"/>

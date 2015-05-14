@@ -42,6 +42,9 @@
     
 }
 
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [[self view] endEditing:YES];
+}
 
 - (void) cancel{
     [self.swipeVC dismissViewControllerAnimated:YES completion:nil];

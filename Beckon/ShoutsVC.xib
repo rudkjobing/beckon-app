@@ -23,7 +23,7 @@
                 </tableView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="OuC-yT-NJZ">
                     <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                    <color key="color" red="0.85875660967040846" green="0.9892006516456604" blue="0.9892006516456604" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="color" red="0.63612545490000005" green="0.40268656689999999" blue="0.99852645399999995" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
                 <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bsL-2h-V1D">
                     <rect key="frame" x="0.0" y="-50" width="320" height="50"/>

@@ -199,7 +199,8 @@
     [self.spinner startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager GET:@"http://api.broshout.net:9000/friendships" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"http://api.broshout.net:9000/friendships" parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
          
