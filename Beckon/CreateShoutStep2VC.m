@@ -115,10 +115,10 @@
     cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
     cell.email.text = [user objectForKey:@"email"];
     if([self.beckonMembers containsObject:friend]){
-        cell.backgroundColor = [UIColor lightGrayColor];
+        cell.contentView.backgroundColor = [UIColor lightGrayColor];
     }
     else{
-        cell.backgroundColor = [UIColor clearColor];
+        cell.contentView.backgroundColor = [UIColor whiteColor];
     }
     return cell;
 }
