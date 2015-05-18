@@ -72,7 +72,7 @@
         self.message.text = @"";
         [self.message setTextColor:[UIColor blackColor]];
         [self.feedbackLabel setTextColor:[UIColor blackColor]];
-        self.feedbackLabel.text = @"Check your email for activation details.";
+        self.feedbackLabel.text = [responseObject objectForKey:@"message"];
         self.signInVCemailTextField.text = self.emailTextField.text;
         self.working = NO;
         [self.activityIndicator stopAnimating];

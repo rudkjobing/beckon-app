@@ -20,15 +20,18 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)acceptAction:(id)sender {
+- (IBAction)acceptAction:(UIButton *)sender {
+    [sender setEnabled:NO];
     [self.delegate acceptShoutRequestAction:self];
 }
 
-- (IBAction)maybeAction:(id)sender {
+- (IBAction)maybeAction:(UIButton *)sender {
+    [sender setEnabled:NO];
     [self.delegate maybeShoutRequestAction:self];
 }
 
-- (IBAction)declineAction:(id)sender {
+- (IBAction)declineAction:(UIButton *)sender {
+    [sender setEnabled:NO];
     [self.delegate declineShoutRequestAction:self];
 }
 

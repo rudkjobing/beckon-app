@@ -202,8 +202,6 @@
     [manager GET:@"http://api.broshout.net:9000/friendships" parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         NSLog(@"JSON: %@", responseObject);
-         
          NSNumber *friendRequests = [NSNumber numberWithInt:0];
          
          for(NSDictionary *friend in responseObject){

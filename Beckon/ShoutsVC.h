@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ShoutRequestCell.h"
+#import "ShoutDeclinedCell.h"
 #import <iAd/iAd.h>
 
-@interface ShoutsVC : UIViewController <UITableViewDataSource, UITableViewDelegate, ShoutRequestCellDelegate, ADBannerViewDelegate>
+@interface ShoutsVC : UIViewController <UITableViewDataSource, UITableViewDelegate, ShoutRequestCellDelegate, ADBannerViewDelegate, ShoutDeclinedCellDelegate>
 
 @end

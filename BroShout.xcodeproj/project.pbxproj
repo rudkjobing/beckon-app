@@ -37,6 +37,11 @@
 		F97A05D01ADEEB0900D9168D /* ShoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97A05CE1ADEEB0900D9168D /* ShoutCell.xib */; };
 		F97A05D41ADEF0BD00D9168D /* ShoutRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97A05D21ADEF0BD00D9168D /* ShoutRequestCell.m */; };
 		F97A05D51ADEF0BD00D9168D /* ShoutRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97A05D31ADEF0BD00D9168D /* ShoutRequestCell.xib */; };
+		F9DB6F241B04DF0D00F9CE05 /* ShoutSwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DB6F231B04DF0D00F9CE05 /* ShoutSwipeVC.m */; };
+		F9DB6F2D1B04E11C00F9CE05 /* ShoutMiscVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DB6F2B1B04E11C00F9CE05 /* ShoutMiscVC.m */; };
+		F9DB6F2E1B04E11C00F9CE05 /* ShoutMiscVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DB6F2C1B04E11C00F9CE05 /* ShoutMiscVC.xib */; };
+		F9DB6F321B07667E00F9CE05 /* ShoutDeclinedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DB6F301B07667E00F9CE05 /* ShoutDeclinedCell.m */; };
+		F9DB6F331B07667E00F9CE05 /* ShoutDeclinedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DB6F311B07667E00F9CE05 /* ShoutDeclinedCell.xib */; };
 		F9DCFB331A63205D00B58029 /* FriendRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB311A63205D00B58029 /* FriendRequestCell.m */; };
 		F9DCFB341A63205D00B58029 /* FriendRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */; };
 		F9DCFB381A640F2A00B58029 /* FriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB361A640F2A00B58029 /* FriendVC.m */; };
@@ -111,6 +116,14 @@
 		F97A05D11ADEF0BD00D9168D /* ShoutRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutRequestCell.h; sourceTree = "<group>"; };
 		F97A05D21ADEF0BD00D9168D /* ShoutRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutRequestCell.m; sourceTree = "<group>"; };
 		F97A05D31ADEF0BD00D9168D /* ShoutRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutRequestCell.xib; sourceTree = "<group>"; };
+		F9DB6F221B04DF0D00F9CE05 /* ShoutSwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutSwipeVC.h; sourceTree = "<group>"; };
+		F9DB6F231B04DF0D00F9CE05 /* ShoutSwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutSwipeVC.m; sourceTree = "<group>"; };
+		F9DB6F2A1B04E11C00F9CE05 /* ShoutMiscVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutMiscVC.h; sourceTree = "<group>"; };
+		F9DB6F2B1B04E11C00F9CE05 /* ShoutMiscVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutMiscVC.m; sourceTree = "<group>"; };
+		F9DB6F2C1B04E11C00F9CE05 /* ShoutMiscVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutMiscVC.xib; sourceTree = "<group>"; };
+		F9DB6F2F1B07667E00F9CE05 /* ShoutDeclinedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutDeclinedCell.h; sourceTree = "<group>"; };
+		F9DB6F301B07667E00F9CE05 /* ShoutDeclinedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutDeclinedCell.m; sourceTree = "<group>"; };
+		F9DB6F311B07667E00F9CE05 /* ShoutDeclinedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutDeclinedCell.xib; sourceTree = "<group>"; };
 		F9DCFB301A63205D00B58029 /* FriendRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendRequestCell.h; sourceTree = "<group>"; };
 		F9DCFB311A63205D00B58029 /* FriendRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendRequestCell.m; sourceTree = "<group>"; };
 		F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendRequestCell.xib; sourceTree = "<group>"; };
@@ -209,6 +222,7 @@
 		F92CC0B41A596DFA00AA0B70 /* Detail scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F9DB6F211B04DEBE00F9CE05 /* Scout scenes */,
 				F9DCFB3A1A640F3100B58029 /* Friend scenes */,
 				F92CC0D21A599E8A00AA0B70 /* Add Friend scenes */,
 				F92CC0B51A596E0300AA0B70 /* Create Beckon scenes */,
@@ -308,6 +322,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F9DB6F211B04DEBE00F9CE05 /* Scout scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F9DB6F221B04DF0D00F9CE05 /* ShoutSwipeVC.h */,
+				F9DB6F231B04DF0D00F9CE05 /* ShoutSwipeVC.m */,
+				F9DB6F2A1B04E11C00F9CE05 /* ShoutMiscVC.h */,
+				F9DB6F2B1B04E11C00F9CE05 /* ShoutMiscVC.m */,
+				F9DB6F2C1B04E11C00F9CE05 /* ShoutMiscVC.xib */,
+			);
+			name = "Scout scenes";
+			sourceTree = "<group>";
+		};
 		F9DCFB2A1A631A3500B58029 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +352,9 @@
 				F9E4DBB01AF67E5600DE1350 /* AddFriendCell.h */,
 				F9E4DBB11AF67E5600DE1350 /* AddFriendCell.m */,
 				F9E4DBB21AF67E5600DE1350 /* AddFriendCell.xib */,
+				F9DB6F2F1B07667E00F9CE05 /* ShoutDeclinedCell.h */,
+				F9DB6F301B07667E00F9CE05 /* ShoutDeclinedCell.m */,
+				F9DB6F311B07667E00F9CE05 /* ShoutDeclinedCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -431,7 +460,9 @@
 				F9DCFB391A640F2A00B58029 /* FriendVC.xib in Resources */,
 				F92811451A618C220073B33E /* AddFriendStep1VC.xib in Resources */,
 				F9DCFB3F1A64143100B58029 /* FriendCell.xib in Resources */,
+				F9DB6F331B07667E00F9CE05 /* ShoutDeclinedCell.xib in Resources */,
 				F97A05D01ADEEB0900D9168D /* ShoutCell.xib in Resources */,
+				F9DB6F2E1B04E11C00F9CE05 /* ShoutMiscVC.xib in Resources */,
 				F95F30201A57262D00D2CC3B /* LaunchScreen.xib in Resources */,
 				F92CC0C21A596F6E00AA0B70 /* CreateShoutStep2VC.xib in Resources */,
 				F95F301D1A57262D00D2CC3B /* Images.xcassets in Resources */,
@@ -491,14 +522,17 @@
 			files = (
 				F960A7581A57285E000BB047 /* SignUpVC.m in Sources */,
 				F92CC0B81A596F1300AA0B70 /* CreateShoutSwipeVC.m in Sources */,
+				F9DB6F321B07667E00F9CE05 /* ShoutDeclinedCell.m in Sources */,
 				F97A05CF1ADEEB0900D9168D /* ShoutCell.m in Sources */,
 				F92CC0C11A596F6E00AA0B70 /* CreateShoutStep2VC.m in Sources */,
+				F9DB6F2D1B04E11C00F9CE05 /* ShoutMiscVC.m in Sources */,
 				F92CC0BC1A596F5600AA0B70 /* CreateShoutStep1VC.m in Sources */,
 				F92811491A618CD20073B33E /* AddFriendNC.m in Sources */,
 				F92CC0A91A5890BB00AA0B70 /* FriendsVC.m in Sources */,
 				F9E4DBB31AF67E5600DE1350 /* AddFriendCell.m in Sources */,
 				F92CC0E61A59CB7600AA0B70 /* SettingsVC.m in Sources */,
 				F97A05D41ADEF0BD00D9168D /* ShoutRequestCell.m in Sources */,
+				F9DB6F241B04DF0D00F9CE05 /* ShoutSwipeVC.m in Sources */,
 				F960A7551A57285E000BB047 /* MainSwipeVC.m in Sources */,
 				F92CC0991A581CDF00AA0B70 /* ShoutsVC.m in Sources */,
 				F9DCFB3E1A64143100B58029 /* FriendCell.m in Sources */,
@@ -635,8 +669,8 @@
 			baseConfigurationReference = 153D9C6F3363723670029AF8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Beckon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = BroShout;

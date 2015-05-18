@@ -52,7 +52,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cux-E0-LJ1">
                                 <rect key="frame" x="8" y="108" width="96" height="30"/>
-                                <color key="backgroundColor" red="0.26979507990000001" green="0.71816729970000004" blue="0.35457963570000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.18445092129999999" green="0.5" blue="0.0057998500709999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="0m4-TV-SJO"/>
                                 </constraints>

@@ -11,6 +11,7 @@
 #import "CreateShoutSwipeVC.h"
 #import "ShoutCell.h"
 #import "MainSwipeVC.h"
+#import "ShoutSwipeVC.h"
 
 @interface ShoutsVC ()
 
@@ -45,6 +46,7 @@
  
     [self.shoutTable registerClass:[ShoutRequestCell class] forCellReuseIdentifier:@"ShoutRequestCell"];
     [self.shoutTable registerClass:[ShoutCell class] forCellReuseIdentifier:@"ShoutCell"];
+    [self.shoutTable registerClass:[ShoutDeclinedCell class] forCellReuseIdentifier:@"ShoutDeclinedCell"];
     self.shoutTable.dataSource = self;
     self.shoutTable.delegate = self;
     
@@ -91,13 +93,11 @@
     
     NSDateFormatter *timeOfDayFormatter = [[NSDateFormatter alloc] init];
     [timeOfDayFormatter setDateFormat: @"HH:mm"];
-    
-    NSDate *begins = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] integerValue] / 1000];
+    NSDate *begins = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] longLongValue] / 1000];
     NSString *title = [shout objectForKey:@"title"];
     NSString *location = [[shout objectForKey:@"location"] objectForKey:@"name"];
     NSArray *members = [shout objectForKey:@"memberList"];
     NSString *creator = @"";
-    
     
     /* Present the shout cell if this is a shout invitation */
     if([[shout objectForKey:@"status"] isEqualToString:@"INVITED"]){
@@ -118,7 +118,7 @@
         
         cell.delegate = self;
         cell.shout = shout;
-        cell.headline.text = [creator stringByAppendingString:@" has invited you to"];
+        cell.headline.text = [creator stringByAppendingString:@" invites you to"];
         cell.title.text = title;
         cell.location.text = location;
 
@@ -127,7 +127,7 @@
         return cell;
     }
     /* Or present a normal shout cell */
-    else{
+    else if([[shout objectForKey:@"status"] isEqualToString:@"ACCEPTED"] || [[shout objectForKey:@"status"] isEqualToString:@"MAYBE"]){
         static NSString *cellIdentifier = @"ShoutCell";
         [tableView registerNib:[UINib nibWithNibName:@"ShoutCell" bundle: nil] forCellReuseIdentifier:@"ShoutCell"];
         
@@ -168,10 +168,28 @@
         
         return cell;
     }
+    else if([[shout objectForKey:@"status"] isEqualToString:@"DECLINED"]){
+        static NSString *cellIdentifier = @"ShoutDeclinedCell";
+        [tableView registerNib:[UINib nibWithNibName:@"ShoutDeclinedCell" bundle: nil] forCellReuseIdentifier:@"ShoutDeclinedCell"];
+        
+        ShoutDeclinedCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (!cell) {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"ShoutDeclinedCell"];
+        }
+
+        cell.title.text = title;
+        return cell;
+
+    }
     return nil;
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *shout = [self.shouts objectAtIndex:indexPath.row];
+    ShoutSwipeVC *shoutDetailView = [ShoutSwipeVC new];
+    shoutDetailView.shout = shout;
+    [self presentViewController:shoutDetailView animated:YES completion:nil];
+}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -183,6 +201,9 @@
     
     if([[shout objectForKey:@"status"] isEqualToString:@"INVITED"]){
         return 156.0;
+    }
+    else if([[shout objectForKey:@"status"] isEqualToString:@"DECLINED"]){
+        return 44.0;
     }
     
     return 100.0;
@@ -204,7 +225,6 @@
     [manager GET:@"http://api.broshout.net:9000/shouts" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          self.shouts = responseObject;
-         NSLog(@"JSON: %@", self.shouts);
          [self.shoutTable reloadData];
          [self.spinner stopAnimating];
      }
@@ -256,6 +276,10 @@
     ShoutRequestCell *s = (ShoutRequestCell*) sender;
     NSDictionary *update = @{@"memberId": [s.shout objectForKey:@"memberId"], @"shoutId": [s.shout objectForKey:@"id"], @"status": @"DECLINED"};
     [self updateShoutMemberShout:update shoutOriginal:s.shout];
+}
+
+-(void) dismissShoutAction:(id)sender{
+    
 }
 
 @end
