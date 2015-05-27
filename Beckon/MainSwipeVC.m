@@ -41,9 +41,9 @@
     
     //Create the Options controller
     SettingsVC *settings = [SettingsVC new];
-    UINavigationController *scene4 = [[UINavigationController alloc] initWithRootViewController:settings];
+    UINavigationController *scene3 = [[UINavigationController alloc] initWithRootViewController:settings];
     
-    self.viewControllers = @[scene1, scene2];
+    self.viewControllers = @[scene1, scene2, scene3];
     
     self.userLoggedIn = YES;
     
@@ -77,9 +77,9 @@
   
     //Create the Options controller
     SettingsVC *settings = [SettingsVC new];
-    UINavigationController *scene4 = [[UINavigationController alloc] initWithRootViewController:settings];
+    UINavigationController *scene3 = [[UINavigationController alloc] initWithRootViewController:settings];
     
-    self.viewControllers = @[scene1, scene2];
+    self.viewControllers = @[scene1, scene2, scene3];
 }
 
 @end
