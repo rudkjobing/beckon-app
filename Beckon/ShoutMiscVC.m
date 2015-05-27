@@ -174,7 +174,7 @@
 
 -(void)getShout{
     [self.spinner startAnimating];
-    NSString *currentShoutId = [[self.swipeVC.shout objectForKey:@"id"] stringValue];
+    NSString *currentShoutId = [[self.swipeVC.shout objectForKey:@"memberId"] stringValue];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager GET:[@"http://api.broshout.net:9000/shout/" stringByAppendingString:currentShoutId] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)

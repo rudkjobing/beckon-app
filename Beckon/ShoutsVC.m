@@ -164,6 +164,13 @@
         cell.timeOfDay.text = [timeOfDayFormatter stringFromDate:begins];
         cell.date.text = [formatter stringFromDate:begins];
         
+        if ([[shout objectForKey:@"status"] isEqualToString:@"MAYBE"]){
+            [cell.bgView setBackgroundColor: [UIColor colorWithRed:146.0/255.0 green:53.0/255.0 blue:181.0/255.0 alpha:0.2]];
+        }
+        else if ([[shout objectForKey:@"status"] isEqualToString:@"ACCEPTED"]){
+            [cell.bgView setBackgroundColor: [UIColor colorWithRed:69.0/255.0 green:183.0/255.0 blue:90.0/255.0 alpha:0.2]];
+        }
+        
         [cell startTimer];
         
         return cell;
