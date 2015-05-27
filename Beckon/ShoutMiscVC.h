@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShoutMiscVC : UIViewController
+@interface ShoutMiscVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

@@ -4,8 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoutAddMembersVC">
             <connections>
+                <outlet property="table" destination="IHE-Ne-eyc" id="LTL-mc-tRK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,44 +15,42 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mUE-YT-Bwm">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IHE-Ne-eyc">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="mUE-YT-Bwm" secondAttribute="centerY" id="1Bl-yp-nUt"/>
-                <constraint firstItem="mUE-YT-Bwm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="I6O-9p-Fsj"/>
-                <constraint firstAttribute="bottom" secondItem="mUE-YT-Bwm" secondAttribute="bottom" id="JX8-yb-5U4"/>
-                <constraint firstAttribute="trailing" secondItem="mUE-YT-Bwm" secondAttribute="trailing" id="cfR-af-XLf"/>
-                <constraint firstItem="mUE-YT-Bwm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yD0-4S-VKA"/>
+                <constraint firstAttribute="trailing" secondItem="IHE-Ne-eyc" secondAttribute="trailing" id="RRC-rS-EJN"/>
+                <constraint firstAttribute="bottom" secondItem="IHE-Ne-eyc" secondAttribute="bottom" id="aVB-ZX-fzc"/>
+                <constraint firstItem="IHE-Ne-eyc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gfP-iK-Svc"/>
+                <constraint firstItem="IHE-Ne-eyc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="lmy-eE-SRb"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="mUE-YT-Bwm"/>
+                    <exclude reference="IHE-Ne-eyc"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="1Bl-yp-nUt"/>
-                    <exclude reference="I6O-9p-Fsj"/>
-                    <exclude reference="JX8-yb-5U4"/>
-                    <exclude reference="cfR-af-XLf"/>
-                    <exclude reference="yD0-4S-VKA"/>
+                    <exclude reference="RRC-rS-EJN"/>
+                    <exclude reference="aVB-ZX-fzc"/>
+                    <exclude reference="gfP-iK-Svc"/>
+                    <exclude reference="lmy-eE-SRb"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
-                    <include reference="mUE-YT-Bwm"/>
+                    <include reference="IHE-Ne-eyc"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="1Bl-yp-nUt"/>
-                    <include reference="I6O-9p-Fsj"/>
-                    <include reference="JX8-yb-5U4"/>
-                    <include reference="cfR-af-XLf"/>
-                    <include reference="yD0-4S-VKA"/>
+                    <include reference="RRC-rS-EJN"/>
+                    <include reference="aVB-ZX-fzc"/>
+                    <include reference="gfP-iK-Svc"/>
+                    <include reference="lmy-eE-SRb"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="329" y="295"/>
+            <point key="canvasLocation" x="273" y="697"/>
         </view>
     </objects>
 </document>

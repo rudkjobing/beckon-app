@@ -36,6 +36,7 @@
     self.table.dataSource = self;
     self.table.delegate = self;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewEnteredForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
     self.gotoShoutsButton = [[UIBarButtonItem alloc] initWithTitle:@"Shouts" style:UIBarButtonItemStylePlain target:self action:@selector(gotoShouts)];
     self.gotoShoutsButton.tintColor = [UIColor blackColor];
     
@@ -51,12 +52,16 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated{
-    [self getFriendships];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getFriendships) name:@"PleaseUpdate" object:nil];
+    [self getFriendships];
 }
 
 - (void) viewWillDisappear:(BOOL)animated{
   
+}
+
+- (void)viewEnteredForeground{
+    [self getFriendships];
 }
 
 - (void) gotoShouts{

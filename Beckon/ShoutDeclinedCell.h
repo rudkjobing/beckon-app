@@ -16,5 +16,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *title;
 @property (strong, nonatomic) IBOutlet UIView *bgView;
+@property (assign, nonatomic) id<ShoutDeclinedCellDelegate> delegate;
+@property (strong, nonatomic) NSDictionary *shout;
 
 @end

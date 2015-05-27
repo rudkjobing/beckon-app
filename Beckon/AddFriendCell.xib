@@ -21,7 +21,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invitation sent" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAH-Dp-hzI">
-                        <rect key="frame" x="106" y="41" width="108" height="21"/>
+                        <rect key="frame" x="8" y="41" width="304" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.26979507990000001" green="0.71816729970000004" blue="0.35457963570000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -48,12 +48,12 @@
                 <constraints>
                     <constraint firstItem="x2e-gH-k0r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="2A2-DU-iSE"/>
                     <constraint firstAttribute="bottomMargin" secondItem="5ge-Tk-Bhc" secondAttribute="bottom" constant="6" id="4fx-Q5-fg2"/>
-                    <constraint firstItem="CAH-Dp-hzI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="98" id="75m-0T-JwY"/>
+                    <constraint firstItem="CAH-Dp-hzI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="75m-0T-JwY"/>
                     <constraint firstItem="x2e-gH-k0r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="CXI-oG-qp2"/>
                     <constraint firstAttribute="bottomMargin" secondItem="91F-ru-ST9" secondAttribute="bottom" constant="1" id="HTP-4B-GCO"/>
                     <constraint firstAttribute="bottomMargin" secondItem="CAH-Dp-hzI" secondAttribute="bottom" constant="6" id="LSv-FX-jEL"/>
                     <constraint firstItem="x2e-gH-k0r" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="MUW-jk-D9v"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="CAH-Dp-hzI" secondAttribute="trailing" constant="98" id="cBc-Qm-upp"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CAH-Dp-hzI" secondAttribute="trailing" id="cBc-Qm-upp"/>
                     <constraint firstAttribute="centerX" secondItem="91F-ru-ST9" secondAttribute="centerX" constant="-0.5" id="pEO-l9-3YK"/>
                     <constraint firstAttribute="centerX" secondItem="5ge-Tk-Bhc" secondAttribute="centerX" id="sU3-Sf-AWX"/>
                 </constraints>

@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "AFNetworking.h"
+#import "AFNetworkActivityIndicatorManager.h"
+
+
 @import AudioToolbox;
 
 @interface AppDelegate ()
@@ -45,11 +48,12 @@
 }
 
 - (void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
-
+    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
     return YES;
 }
 
@@ -64,7 +68,7 @@
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
          
-     }];
+     }];    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -78,6 +82,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

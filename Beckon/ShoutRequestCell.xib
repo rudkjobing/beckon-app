@@ -50,6 +50,17 @@
                                 <color key="textColor" red="0.57254901960000004" green="0.20784313730000001" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wq-FZ-P7D">
+                                <rect key="frame" x="112" y="108" width="96" height="30"/>
+                                <color key="backgroundColor" red="0.57254901960000004" green="0.20784313730000001" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Hmm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="maybeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="m53-x3-uIB"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cux-E0-LJ1">
                                 <rect key="frame" x="8" y="108" width="96" height="30"/>
                                 <color key="backgroundColor" red="0.18445092129999999" green="0.5" blue="0.0057998500709999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,17 +72,6 @@
                                 </state>
                                 <connections>
                                     <action selector="acceptAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BTP-QU-T4E"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wq-FZ-P7D">
-                                <rect key="frame" x="112" y="108" width="96" height="30"/>
-                                <color key="backgroundColor" red="0.57254901960000004" green="0.20784313730000001" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Hmm">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="maybeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="m53-x3-uIB"/>
                                 </connections>
                             </button>
                         </subviews>

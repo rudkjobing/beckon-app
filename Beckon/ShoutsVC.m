@@ -111,7 +111,7 @@
         
         for (NSDictionary *member in members) {
             if ([[member objectForKey:@"role"] isEqualToString:@"CREATOR"]) {
-                creator = [member objectForKey:@"name"];
+                creator = [member objectForKey:@"firstName"];
                 break;
             }
         }
@@ -140,7 +140,7 @@
         NSMutableAttributedString *names = [[NSMutableAttributedString alloc] initWithString:@""];
         for (NSDictionary *member in members) {
             
-            NSMutableAttributedString *name = names.length == 0 ? [[NSMutableAttributedString alloc] initWithString:[member objectForKey:@"name"]] : [[NSMutableAttributedString alloc] initWithString:[@" " stringByAppendingString:[member objectForKey:@"name"]]];
+            NSMutableAttributedString *name = names.length == 0 ? [[NSMutableAttributedString alloc] initWithString:[member objectForKey:@"firstName"]] : [[NSMutableAttributedString alloc] initWithString:[@" " stringByAppendingString:[member objectForKey:@"firstName"]]];
             if ([[member objectForKey:@"role"] isEqualToString:@"CREATOR"]) {
                 [name addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:NSMakeRange(0, name.length)];
             }
@@ -176,8 +176,9 @@
         if (!cell) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"ShoutDeclinedCell"];
         }
-
+        cell.delegate = self;
         cell.title.text = title;
+        cell.shout = shout;
         return cell;
 
     }
@@ -224,9 +225,28 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager GET:@"http://api.broshout.net:9000/shouts" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
+         NSLog(@"JSON: %@", responseObject);
          self.shouts = responseObject;
          [self.shoutTable reloadData];
          [self.spinner stopAnimating];
+         for(NSDictionary *shout in responseObject){
+             NSDate *shoutDate = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] longLongValue] / 1000];
+             if([[[[NSDate alloc] init]dateByAddingTimeInterval: + 60*60] laterDate:shoutDate] == shoutDate){
+                 UILocalNotification *notification15 = [[UILocalNotification alloc] init];
+                 notification15.fireDate = [shoutDate dateByAddingTimeInterval:-60*60];
+                 notification15.alertBody = [@"1 Hour: " stringByAppendingString:[shout objectForKey:@"title"]];
+                 notification15.soundName = UILocalNotificationDefaultSoundName;
+                 [[UIApplication sharedApplication] scheduleLocalNotification:notification15];
+             }
+             if([shoutDate laterDate:[[NSDate alloc] init]] == shoutDate){
+                 UILocalNotification *notificationNow = [[UILocalNotification alloc] init];
+                 notificationNow.fireDate = shoutDate;
+                 notificationNow.alertBody = [@"Now: " stringByAppendingString:[shout objectForKey:@"title"]];
+                 notificationNow.soundName = UILocalNotificationDefaultSoundName;
+                 [[UIApplication sharedApplication] scheduleLocalNotification:notificationNow];
+             }
+         }
+         
      }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
@@ -279,7 +299,9 @@
 }
 
 -(void) dismissShoutAction:(id)sender{
-    
+    ShoutDeclinedCell *s = (ShoutDeclinedCell*) sender;
+    NSDictionary *update = @{@"memberId": [s.shout objectForKey:@"memberId"], @"shoutId": [s.shout objectForKey:@"id"], @"status": @"DELETED"};
+    [self updateShoutMemberShout:update shoutOriginal:s.shout];
 }
 
 @end

@@ -42,6 +42,10 @@
 		F9DB6F2E1B04E11C00F9CE05 /* ShoutMiscVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DB6F2C1B04E11C00F9CE05 /* ShoutMiscVC.xib */; };
 		F9DB6F321B07667E00F9CE05 /* ShoutDeclinedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DB6F301B07667E00F9CE05 /* ShoutDeclinedCell.m */; };
 		F9DB6F331B07667E00F9CE05 /* ShoutDeclinedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DB6F311B07667E00F9CE05 /* ShoutDeclinedCell.xib */; };
+		F9DB6F371B137FFC00F9CE05 /* ShoutMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DB6F351B137FFC00F9CE05 /* ShoutMemberCell.m */; };
+		F9DB6F381B137FFC00F9CE05 /* ShoutMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DB6F361B137FFC00F9CE05 /* ShoutMemberCell.xib */; };
+		F9DB6F3C1B13AC6200F9CE05 /* ShoutAddMembersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DB6F3A1B13AC6200F9CE05 /* ShoutAddMembersVC.m */; };
+		F9DB6F3D1B13AC6200F9CE05 /* ShoutAddMembersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DB6F3B1B13AC6200F9CE05 /* ShoutAddMembersVC.xib */; };
 		F9DCFB331A63205D00B58029 /* FriendRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB311A63205D00B58029 /* FriendRequestCell.m */; };
 		F9DCFB341A63205D00B58029 /* FriendRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */; };
 		F9DCFB381A640F2A00B58029 /* FriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DCFB361A640F2A00B58029 /* FriendVC.m */; };
@@ -124,6 +128,12 @@
 		F9DB6F2F1B07667E00F9CE05 /* ShoutDeclinedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutDeclinedCell.h; sourceTree = "<group>"; };
 		F9DB6F301B07667E00F9CE05 /* ShoutDeclinedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutDeclinedCell.m; sourceTree = "<group>"; };
 		F9DB6F311B07667E00F9CE05 /* ShoutDeclinedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutDeclinedCell.xib; sourceTree = "<group>"; };
+		F9DB6F341B137FFC00F9CE05 /* ShoutMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutMemberCell.h; sourceTree = "<group>"; };
+		F9DB6F351B137FFC00F9CE05 /* ShoutMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutMemberCell.m; sourceTree = "<group>"; };
+		F9DB6F361B137FFC00F9CE05 /* ShoutMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutMemberCell.xib; sourceTree = "<group>"; };
+		F9DB6F391B13AC6200F9CE05 /* ShoutAddMembersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutAddMembersVC.h; sourceTree = "<group>"; };
+		F9DB6F3A1B13AC6200F9CE05 /* ShoutAddMembersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutAddMembersVC.m; sourceTree = "<group>"; };
+		F9DB6F3B1B13AC6200F9CE05 /* ShoutAddMembersVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutAddMembersVC.xib; sourceTree = "<group>"; };
 		F9DCFB301A63205D00B58029 /* FriendRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendRequestCell.h; sourceTree = "<group>"; };
 		F9DCFB311A63205D00B58029 /* FriendRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendRequestCell.m; sourceTree = "<group>"; };
 		F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendRequestCell.xib; sourceTree = "<group>"; };
@@ -330,6 +340,9 @@
 				F9DB6F2A1B04E11C00F9CE05 /* ShoutMiscVC.h */,
 				F9DB6F2B1B04E11C00F9CE05 /* ShoutMiscVC.m */,
 				F9DB6F2C1B04E11C00F9CE05 /* ShoutMiscVC.xib */,
+				F9DB6F391B13AC6200F9CE05 /* ShoutAddMembersVC.h */,
+				F9DB6F3A1B13AC6200F9CE05 /* ShoutAddMembersVC.m */,
+				F9DB6F3B1B13AC6200F9CE05 /* ShoutAddMembersVC.xib */,
 			);
 			name = "Scout scenes";
 			sourceTree = "<group>";
@@ -355,6 +368,9 @@
 				F9DB6F2F1B07667E00F9CE05 /* ShoutDeclinedCell.h */,
 				F9DB6F301B07667E00F9CE05 /* ShoutDeclinedCell.m */,
 				F9DB6F311B07667E00F9CE05 /* ShoutDeclinedCell.xib */,
+				F9DB6F341B137FFC00F9CE05 /* ShoutMemberCell.h */,
+				F9DB6F351B137FFC00F9CE05 /* ShoutMemberCell.m */,
+				F9DB6F361B137FFC00F9CE05 /* ShoutMemberCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -460,9 +476,11 @@
 				F9DCFB391A640F2A00B58029 /* FriendVC.xib in Resources */,
 				F92811451A618C220073B33E /* AddFriendStep1VC.xib in Resources */,
 				F9DCFB3F1A64143100B58029 /* FriendCell.xib in Resources */,
+				F9DB6F381B137FFC00F9CE05 /* ShoutMemberCell.xib in Resources */,
 				F9DB6F331B07667E00F9CE05 /* ShoutDeclinedCell.xib in Resources */,
 				F97A05D01ADEEB0900D9168D /* ShoutCell.xib in Resources */,
 				F9DB6F2E1B04E11C00F9CE05 /* ShoutMiscVC.xib in Resources */,
+				F9DB6F3D1B13AC6200F9CE05 /* ShoutAddMembersVC.xib in Resources */,
 				F95F30201A57262D00D2CC3B /* LaunchScreen.xib in Resources */,
 				F92CC0C21A596F6E00AA0B70 /* CreateShoutStep2VC.xib in Resources */,
 				F95F301D1A57262D00D2CC3B /* Images.xcassets in Resources */,
@@ -527,9 +545,11 @@
 				F92CC0C11A596F6E00AA0B70 /* CreateShoutStep2VC.m in Sources */,
 				F9DB6F2D1B04E11C00F9CE05 /* ShoutMiscVC.m in Sources */,
 				F92CC0BC1A596F5600AA0B70 /* CreateShoutStep1VC.m in Sources */,
+				F9DB6F371B137FFC00F9CE05 /* ShoutMemberCell.m in Sources */,
 				F92811491A618CD20073B33E /* AddFriendNC.m in Sources */,
 				F92CC0A91A5890BB00AA0B70 /* FriendsVC.m in Sources */,
 				F9E4DBB31AF67E5600DE1350 /* AddFriendCell.m in Sources */,
+				F9DB6F3C1B13AC6200F9CE05 /* ShoutAddMembersVC.m in Sources */,
 				F92CC0E61A59CB7600AA0B70 /* SettingsVC.m in Sources */,
 				F97A05D41ADEF0BD00D9168D /* ShoutRequestCell.m in Sources */,
 				F9DB6F241B04DF0D00F9CE05 /* ShoutSwipeVC.m in Sources */,

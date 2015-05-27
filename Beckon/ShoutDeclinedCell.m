@@ -19,5 +19,8 @@
     
     // Configure the view for the selected state
 }
+- (IBAction)dismissAction:(id)sender {
+    [self.delegate dismissShoutAction:self];
+}
 
 @end
