@@ -22,6 +22,7 @@
     NSInteger currentIndex = [self.viewControllers indexOfObject:controllerToSwipe];
     NSInteger newIndex = currentIndex - 1;
     if(currentIndex != 0){
+        [[self view] endEditing:YES];
         [self scrollToViewControllerAtIndex:newIndex animated:YES];
     }
 }
@@ -30,11 +31,13 @@
     NSInteger currentIndex = [self.viewControllers indexOfObject:controllerToSwipe];
     NSInteger newIndex = currentIndex + 1;
     if(newIndex <= self.viewControllers.count){
+        [[self view] endEditing:YES];
         [self scrollToViewControllerAtIndex:newIndex animated:YES];
     }
 }
 
 - (void)swipeToIndex:(NSInteger)index sender:(id)sender{
+    [[self view] endEditing:YES];
     [self scrollToViewControllerAtIndex:index animated:YES];
 }
 

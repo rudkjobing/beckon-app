@@ -42,16 +42,11 @@
     
 }
 
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [[self view] endEditing:YES];
-}
-
 - (void) cancel{
     [self.swipeVC dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) next{
-    NSLog(@"%@", self.swipeVC.beckon);
     [self.swipeVC swipeToNext:self.parentViewController sender:self];
 }
 
@@ -64,6 +59,7 @@
 
 - (IBAction)dateSelected:(id)sender {
     [self.swipeVC.beckon setValue:self.datePicker.date.description forKey:@"begins"];
+    
 }
 
 @end

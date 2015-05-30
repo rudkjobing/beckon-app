@@ -24,6 +24,7 @@
                     </date>
                     <connections>
                         <action selector="dateSelected:" destination="-1" eventType="valueChanged" id="CdK-Xh-h5e"/>
+                        <action selector="touchBegan:" destination="-1" eventType="editingDidBegin" id="shu-lv-dLa"/>
                     </connections>
                 </datePicker>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="The Pub!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqb-LL-trI">

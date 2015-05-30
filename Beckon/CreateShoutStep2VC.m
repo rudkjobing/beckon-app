@@ -94,6 +94,11 @@
     [self.table reloadData];
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self.swipeVC.view endEditing:YES];
+    NSLog(@"Done");
+}
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

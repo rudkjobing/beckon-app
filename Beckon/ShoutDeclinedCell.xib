@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,12 +14,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dt5-H8-vpv">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dt5-H8-vpv">
                         <rect key="frame" x="8" y="4" width="304" height="35"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XV0-ls-0E0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XV0-ls-0E0">
                                 <rect key="frame" x="229" y="3" width="67" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="P3d-Ea-JLs"/>
+                                </constraints>
                                 <state key="normal" title="Dismiss">
                                     <color key="titleColor" red="1" green="0.094117647060000004" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,7 +31,7 @@
                                     <action selector="dismissAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zdK-8y-rEz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmT-jR-6x3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmT-jR-6x3">
                                 <rect key="frame" x="8" y="8" width="213" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,8 +39,23 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.094117647060000004" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XV0-ls-0E0" secondAttribute="trailing" constant="8" id="EVH-IF-2VU"/>
+                            <constraint firstAttribute="bottom" secondItem="gmT-jR-6x3" secondAttribute="bottom" constant="6" id="L0d-AN-zFE"/>
+                            <constraint firstItem="gmT-jR-6x3" firstAttribute="leading" secondItem="Dt5-H8-vpv" secondAttribute="leading" constant="8" id="bHM-bv-SXG"/>
+                            <constraint firstItem="gmT-jR-6x3" firstAttribute="top" secondItem="Dt5-H8-vpv" secondAttribute="top" constant="8" id="dbP-oC-rci"/>
+                            <constraint firstItem="XV0-ls-0E0" firstAttribute="top" secondItem="Dt5-H8-vpv" secondAttribute="top" constant="3" id="izH-db-CyD"/>
+                            <constraint firstAttribute="bottom" secondItem="XV0-ls-0E0" secondAttribute="bottom" constant="2" id="lQW-8C-zA7"/>
+                            <constraint firstItem="XV0-ls-0E0" firstAttribute="leading" secondItem="gmT-jR-6x3" secondAttribute="trailing" constant="8" id="sN0-kd-mhD"/>
+                        </constraints>
                     </view>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Dt5-H8-vpv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="2fe-Qb-sCq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Dt5-H8-vpv" secondAttribute="bottom" constant="-4" id="CNa-Or-mf5"/>
+                    <constraint firstItem="Dt5-H8-vpv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hjD-eh-QVW"/>
+                    <constraint firstItem="Dt5-H8-vpv" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="srK-vL-U3H"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="bgView" destination="Dt5-H8-vpv" id="b9q-dq-m09"/>
