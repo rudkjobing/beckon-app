@@ -32,13 +32,13 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="ZcT-pz-h1b" secondAttribute="trailing" id="6BD-xm-FCu"/>
-                <constraint firstAttribute="centerY" secondItem="OuC-yT-NJZ" secondAttribute="centerY" constant="-8.5" id="JY5-Sg-7xB"/>
+                <constraint firstAttribute="centerY" secondItem="OuC-yT-NJZ" secondAttribute="centerY" constant="-0.5" id="JY5-Sg-7xB"/>
                 <constraint firstItem="bsL-2h-V1D" firstAttribute="top" secondItem="ZcT-pz-h1b" secondAttribute="bottom" constant="8" id="LLy-bR-ZLW"/>
                 <constraint firstAttribute="bottom" secondItem="bsL-2h-V1D" secondAttribute="bottom" id="l3T-bX-SnC"/>
                 <constraint firstItem="ZcT-pz-h1b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pm4-i0-f0e"/>
                 <constraint firstAttribute="centerX" secondItem="bsL-2h-V1D" secondAttribute="centerX" id="s3M-aU-g2p"/>
                 <constraint firstItem="ZcT-pz-h1b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ueJ-P2-vIL"/>
-                <constraint firstAttribute="centerX" secondItem="OuC-yT-NJZ" secondAttribute="centerX" constant="-8.5" id="yVb-nj-h1h"/>
+                <constraint firstAttribute="centerX" secondItem="OuC-yT-NJZ" secondAttribute="centerX" constant="0.5" id="yVb-nj-h1h"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
