@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsVC">
             <connections>
+                <outlet property="spinner" destination="MYW-62-pyB" id="wYC-yX-OPM"/>
+                <outlet property="table" destination="mUE-YT-Bwm" id="z5S-TK-yfS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,18 +20,26 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MYW-62-pyB">
+                    <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                    <color key="color" red="0.63612545490000005" green="0.40268656689999999" blue="0.99852645399999995" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="mUE-YT-Bwm" secondAttribute="centerY" id="1Bl-yp-nUt"/>
+                <constraint firstAttribute="bottom" secondItem="MYW-62-pyB" secondAttribute="bottom" constant="373" id="CgQ-Cd-yV4"/>
+                <constraint firstAttribute="centerX" secondItem="MYW-62-pyB" secondAttribute="centerX" constant="-0.5" id="ChE-tP-be0"/>
                 <constraint firstItem="mUE-YT-Bwm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="I6O-9p-Fsj"/>
                 <constraint firstAttribute="bottom" secondItem="mUE-YT-Bwm" secondAttribute="bottom" id="JX8-yb-5U4"/>
+                <constraint firstAttribute="centerY" secondItem="MYW-62-pyB" secondAttribute="centerY" constant="0.5" id="aFk-48-pi0"/>
                 <constraint firstAttribute="trailing" secondItem="mUE-YT-Bwm" secondAttribute="trailing" id="cfR-af-XLf"/>
                 <constraint firstItem="mUE-YT-Bwm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yD0-4S-VKA"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="mUE-YT-Bwm"/>
+                    <exclude reference="MYW-62-pyB"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="1Bl-yp-nUt"/>
@@ -37,11 +47,15 @@
                     <exclude reference="JX8-yb-5U4"/>
                     <exclude reference="cfR-af-XLf"/>
                     <exclude reference="yD0-4S-VKA"/>
+                    <exclude reference="CgQ-Cd-yV4"/>
+                    <exclude reference="ChE-tP-be0"/>
+                    <exclude reference="aFk-48-pi0"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="mUE-YT-Bwm"/>
+                    <include reference="MYW-62-pyB"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="1Bl-yp-nUt"/>
@@ -49,6 +63,9 @@
                     <include reference="JX8-yb-5U4"/>
                     <include reference="cfR-af-XLf"/>
                     <include reference="yD0-4S-VKA"/>
+                    <include reference="CgQ-Cd-yV4"/>
+                    <include reference="ChE-tP-be0"/>
+                    <include reference="aFk-48-pi0"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="329" y="295"/>

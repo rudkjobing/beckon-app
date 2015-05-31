@@ -111,9 +111,7 @@
         static NSString *cellIdentifier = @"FriendRequestCell";
         [tableView registerNib:[UINib nibWithNibName:@"FriendRequestCell" bundle: nil] forCellReuseIdentifier:@"FriendRequestCell"];
         FriendRequestCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-        if (!cell) {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"FriendRequestCell"];
-        }
+        
         cell.delegate = self;
         NSDictionary *user = [friend objectForKey:@"friend"];
         cell.name.text = [[[user objectForKey:@"firstName"] stringByAppendingString:@" "] stringByAppendingString:[user objectForKey:@"lastName"]];
@@ -125,9 +123,7 @@
         static NSString *cellIdentifier = @"FriendCell";
         [tableView registerNib:[UINib nibWithNibName:@"FriendCell" bundle: nil] forCellReuseIdentifier:@"FriendCell"];
         FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-        if (!cell) {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"FriendCell"];
-        }
+        
         NSDictionary *user = [friend objectForKey:@"friend"];
         if([[friend objectForKey:@"status"] isEqualToString:@"INVITED"]){
             cell.name.text =@"Awaiting approval";

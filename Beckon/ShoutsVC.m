@@ -238,14 +238,14 @@
          [self.spinner stopAnimating];
          for(NSDictionary *shout in responseObject){
              NSDate *shoutDate = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] longLongValue] / 1000];
-             if([[[[NSDate alloc] init]dateByAddingTimeInterval: + 60*60] laterDate:shoutDate] == shoutDate){
+             if([[[[NSDate alloc] init]dateByAddingTimeInterval: + 60*60] laterDate:shoutDate] == shoutDate && ![[shout objectForKey:@"status"] isEqualToString:@"DECLINED"]){
                  UILocalNotification *notification15 = [[UILocalNotification alloc] init];
                  notification15.fireDate = [shoutDate dateByAddingTimeInterval:-60*60];
                  notification15.alertBody = [@"1 Hour: " stringByAppendingString:[shout objectForKey:@"title"]];
                  notification15.soundName = UILocalNotificationDefaultSoundName;
                  [[UIApplication sharedApplication] scheduleLocalNotification:notification15];
              }
-             if([shoutDate laterDate:[[NSDate alloc] init]] == shoutDate){
+             if([shoutDate laterDate:[[NSDate alloc] init]] == shoutDate && ![[shout objectForKey:@"status"] isEqualToString:@"DECLINED"]){
                  UILocalNotification *notificationNow = [[UILocalNotification alloc] init];
                  notificationNow.fireDate = shoutDate;
                  notificationNow.alertBody = [@"Now: " stringByAppendingString:[shout objectForKey:@"title"]];
