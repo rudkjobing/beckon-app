@@ -90,9 +90,10 @@
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat: @"MMM d."];
-    
+
     NSDateFormatter *timeOfDayFormatter = [[NSDateFormatter alloc] init];
     [timeOfDayFormatter setDateFormat: @"HH:mm"];
+    
     NSDate *begins = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] longLongValue] / 1000];
     NSString *title = [shout objectForKey:@"title"];
     NSString *location = [[shout objectForKey:@"location"] objectForKey:@"name"];
@@ -263,7 +264,6 @@
              [[NSNotificationCenter defaultCenter] postNotificationName:@"UserUnautherized" object:self];
          }
      }];
-    
 }
 
 -(void)updateShoutMemberShout: (NSDictionary *) shout shoutOriginal: (NSDictionary *) original{

@@ -337,6 +337,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F9C279221B1BA17C0091AC77 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		F9DB6F211B04DEBE00F9CE05 /* Scout scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +362,7 @@
 		F9DCFB2A1A631A3500B58029 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F9C279221B1BA17C0091AC77 /* Settings */,
 				F9DCFB301A63205D00B58029 /* FriendRequestCell.h */,
 				F9DCFB311A63205D00B58029 /* FriendRequestCell.m */,
 				F9DCFB321A63205D00B58029 /* FriendRequestCell.xib */,
