@@ -66,8 +66,6 @@
 - (void)viewDidAppear:(BOOL)animated{
     //Register for notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getShouts) name:@"PleaseUpdate" object:nil];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
     [self getShouts];
 }
 
@@ -146,7 +144,8 @@
                 [name addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:NSMakeRange(0, name.length)];
             }
             else if ([[member objectForKey:@"status"] isEqualToString:@"ACCEPTED"]) {
-                [name addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(0, name.length)];
+                //[name addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(0, name.length)];
+                [name addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.0 green:100.0/255.0 blue:0.0 alpha:1.0] range:NSMakeRange(0, name.length)];
             }
             else if ([[member objectForKey:@"status"] isEqualToString:@"DECLINED"]) {
                 [name addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, name.length)];
@@ -238,6 +237,7 @@
          [self.shoutTable reloadData];
          [self.spinner stopAnimating];
          for(NSDictionary *shout in responseObject){
+             [[UIApplication sharedApplication] cancelAllLocalNotifications];
              NSDate *shoutDate = [NSDate dateWithTimeIntervalSince1970:[[shout objectForKey:@"begins"] longLongValue] / 1000];
              if([[[[NSDate alloc] init]dateByAddingTimeInterval: + 60*60] laterDate:shoutDate] == shoutDate && ![[shout objectForKey:@"status"] isEqualToString:@"DECLINED"]){
                  UILocalNotification *notification15 = [[UILocalNotification alloc] init];

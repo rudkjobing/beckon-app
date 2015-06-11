@@ -29,7 +29,6 @@
 		F95F301B1A57262D00D2CC3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95F30191A57262D00D2CC3B /* Main.storyboard */; };
 		F95F301D1A57262D00D2CC3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95F301C1A57262D00D2CC3B /* Images.xcassets */; };
 		F95F30201A57262D00D2CC3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95F301E1A57262D00D2CC3B /* LaunchScreen.xib */; };
-		F95F302C1A57262D00D2CC3B /* BeckonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F95F302B1A57262D00D2CC3B /* BeckonTests.m */; };
 		F960A7551A57285E000BB047 /* MainSwipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A74E1A57285E000BB047 /* MainSwipeVC.m */; };
 		F960A7571A57285E000BB047 /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7521A57285E000BB047 /* SignInVC.m */; };
 		F960A7581A57285E000BB047 /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F960A7541A57285E000BB047 /* SignUpVC.m */; };
@@ -108,8 +107,6 @@
 		F95F301C1A57262D00D2CC3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F95F301F1A57262D00D2CC3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F95F30251A57262D00D2CC3B /* BroShoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BroShoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F95F302A1A57262D00D2CC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F95F302B1A57262D00D2CC3B /* BeckonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeckonTests.m; sourceTree = "<group>"; };
 		F960A74D1A57285E000BB047 /* MainSwipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSwipeVC.h; sourceTree = "<group>"; };
 		F960A74E1A57285E000BB047 /* MainSwipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSwipeVC.m; sourceTree = "<group>"; };
 		F960A7511A57285E000BB047 /* SignInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInVC.h; sourceTree = "<group>"; };
@@ -276,7 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				F95F300E1A57262D00D2CC3B /* Beckon */,
-				F95F30281A57262D00D2CC3B /* BeckonTests */,
 				F95F300D1A57262D00D2CC3B /* Products */,
 				6055E700AD8E2906387336D4 /* Pods */,
 				E1FD63CD532B91CB4A006EDA /* Frameworks */,
@@ -316,23 +312,6 @@
 				F95F30111A57262D00D2CC3B /* main.m */,
 				F92CC0E01A59A52300AA0B70 /* SwipeVC.h */,
 				F92CC0E11A59A52300AA0B70 /* SwipeVC.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F95F30281A57262D00D2CC3B /* BeckonTests */ = {
-			isa = PBXGroup;
-			children = (
-				F95F302B1A57262D00D2CC3B /* BeckonTests.m */,
-				F95F30291A57262D00D2CC3B /* Supporting Files */,
-			);
-			path = BeckonTests;
-			sourceTree = "<group>";
-		};
-		F95F30291A57262D00D2CC3B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F95F302A1A57262D00D2CC3B /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -588,7 +567,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F95F302C1A57262D00D2CC3B /* BeckonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,12 +685,15 @@
 			baseConfigurationReference = 153D9C6F3363723670029AF8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Beckon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = BroShout;
 				PROVISIONING_PROFILE = "4521e5b4-2a3b-46d9-81e3-2692d3f1586d";
+				SWIFT_OBJC_BRIDGING_HEADER = "Beckon/BroShout-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -721,12 +702,14 @@
 			baseConfigurationReference = C48ADF593C1D89D1A6F65F7A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Steffen Rudkjobing (24ZKBP96S6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Steffen Rudkjobing (24ZKBP96S6)";
 				INFOPLIST_FILE = Beckon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = BroShout;
 				PROVISIONING_PROFILE = "4521e5b4-2a3b-46d9-81e3-2692d3f1586d";
+				SWIFT_OBJC_BRIDGING_HEADER = "Beckon/BroShout-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -817,12 +800,15 @@
 			baseConfigurationReference = 153D9C6F3363723670029AF8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Beckon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = BroShout;
 				PROVISIONING_PROFILE = "4521e5b4-2a3b-46d9-81e3-2692d3f1586d";
+				SWIFT_OBJC_BRIDGING_HEADER = "Beckon/BroShout-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Test;
 		};

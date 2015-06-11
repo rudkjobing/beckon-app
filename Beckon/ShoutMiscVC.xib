@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoutMiscVC">
@@ -90,15 +90,8 @@
                     <exclude reference="TMC-sb-Oou"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="6ca-ec-90n"/>
-                    <exclude reference="DxY-Ew-s2Z"/>
-                    <exclude reference="UYh-BP-E8r"/>
-                    <exclude reference="iJT-NO-vMg"/>
                     <exclude reference="SUk-xa-tsr"/>
                     <exclude reference="lVe-sH-mNW"/>
-                    <exclude reference="JKa-Yd-WHN"/>
-                    <exclude reference="RiQ-MP-bHF"/>
-                    <exclude reference="sqO-i9-mta"/>
                     <exclude reference="8iW-AT-3vj"/>
                     <exclude reference="R9a-xR-4x0"/>
                     <exclude reference="ou1-PC-YBf"/>
@@ -106,6 +99,13 @@
                     <exclude reference="3P7-nP-kt5"/>
                     <exclude reference="EFe-Mv-s9o"/>
                     <exclude reference="Kcf-mn-d3M"/>
+                    <exclude reference="JKa-Yd-WHN"/>
+                    <exclude reference="RiQ-MP-bHF"/>
+                    <exclude reference="sqO-i9-mta"/>
+                    <exclude reference="6ca-ec-90n"/>
+                    <exclude reference="DxY-Ew-s2Z"/>
+                    <exclude reference="UYh-BP-E8r"/>
+                    <exclude reference="iJT-NO-vMg"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -117,15 +117,8 @@
                     <include reference="TMC-sb-Oou"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="6ca-ec-90n"/>
-                    <include reference="DxY-Ew-s2Z"/>
-                    <include reference="UYh-BP-E8r"/>
-                    <include reference="iJT-NO-vMg"/>
                     <include reference="SUk-xa-tsr"/>
                     <include reference="lVe-sH-mNW"/>
-                    <include reference="JKa-Yd-WHN"/>
-                    <include reference="RiQ-MP-bHF"/>
-                    <include reference="sqO-i9-mta"/>
                     <include reference="8iW-AT-3vj"/>
                     <include reference="R9a-xR-4x0"/>
                     <include reference="ou1-PC-YBf"/>
@@ -133,6 +126,13 @@
                     <include reference="3P7-nP-kt5"/>
                     <include reference="EFe-Mv-s9o"/>
                     <include reference="Kcf-mn-d3M"/>
+                    <include reference="JKa-Yd-WHN"/>
+                    <include reference="RiQ-MP-bHF"/>
+                    <include reference="sqO-i9-mta"/>
+                    <include reference="6ca-ec-90n"/>
+                    <include reference="DxY-Ew-s2Z"/>
+                    <include reference="UYh-BP-E8r"/>
+                    <include reference="iJT-NO-vMg"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="390" y="670"/>

@@ -63,7 +63,6 @@
     [self.activityIndicator startAnimating];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//    manager.responseSerializer = [JSONResponseSerializerWithData serializer];
     NSDictionary *parameters = @{@"email": self.emailTextField.text,
                                  @"firstName": self.firstNameTextField.text,
                                  @"lastName": self.lastNameTextField.text};

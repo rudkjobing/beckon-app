@@ -50,6 +50,8 @@
               [[NSNotificationCenter defaultCenter] postNotificationName:@"UserLoggedIn" object:self];
               self.working = NO;
               [self.activityIndicator stopAnimating];
+              [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+              [[UIApplication sharedApplication] registerForRemoteNotifications];
               [self dismissViewControllerAnimated:YES completion:nil];
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               self.working = NO;
